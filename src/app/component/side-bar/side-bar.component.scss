@@ -138,13 +138,3 @@ h1 {
   width: 100%;
   left: 0;
 }
-
-.footer::before {
-  content: "";
-  position: absolute;
-  bottom: 150px; /* Ajustez cette valeur pour déplacer le trait vers le haut */
-  left: 25%;
-  width: 50%;
-  height: 1px;
-  background-color: #fa7d0987
-}
