@@ -1,0 +1,139 @@
+
+#container-skills {
+  margin: 50px 0 0 250px;
+}
+
+#description {
+  padding-right: 200px;
+}
+
+/***********Debut Competences***********/
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.cardC,
+.cardA,
+.cardB,
+.cardE,
+.cardG,
+.cardH {
+  width: 240px;
+  height: 250px;
+  border-radius: 20px;
+  background: #2F2519;
+  position: relative;
+  padding: 0 30px;
+  border: 4px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  margin: 25px;
+}
+
+.card-details {
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+  padding-bottom: 35px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/***********Les images***********/
+.text-title {
+  margin-left: 25px;
+}
+
+/***********Les textes***********/
+.text-body {
+  text-align: center;
+}
+
+.container-card {
+  display: flex;
+}
+
+/***********Java***********/
+.cardA:hover {
+  border-top: 4px solid #dc3b0c;
+  border-right: 4px solid #74a4fc;
+  border-left: 4px solid #dc3b0c;
+  border-bottom: 4px solid #74a4fc;
+}
+
+/***********C++***********/
+.cardB:hover {
+  border-top: 4px solid #649ad3;
+  border-right: 4px solid white;
+  border-left: 4px solid #649ad3;
+  border-bottom: 4px solid white;
+}
+
+/***********Angular***********/
+.cardC:hover {
+  border-top: 4px solid #cf0830;
+  border-right: 4px solid white;
+  border-left: 4px solid #cf0830;
+  border-bottom: 4px solid white;
+}
+
+/***********Csharp***********/
+.cardE:hover {
+  border-top: 4px solid #3c0594;
+  border-right: 4px solid white;
+  border-left: 4px solid #3c0594;
+  border-bottom: 4px solid white;
+}
+
+
+/***********Linux***********/
+.cardG:hover {
+  border-top: 4px solid #e79628;
+  border-right: 4px solid #040404;
+  border-left: 4px solid #e79628;
+  border-bottom: 4px solid #040404;
+}
+
+/***********Git***********/
+.cardH:hover {
+  border-top: 4px solid #dc4c4c;
+  border-right: 4px solid #646464;
+  border-left: 4px solid #dc4c4c;
+  border-bottom: 4px solid #646464;
+}
+
+.cardC:hover,
+.cardA:hover,
+.cardB:hover,
+.cardE:hover,
+.cardG:hover,
+.cardH:hover {
+  box-shadow: 0 30px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+/***********Trait premiere ligne competence***********/
+#deco-trait2 {
+  top: 170px;
+  left: 200px;
+  width: 70%;
+  border: 1px dashed rgba(255, 255, 255, 0.541);
+}
+
+/***********Trait derniere ligne competence***********/
+#deco-trait3 {
+  width: 60%;
+  left: 355px;
+  bottom: 160px;
+  border: 1px dashed rgba(255, 255, 255, 0.541);
+  z-index: -1;
+}
+
+#deco-trait2,
+#deco-trait3 {
+  position: relative;
+}
+/***********Fin Competences***********/

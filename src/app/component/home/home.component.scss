@@ -1,15 +1,17 @@
-* {
-  color: white;
-}
-
 #content {
   display: flex;
-  justify-content: center;
-  margin-top: 100vh;
+  margin-top: 100px;
 }
 
 #head {
   font-family: "Poppins", Arial, sans-serif;
+}
+
+#head p {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 #head span {

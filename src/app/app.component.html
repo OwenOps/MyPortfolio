@@ -1,25 +1,68 @@
-<app-side-bar></app-side-bar>
-<div class="main-content" #mainContent>
-  <div id="#HOME">
-    <app-home></app-home>
+<body>
+  <div class="sidebar active">
+    <div class="user">
+      <img src="../../../assets/test.jpg" alt="me" class="user-img">
+    </div>
+    <div class="top">
+      <div class="logo">
+        <h1 class="animate__animated animate__heartBeat"> Owen Rebeller </h1>
+        <p>Developper</p>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a  href="#home" class="nav-item" [class.active]="activeNavItem === 'HOME'" (click)="setActiveNavItem('HOME')">HOME</a>
+      </li>
+      <li>
+        <a  href="#about" class="nav-item" [class.active]="activeNavItem === 'ABOUT'" (click)="setActiveNavItem('ABOUT')">ABOUT</a>
+      </li>
+      <li>
+        <a  href="#skills" class="nav-item" [class.active]="activeNavItem === 'SKILLS'" (click)="setActiveNavItem('SKILLS')">SKILLS</a>
+      </li>
+      <li>
+        <a  href="#education" class="nav-item" [class.active]="activeNavItem === 'EDUCATION'" (click)="setActiveNavItem('EDUCATION')">EDUCATION</a>
+      </li>
+      <li>
+        <a  href="#experiences" class="nav-item" [class.active]="activeNavItem === 'EXPERIENCES'" (click)="setActiveNavItem('EXPERIENCES')">EXPERIENCES</a>
+      </li>
+      <li>
+        <a  href="#work" class="nav-item" [class.active]="activeNavItem === 'WORK'" (click)="setActiveNavItem('WORK')">WORK</a>
+      </li>
+      <li>
+        <a  href="#other" class="nav-item" [class.active]="activeNavItem === 'OTHER'" (click)="setActiveNavItem('OTHER')">OTHER</a>
+      </li>
+    </ul>
+    <div class="footer">
+      <app-footer></app-footer>
+    </div>
   </div>
-  <div id="#ABOUT">
-    <app-about></app-about>
-  </div>
-  <div id="#SKILLS">
-    <app-skills></app-skills>
-  </div>
-  <div>
-    <app-education></app-education>
-  </div>
-  <div>
-    <app-experiences></app-experiences>
-  </div>
-  <div>
-    <app-work></app-work>
-  </div>
-  <div>
-    <app-blog></app-blog>
-  </div>
-</div>
+  <div class="main-content" #mainContent>
+    <section id="home" class="one">
+      <app-home></app-home>
+    </section>
 
+    <section id="about" class="two">
+      <app-about></app-about>
+    </section>
+
+    <section id="skills" class="three">
+      <app-skills></app-skills>
+    </section>
+
+    <section id="education" class="four">
+      <app-education></app-education>
+    </section>
+
+    <section id="experiences" class="five">
+      <app-experiences></app-experiences>
+    </section>
+
+    <section id="work" class="six">
+      <app-work></app-work>
+    </section>
+
+    <section id="other" class="seven">
+      <app-other></app-other>
+    </section>
+  </div>
+</body>

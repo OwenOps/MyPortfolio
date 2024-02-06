@@ -3,24 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //-------Component-------//
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './component/side-bar/side-bar.component';
-import { FooterComponent } from './component/footer/footer.component';
-
-//-------PrimeNG-------//
-import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 import { SkillsComponent } from './component/skills/skills.component';
 import { EducationComponent } from './component/education/education.component';
 import { ExperiencesComponent } from './component/experiences/experiences.component';
 import { WorkComponent } from './component/work/work.component';
-import { BlogComponent } from './component/blog/blog.component';
+import { OtherComponent } from './component/other/other.component';
+import { FooterComponent } from './component/footer/footer.component';
 
+//-------PrimeNG-------//
+import { ButtonModule } from 'primeng/button';
+import { TimelineModule } from 'primeng/timeline';
+import { CardModule } from 'primeng/card';
+import { AccordionModule } from 'primeng/accordion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
     FooterComponent,
     HomeComponent,
     AboutComponent,
@@ -28,10 +29,14 @@ import { BlogComponent } from './component/blog/blog.component';
     EducationComponent,
     ExperiencesComponent,
     WorkComponent,
-    BlogComponent
+    OtherComponent
   ],
   imports: [
     BrowserModule,
+    TimelineModule,
+    CardModule,
+    AccordionModule,
+    BrowserAnimationsModule,
     ButtonModule,
   ],
 
