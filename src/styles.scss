@@ -16,6 +16,10 @@ body {
   line-height: 1.8;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .p-card {
   background-color: #2F2519;
   color: white;
