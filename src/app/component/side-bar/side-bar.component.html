@@ -1,0 +1,21 @@
+<div class="sidebar active">
+  <div class="user">
+    <img src="../../../assets/img/test.jpg" alt="me" class="user-img">
+  </div>
+  <div class="top">
+    <div class="logo">
+      <h1 class="animate__animated animate__heartBeat"> Owen Rebeller </h1>
+      <p>Developper</p>
+    </div>
+  </div>
+  <ul>
+    <div *ngFor="let item of lstSection">
+      <li>
+        <a class="nav-item" (click)="goToThePage(item.root)">{{ item.header }}</a>
+      </li>
+    </div>
+  </ul>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>

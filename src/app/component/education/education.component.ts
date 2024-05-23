@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Education } from 'src/app/models/education/education';
+import { Education } from 'src/app/models/education';
 
 @Component({
   selector: 'app-education',

@@ -19,6 +19,11 @@ import { CardModule } from 'primeng/card';
 import { AccordionModule } from 'primeng/accordion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//-------Service-------//
+import { CommonFunctionsService } from './services/common-functions.service';
+import { AppRoutingModule } from './app-routing.module';
+import { SideBarComponent } from './component/side-bar/side-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,10 +34,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EducationComponent,
     ExperiencesComponent,
     WorkComponent,
-    OtherComponent
+    OtherComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     TimelineModule,
     CardModule,
     AccordionModule,
@@ -40,7 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
   ],
 
-  providers: [],
+  providers: [CommonFunctionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
