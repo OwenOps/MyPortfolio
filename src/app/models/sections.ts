@@ -17,14 +17,10 @@ export const lstSections: Sections[] =
       "header": "SKILLS",
       "root": "skills"
     },
-    {
-      "header": "EDUCATION",
-      "root": "education"
-    },
-    {
-      "header": "EXPERIENCES",
-      "root": "experiences"
-    },
+    // {
+    //   "header": "EXPERIENCES",
+    //   "root": "experiences"
+    // },
     {
       "header": "WORK",
       "root": "work"

@@ -1,3 +1,5 @@
+@import '../../../constant/colos.scss';
+
 .user {
   display: flex;
   justify-content: center;
@@ -18,7 +20,7 @@
   left: 0;
   height: 100vh;
   width: 80px;
-  background-color: #2F2519;
+  background-color: $color-dark-brown;
   padding: 0.4rem 0.8rem;
   display: flex;
   flex-direction: column;
@@ -65,7 +67,7 @@ h1 {
   left: 25%;
   width: 50%;
   height: 1px;
-  background-color: #fa7d0987;
+  background-color: $color-orange-light;
 }
 
 .user {
@@ -120,7 +122,7 @@ h1 {
   left: 50%;
   width: 0;
   height: 1px;
-  background-color: #FA7D09;
+  background-color: $color-orange;
   transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
 }
 
@@ -132,13 +134,4 @@ h1 {
 .sidebar ul li a:hover::after {
   width: 100%;
   left: 0;
-}
-
-.main-content {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  align-items: center;
-  margin-left: 150px;
-  height: 100vh;
-  scroll-behavior: smooth;
 }

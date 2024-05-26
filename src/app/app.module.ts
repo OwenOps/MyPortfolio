@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 import { SkillsComponent } from './component/skills/skills.component';
-import { EducationComponent } from './component/education/education.component';
 import { ExperiencesComponent } from './component/experiences/experiences.component';
 import { WorkComponent } from './component/work/work.component';
 import { OtherComponent } from './component/other/other.component';
@@ -31,7 +30,6 @@ import { SideBarComponent } from './component/side-bar/side-bar.component';
     HomeComponent,
     AboutComponent,
     SkillsComponent,
-    EducationComponent,
     ExperiencesComponent,
     WorkComponent,
     OtherComponent,

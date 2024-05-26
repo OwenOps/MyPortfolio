@@ -2,6 +2,7 @@
 @import "primeicons/primeicons.css";
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+@import "constant/colos.scss";
 
 html {
   padding: 0;
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #4A3F35;
+  background-color: $color-ligh-brown;
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
   line-height: 1.8;
@@ -21,18 +22,19 @@ body::-webkit-scrollbar {
 }
 
 .p-card {
-  background-color: #2F2519;
+  background-color: $color-dark-brown;
   color: white;
   padding: 0px;
   margin: 0px;
 }
 
 .p-card-body {
-  padding: 15px;
+  padding: 35px;
+  padding-left: 150px;
 }
 
 .p-card-content {
-  padding: 0px;
+  // padding: 0px;
 }
 
 .p-timeline {
@@ -40,7 +42,7 @@ body::-webkit-scrollbar {
 }
 
 #title h3 {
-  color: #FA7D09;
+  color: $color-orange;
 }
 
 .subtitle {
