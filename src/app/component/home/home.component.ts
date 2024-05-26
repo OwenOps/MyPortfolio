@@ -17,7 +17,7 @@ export class HomeComponent {
   ngOnInit() {
     const options = {
       strings: ['Hello,'],
-      typeSpeed: 120,
+      typeSpeed: 70,
       backSpeed: 0,
       loop: false,
       showCursor: false,
@@ -25,8 +25,8 @@ export class HomeComponent {
 
     const options2 = {
       strings: ['Welcome To My Portfolio !!'],
-      startDelay: 1200,
-      typeSpeed: 70,
+      startDelay: 980,
+      typeSpeed: 40,
       backSpeed: 0,
       loop: false,
       showCursor: false,
@@ -37,7 +37,7 @@ export class HomeComponent {
 
     setTimeout(() => {
       this.showButton = true;
-    }, 4200);
+    }, 2750);
   }
 
   goToAbout() {
