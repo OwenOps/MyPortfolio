@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonFunctionsService } from './services/common-functions.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
+import { TimelineComponent } from './layouts/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SideBarComponent } from './component/side-bar/side-bar.component';
     ExperiencesComponent,
     WorkComponent,
     OtherComponent,
-    SideBarComponent
+    SideBarComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
