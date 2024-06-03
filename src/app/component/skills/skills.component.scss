@@ -8,7 +8,7 @@
 
 .skills::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -16,6 +16,7 @@
   background-image: url("../../../assets/img/b_skills.png");
   background-size: cover;
   filter: blur(4px) brightness(40%);
+  background-attachment: fixed;
   -webkit-filter: blur(4px) brightness(40%);
   z-index: 2;
   opacity: 1;
@@ -51,7 +52,9 @@
 .cardB,
 .cardE,
 .cardG,
-.cardH {
+.cardH,
+.cardI,
+.cardJ {
   width: 260px;
   height: 280px;
   border-radius: 20px;
@@ -109,17 +112,17 @@
 /***********Angular***********/
 .cardC:hover {
   border-top: 4px solid #cf0830;
-  border-right: 4px solid white;
+  border-right: 4px solid #3c0594;
   border-left: 4px solid #cf0830;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #3c0594;
 }
 
 /***********Csharp***********/
 .cardE:hover {
   border-top: 4px solid #3c0594;
-  border-right: 4px solid white;
+  border-right: 4px solid #cf0830;
   border-left: 4px solid #3c0594;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #cf0830;
 }
 
 
@@ -134,9 +137,23 @@
 /***********Git***********/
 .cardH:hover {
   border-top: 4px solid #dc4c4c;
-  border-right: 4px solid #646464;
+  border-right: 4px solid white;
   border-left: 4px solid #dc4c4c;
-  border-bottom: 4px solid #646464;
+  border-bottom: 4px solid white;
+}
+
+.cardI:hover {
+  border-top: 4px solid #3fb7d2;
+  border-right: 4px solid #feca29;
+  border-left: 4px solid #3fb7d2;
+  border-bottom: 4px solid #feca29;
+}
+
+.cardJ:hover {
+  border-top: 4px solid #feca29;
+  border-right: 4px solid #3fb7d2;
+  border-left: 4px solid #feca29;
+  border-bottom: 4px solid #3fb7d2;
 }
 
 .cardC:hover,
@@ -144,13 +161,15 @@
 .cardB:hover,
 .cardE:hover,
 .cardG:hover,
-.cardH:hover {
+.cardH:hover,
+.cardI:hover,
+.cardJ:hover {
   box-shadow: 0 30px 18px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-10px);
 }
 
-.animated-button {
-  position: absolute;
+.button {
+  position: fixed;
   right: 5%;
   bottom: 5%
 }

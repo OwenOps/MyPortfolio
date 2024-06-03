@@ -66,94 +66,76 @@ body::-webkit-scrollbar {
 }
 
 //-------------------------Button-------------------------//
-.animated-button {
+.button {
+  display: block;
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 16px 36px;
-  margin-top: 70px;
-  border: 4px solid;
-  border-color: transparent;
-  font-size: 16px;
-  background-color: $color-dark-brown;
-  border-radius: 100px;
-  font-weight: 600;
-  color: #1f387e;
-  box-shadow: 0 0 0 2px #ffffff;
-  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  margin: 0;
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  z-index: 50;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  z-index: 555;
 }
 
-.animated-button svg {
+.button:before,
+.button:after {
+  content: "";
   position: absolute;
-  width: 24px;
-  fill: $color-light-orange-red;
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 50%;
+  inset: 7px;
 }
 
-.animated-button .arr-1 {
-  right: 16px;
+.button:before {
+  border: 4px solid white;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
 }
 
-.animated-button .arr-2 {
-  left: -25%;
+.button:after {
+  border: 4px solid $color-light-orange-red;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
 }
 
-.animated-button .circle {
+.button:hover:before,
+.button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
+}
+
+.button-elem {
+  display: block;
   width: 20px;
   height: 20px;
-  background-color: #ad5604;
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 19px 18px 0 18px;
+  transform: rotate(0deg);
+  fill: #f0eeef;
 }
 
-.animated-button .text {
-  position: relative;
-  z-index: 1;
-  transform: translateX(-12px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button:hover {
-  box-shadow: 0 0 0 12px transparent;
-  color: white;
-  border-radius: 12px;
-  border-width: 3px;
-  border-color: white;
-}
-
-.animated-button:hover .arr-1 {
-  right: -25%;
-}
-
-.animated-button:hover .arr-2 {
-  left: 16px;
-}
-
-.animated-button:hover .text {
-  transform: translateX(12px);
-}
-
-.animated-button:hover svg {
-  fill: white;
-}
-
-.animated-button:active {
-  scale: 0.95;
-  box-shadow: 0 0 0 4px white;
-}
-
-.animated-button:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(56px);
 }
