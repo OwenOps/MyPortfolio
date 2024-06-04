@@ -23,6 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { TimelineComponent } from './layouts/timeline/timeline.component';
 import { AccordionComponent } from './layouts/accordion/accordion.component';
+import { MusicComponent } from './music/music.component';
+import { PhoneComponent } from './phone/phone.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AccordionComponent } from './layouts/accordion/accordion.component';
     OtherComponent,
     SideBarComponent,
     TimelineComponent,
-    AccordionComponent
+    AccordionComponent,
+    MusicComponent,
+    PhoneComponent
   ],
   imports: [
     BrowserModule,

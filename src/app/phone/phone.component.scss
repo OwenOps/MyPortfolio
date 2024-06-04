@@ -1,0 +1,169 @@
+body {
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  color: #ba0c0c;
+  font-size: 1em;
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.card {
+  width: 250px;
+  height: 500px;
+  background: black;
+  border-radius: 35px;
+  border: 2px solid rgb(40, 40, 40);
+  padding: 7px;
+  position: relative;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
+  overflow: hidden;
+}
+
+.card-int {
+  background-color:#141414;
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  height: 100%;
+  border-radius: 25px;
+  transition: all 0.6s ease-out;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.card:hover .card-int {
+  background-position: 100% 100%;
+}
+
+.top {
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%, 0%);
+  width: 35%;
+  height: 18px;
+  background-color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.speaker {
+  position: absolute;
+  top: 2px;
+  right: 50%;
+  transform: translate(50%, 0%);
+  width: 40%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(20, 20, 20);
+}
+
+.camera {
+  position: absolute;
+  top: 6px;
+  right: 84%;
+  transform: translate(50%, 0%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.048);
+}
+
+.int {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: rgba(0, 0, 255, 0.212);
+}
+
+.btn1, .btn2, .btn3, .btn4 {
+  position: absolute;
+  width: 2px;
+}
+
+.btn1, .btn2, .btn3 {
+  height: 45px;
+  top: 30%;
+  right: -4px;
+  background-image: linear-gradient(to right, #111111, #222222, #333333, #464646, #595959);
+}
+
+.btn2, .btn3 {
+  transform: scale(-1);
+  left: -4px;
+}
+
+.btn2, .btn3 {
+  transform: scale(-1);
+  height: 30px;
+}
+
+.btn2 {
+  top: 26%;
+}
+
+.btn3 {
+  top: 36%;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie {
+  display: flex;
+  align-items: center;
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.movie img {
+  width: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.movie .info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.movie .info .title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.movie .info .director {
+  font-size: 12px;
+}
+
+.movie:hover {
+  background-color: #780909;
+}
