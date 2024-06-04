@@ -1,0 +1,140 @@
+* {
+  text-decoration: none;
+}
+
+.main {
+  background-color: #191414;
+  /* Fond noir */
+  padding: 1em;
+  padding-bottom: 1.1em;
+  border-radius: 15px;
+  margin: 1em;
+  color: #FFFFFF;
+  /* Texte en blanc */
+}
+
+.loader {
+  display: flex;
+  flex-direction: row;
+  margin: 2px 0;
+  height: 4em;
+  padding: 0px 1em;
+  transform: rotate(180deg);
+  justify-content: right;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+  background-color: #121212;
+  /* Gris foncé */
+}
+
+.loader:hover {
+  cursor: pointer;
+  background-color: #0c1ff0;
+  /* Vert Spotify */
+}
+
+.currentplaying {
+  display: flex;
+  margin: 1em;
+}
+
+.spotify {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.6em;
+}
+
+.heading {
+  color: #0c1ff0;
+  /* Vert Spotify */
+  font-size: 1.1em;
+  font-weight: bold;
+  align-self: center;
+}
+
+.loading {
+  display: flex;
+  margin-top: 1em;
+  margin-left: 0.3em;
+}
+
+.load {
+  width: 2px;
+  height: 33px;
+  background-color: #0c1ff0;
+  /* Vert Spotify */
+  animation: 1s move6 infinite;
+  border-radius: 5px;
+  margin: 0.1em;
+}
+
+.load:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.load:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.load:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.play {
+  position: relative;
+  left: 0.35em;
+  height: 1.6em;
+  width: 1.6em;
+  clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+  background-color: #0c1ff0;
+  /* Vert Spotify */
+  transform: rotate(-90deg);
+  align-self: center;
+  margin-top: 0.7em;
+  justify-self: center;
+}
+
+.albumcover {
+  position: relative;
+  margin-right: 1em;
+  height: 40px;
+  width: 40px;
+  background-color: #191414;
+  align-self: center;
+  border-radius: 5px;
+  transform: rotate(180deg);
+}
+
+.albumcover img {
+  width: 40px;
+}
+
+.song {
+  position: relative;
+  transform: rotate(180deg);
+  margin-right: 1em;
+  color: #FFFFFF;
+  align-self: center;
+}
+
+.artist {
+  font-size: 0.6em;
+}
+
+@keyframes move6 {
+  0% {
+    height: 0.2em;
+  }
+
+  25% {
+    height: 0.7em;
+  }
+
+  50% {
+    height: 1.5em;
+  }
+
+  100% {
+    height: 0.2em;
+  }
+}

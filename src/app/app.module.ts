@@ -23,8 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { TimelineComponent } from './layouts/timeline/timeline.component';
 import { AccordionComponent } from './layouts/accordion/accordion.component';
-import { MusicComponent } from './music/music.component';
-import { PhoneComponent } from './phone/phone.component';
+import { MusicComponent } from './layouts/music/music.component';
+import { PhoneComponent } from './layouts/phone/phone.component';
+import { GamesComponent } from './layouts/games/games.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PhoneComponent } from './phone/phone.component';
     TimelineComponent,
     AccordionComponent,
     MusicComponent,
-    PhoneComponent
+    PhoneComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,
