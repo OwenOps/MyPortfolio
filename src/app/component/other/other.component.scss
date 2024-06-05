@@ -46,5 +46,28 @@
 }
 
 .container-card div {
-  margin: 30px;
+  margin: 40px;
+}
+
+@media screen and (max-width: 1350px) {
+  .container-card {
+    flex-direction: column;
+  }
+  .container-card div {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-card div {
+    margin: 0 10px;
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-card div {
+    margin: 0 5px;
+    transform: scale(0.6);
+  }
 }

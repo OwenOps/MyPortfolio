@@ -17,6 +17,25 @@
   text-align: center;
 }
 
+/***********Debut footer***********/
+.contenu-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 25px 0 0px;
+}
+
+.footer-droits {
+  font-size: 10px;
+}
+
+.footer-reseaux h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
 /*******Debut Reseaux Sociaux Logo*******/
 .social-buttons {
   display: flex;
@@ -93,6 +112,19 @@
 .instagram:hover svg {
   fill: #c13584;
 }
+
+.steam {
+  background-color: #1b2838;
+}
+
+.steam img {
+  transition: 0.3s;
+}
+
+.steam:hover img {
+  filter: brightness(0.7) invert(1);
+}
+
 /*******Fin Reseaux Sociaux Logo*******/
 
 .contenu-footer {
