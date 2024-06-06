@@ -130,3 +130,24 @@
 .contenu-footer {
   border-top: 1px solid #fa7d0987;
 }
+
+@media (max-width: 576px) {
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-button {
+    margin: 10px 5px;
+  }
+
+  .footer-droits {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #using-angular {
+    margin: 10px 0px;
+  }
+}
