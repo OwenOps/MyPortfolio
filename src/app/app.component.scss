@@ -17,3 +17,9 @@
   width: 90%;
   justify-content: center;
 }
+
+@media (max-width: 576px) {
+  .main-content {
+    margin-left: 150px;
+  }
+}

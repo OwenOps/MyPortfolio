@@ -34,8 +34,10 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  z-index: 3;
+  z-index: 55;
   align-items: start;
+  width: auto;
+  justify-content: center;
 }
 
 .typed-text {
@@ -44,4 +46,28 @@
   font-weight: 700;
   color: #ffffff;
   text-align: center;
+}
+
+@media screen and (max-width: 915px) {
+  #content-title {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #content-title {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #home-content {
+    margin-left: 130px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #home-content {
+    margin-left: 135px;
+  }
 }

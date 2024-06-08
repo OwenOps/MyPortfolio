@@ -62,7 +62,8 @@ ul li i:after {
   font-size: 16px;
   line-height: 1.45;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  /* Ajout du défilement vertical */
   max-height: 250px;
   will-change: max-height;
   contain: layout;
@@ -98,7 +99,7 @@ ul li i:after {
 }
 
 #faq ul li:hover {
-  border: 1px solid $color-light-orange-red; /* Ajouter une bordure orange */
+  border: 1px solid $color-light-orange-red;
 }
 
 #faq ul li+li {
@@ -204,4 +205,29 @@ img {
   vertical-align: middle;
   height: auto;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardC,
+  .cardA,
+  .cardB,
+  .cardE,
+  .cardG,
+  .cardH,
+  .cardI,
+  .cardJ {
+    width: 80%;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #faq p {
+    padding: 15px;
+  }
 }

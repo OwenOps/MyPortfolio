@@ -149,6 +149,7 @@ h1 {
   }
 
   .user-img {
+    top: 0px;
     width: 100px;
     height: 100px;
   }
@@ -162,10 +163,10 @@ h1 {
 
   .logo h1 {
     margin-bottom: 10px;
+    font-size: 18px;
   }
 
   .top::after {
-    bottom: -20px;
+    bottom: -5px;
   }
-
 }
