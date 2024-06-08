@@ -85,11 +85,9 @@
 
 .card-details p {
   max-height: 100%;
-  overflow-y: auto;
 }
 
 .text-title {
-  margin: 0;
   width: auto;
   max-width: 100%;
 }
@@ -198,23 +196,29 @@
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 605px) {
+  .card-details p {
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
   #description {
     width: 80%;
   }
 
-  .cardC,
-  .cardA,
-  .cardB,
-  .cardE,
-  .cardG,
-  .cardH,
-  .cardI,
-  .cardJ {
-    width: 100%;
-    margin: 10px 0;
-    border: 2px solid #c3c6ce;
-  }
+  // .cardC,
+  // .cardA,
+  // .cardB,
+  // .cardE,
+  // .cardG,
+  // .cardH,
+  // .cardI,
+  // .cardJ {
+  //   width: 100%;
+  //   margin: 10px 0;
+  //   border: 2px solid #c3c6ce;
+  // }
 
   .button {
     right: 10%;
