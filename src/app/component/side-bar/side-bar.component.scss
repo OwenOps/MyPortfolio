@@ -138,6 +138,63 @@ h1 {
   left: 0;
 }
 
+.language-switcher {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  text-align-last: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-select:hover {
+  background-color: #3a3a3a;
+  border-color: #fff;
+}
+
+.custom-select option {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-select option:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.custom-select {
+  text-align-last: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.custom-select::after {
+  display: none;
+}
+
 @media (max-width: 576px) {
 
   .sidebar.active {

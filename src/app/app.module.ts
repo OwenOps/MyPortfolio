@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //-------Component-------//
 import { AppComponent } from './app.component';
@@ -27,6 +30,10 @@ import { MusicComponent } from './layouts/music/music.component';
 import { PhoneComponent } from './layouts/phone/phone.component';
 import { GamesComponent } from './layouts/games/games.component';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +52,14 @@ import { GamesComponent } from './layouts/games/games.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     AppRoutingModule,
     TimelineModule,
     CardModule,

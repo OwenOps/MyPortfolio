@@ -1,5 +1,6 @@
 import { CommonFunctionsService } from './../../services/common-functions.service';
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Sections, lstSections } from 'src/app/models/sections';
 
 @Component({
@@ -10,9 +11,13 @@ import { Sections, lstSections } from 'src/app/models/sections';
 export class SideBarComponent {
   lstSection: Sections[] = lstSections;
 
-  constructor(private commonFunctionService: CommonFunctionsService) { }
+  constructor(private commonFunctionService: CommonFunctionsService, protected translate : TranslateService) { }
 
   goToThePage(path: string): void {
     this.commonFunctionService.goToAPage(path);
+  }
+
+  switchLang(lang: string) {
+    this.translate.use(lang);
   }
 }

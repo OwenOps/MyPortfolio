@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation  } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,11 @@ import { Component, ViewEncapsulation  } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+
+  constructor(private translate: TranslateService) {
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
 }

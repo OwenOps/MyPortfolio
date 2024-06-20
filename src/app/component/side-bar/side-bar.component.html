@@ -5,7 +5,7 @@
   <div class="top">
     <div class="logo">
       <h1> Owen Rebeller </h1>
-      <p class="animate__hinge animate__slow">Developper</p>
+      <p class="animate__hinge animate__slow"> {{'DEVELOPPER' | translate }}</p>
     </div>
   </div>
   <ul>
@@ -13,6 +13,14 @@
       <li>
         <a class="nav-item" (click)="goToThePage(item.root)">{{ item.header }}</a>
       </li>
+    </div>
+  </ul>
+  <ul>
+    <div class="language-switcher">
+      <select #device (change)="switchLang(device.value)" class="custom-select">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
     </div>
   </ul>
   <div class="footer">
