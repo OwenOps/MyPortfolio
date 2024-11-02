@@ -19,6 +19,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 import { AccordionModule } from 'primeng/accordion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownModule } from 'primeng/dropdown';
 
 //-------Service-------//
 import { CommonFunctionsService } from './services/common-functions.service';
@@ -29,6 +30,7 @@ import { AccordionComponent } from './layouts/accordion/accordion.component';
 import { MusicComponent } from './layouts/music/music.component';
 import { PhoneComponent } from './layouts/phone/phone.component';
 import { GamesComponent } from './layouts/games/games.component';
+import { FormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -63,6 +65,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     TimelineModule,
     CardModule,
+    DropdownModule,
+    FormsModule,
     AccordionModule,
     BrowserAnimationsModule,
     ButtonModule,

@@ -6,10 +6,9 @@ import { Router } from '@angular/router';
 })
 export class CommonFunctionsService {
 
-  constructor(private router : Router) {}
+  constructor(private readonly router : Router) {}
 
   goToAPage(route: string): void {
     this.router.navigate([route]);
   }
-
 }

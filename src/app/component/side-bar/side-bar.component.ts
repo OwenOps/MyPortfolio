@@ -11,13 +11,9 @@ import { Sections, lstSections } from 'src/app/models/sections';
 export class SideBarComponent {
   lstSection: Sections[] = lstSections;
 
-  constructor(private commonFunctionService: CommonFunctionsService, protected translate : TranslateService) { }
+  constructor(private readonly commonFunctionService: CommonFunctionsService, protected translate : TranslateService) { }
 
   goToThePage(path: string): void {
     this.commonFunctionService.goToAPage(path);
-  }
-
-  switchLang(lang: string) {
-    this.translate.use(lang);
   }
 }
