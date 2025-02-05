@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { CommonFunctionsService } from 'src/app/services/common-functions.service';
+import { UtilitiesService } from 'src/app/services/utilities/utilities.service';
 import Typed from 'typed.js';
 
 @Component({
@@ -11,7 +11,10 @@ export class AboutComponent {
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
   @ViewChild('typedElement2', { static: true }) typedElement2!: ElementRef;
 
-  constructor(private commonFunctionService : CommonFunctionsService) {}
+  constructor
+  (
+    private readonly utilitiesServices: UtilitiesService
+  ) {}
 
   ngOnInit() {
     const options = {
@@ -35,6 +38,6 @@ export class AboutComponent {
   }
 
   goToSkills() {
-    this.commonFunctionService.goToAPage("skills");
+    this.utilitiesServices.goToAPage("skills");
   }
 }

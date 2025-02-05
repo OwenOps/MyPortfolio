@@ -17,10 +17,6 @@ export const lstSections: Sections[] =
       "header": "SKILLS",
       "root": "skills"
     },
-    // {
-    //   "header": "EXPERIENCES",
-    //   "root": "experiences"
-    // },
     {
       "header": "WORK",
       "root": "work"

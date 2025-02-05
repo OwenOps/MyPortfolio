@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,10 +10,13 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
 
-  constructor(private translate: TranslateService) {
+  constructor
+    (
+      private readonly translate: TranslateService,
+      private readonly activatedRoute: ActivatedRoute
+    ) {
     translate.addLangs(['en', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
   }
-
 }

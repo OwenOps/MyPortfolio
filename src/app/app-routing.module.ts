@@ -5,18 +5,21 @@ import { SkillsComponent } from './component/skills/skills.component';
 import { WorkComponent } from './component/work/work.component';
 import { OtherComponent } from './component/other/other.component';
 import { RouterModule, Routes } from '@angular/router';
+import { StatusGuard } from './guard/auth.guard';
 
+// Parameter is for showing professional portfolio or not
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'other', component: OtherComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: 'home/:isPro', component: HomeComponent, canActivate: [StatusGuard] },
+  { path: 'about/:isPro', component: AboutComponent, canActivate: [StatusGuard] },
+  { path: 'skills/:isPro', component: SkillsComponent, canActivate: [StatusGuard] },
+  { path: 'work/:isPro', component: WorkComponent, canActivate: [StatusGuard] },
+  { path: 'other/:isPro', component: OtherComponent, canActivate: [StatusGuard] },
+  { path: '', redirectTo: 'home/true', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home/true', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })], // Reevaluate if one parameter changed
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

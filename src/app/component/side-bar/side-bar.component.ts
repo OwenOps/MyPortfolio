@@ -1,7 +1,7 @@
-import { CommonFunctionsService } from './../../services/common-functions.service';
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Sections, lstSections } from 'src/app/models/sections';
+import { UtilitiesService } from 'src/app/services/utilities/utilities.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -11,9 +11,9 @@ import { Sections, lstSections } from 'src/app/models/sections';
 export class SideBarComponent {
   lstSection: Sections[] = lstSections;
 
-  constructor(private readonly commonFunctionService: CommonFunctionsService, protected translate : TranslateService) { }
+  constructor(private readonly utilitiesService: UtilitiesService, protected translate: TranslateService) { }
 
   goToThePage(path: string): void {
-    this.commonFunctionService.goToAPage(path);
+    this.utilitiesService.goToAPage(`${path}/${this.utilitiesService.getProFromStorage()}`);
   }
 }

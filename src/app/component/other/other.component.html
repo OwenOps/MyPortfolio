@@ -19,7 +19,7 @@
         <div>
           <app-phone></app-phone>
         </div>
-        <div>
+        <div *ngIf="!utilitiesServices.getIsPro()">
           <app-games></app-games>
         </div>
       </div>

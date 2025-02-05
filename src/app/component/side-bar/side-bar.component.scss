@@ -1,25 +1,11 @@
 @import '../../../constant/colos.scss';
 
-.user {
-  display: flex;
-  justify-content: center;
-}
-
-.user-img {
-  position: relative;
-  top: 15px;
-  width: 180px;
-  height: 150px;
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
 .sidebar {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   height: 100%;
-  width: 250px;
+  width: 5%;
   background-color: $color-dark-brown;
   padding: 0.4rem 0.8rem;
   display: flex;
@@ -28,146 +14,155 @@
   justify-content: space-between;
   z-index: 555;
   transition: width 0.3s ease;
-}
 
-h1 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 25px;
-}
+  &--active {
+    width: 250px;
+    align-items: center;
 
-.sidebar.active~.main-content {
-  left: 250px;
-  width: calc(100% - 250px);
-}
+    ~.main-content {
+      left: 250px;
+      width: calc(100% - 250px);
+    }
+  }
 
-.sidebar.active {
-  width: 250px;
-  align-items: center;
-}
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
 
-.sidebar.active .top .logo {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-}
+  &__user-img {
+    position: relative;
+    top: 15px;
+    width: 180px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
 
-.top .logo>p {
-  opacity: 0.8;
-}
+  &__top {
+    position: relative;
+  }
 
-.top {
-  position: relative;
-}
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
 
-.top::after {
-  content: "";
-  position: absolute;
-  left: 25%;
-  width: 50%;
-  height: 1px;
-  background-color: $color-orange-light;
-}
+  &__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+  }
 
-.user {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-}
+  &__subtitle {
+    opacity: 0.8;
+  }
 
-.user p {
-  color: white;
-  opacity: 1;
-  margin-left: 1rem;
-}
+  &__top::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: $color-orange-light;
+  }
 
-.bold {
-  font-weight: 600;
-}
+  &__nav {
+    padding: 0;
+    text-align: center;
+  }
 
-.sidebar p {
-  opacity: 0;
-}
+  &__nav-item {
+    position: relative;
+    line-height: 50px;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+  }
 
-.sidebar.active p {
-  opacity: 1;
-}
+  &__nav-link {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
 
-.sidebar ul {
-  padding: 0;
-  text-align: center;
-}
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: $color-orange;
+      transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+    }
 
-.sidebar ul li {
-  position: relative;
-  line-height: 50px;
-  list-style: none;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: white;
-}
+    &--active::after,
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
 
-.sidebar ul li a {
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-}
+  &__footer {
+    width: 100%;
+    text-align: center;
+  }
 
-.sidebar ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background-color: $color-orange;
-  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
-}
+  & p {
+    opacity: 0;
 
-.sidebar ul li a.active::after {
-  width: 100%;
-  left: 0;
-}
+    &.bold {
+      font-weight: 600;
+    }
 
-.sidebar ul li a:hover::after {
-  width: 100%;
-  left: 0;
+    &--visible {
+      opacity: 1;
+    }
+  }
 }
 
 @media (max-width: 576px) {
+  .sidebar {
+    width: 50px;
 
-  .sidebar.active {
-    width: 150px;
+    &--active {
+      width: 150px;
+    }
   }
 
-  .sidebar.active {
-    width: 150px;
-  }
-
-  .user-img {
+  .sidebar__user-img {
     top: 0px;
     width: 100px;
     height: 100px;
   }
 
-  .top {
+  .sidebar__top {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .logo h1 {
+  .sidebar__logo h1 {
     margin-bottom: 10px;
     font-size: 18px;
   }
 
-  .top::after {
+  .sidebar__top::after {
     bottom: -5px;
+  }
+
+  .sidebar__nav-item {
+    font-size: 10px;
+    line-height: 40px;
   }
 }

@@ -22,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 
 //-------Service-------//
-import { CommonFunctionsService } from './services/common-functions.service';
 import { AppRoutingModule } from './app-routing.module';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { TimelineComponent } from './layouts/timeline/timeline.component';
@@ -31,6 +30,7 @@ import { MusicComponent } from './layouts/music/music.component';
 import { PhoneComponent } from './layouts/phone/phone.component';
 import { GamesComponent } from './layouts/games/games.component';
 import { FormsModule } from '@angular/forms';
+import { UtilitiesService } from './services/utilities/utilities.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -72,7 +72,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ButtonModule,
   ],
 
-  providers: [CommonFunctionsService],
+  providers: [UtilitiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

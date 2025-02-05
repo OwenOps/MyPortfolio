@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { UtilitiesService } from 'src/app/services/utilities/utilities.service';
 
 export interface Country {
   name: string,
@@ -16,7 +17,11 @@ export class FooterComponent {
 
   selectedCountry: Country | undefined;
 
-  constructor(protected translate: TranslateService) { }
+  constructor
+  (
+    private readonly translate: TranslateService,
+    protected utilitiesService: UtilitiesService
+  ) { }
 
   ngOnInit() {
     this.countries = [

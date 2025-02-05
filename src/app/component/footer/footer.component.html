@@ -22,10 +22,12 @@
         </g>
       </svg>
     </a>
-    <a href="https://steamcommunity.com/profiles/76561198857582544" class="sidebar-footer__link sidebar-footer__steam"
-      target="_blank">
-      <img src="assets/img/steam.png" alt="steam-valve" width="31px">
-    </a>
+    <ng-container *ngIf="!utilitiesService.getIsPro()">
+      <a href="https://steamcommunity.com/profiles/76561198857582544" class="sidebar-footer__link sidebar-footer__steam"
+        target="_blank">
+        <img src="assets/img/steam.png" alt="steam-valve" width="31px">
+      </a>
+    </ng-container>
     <a href="https://www.instagram.com/je_sappelle_owen/" class="sidebar-footer__link sidebar-footer__instagram"
       target="_blank">
       <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +46,7 @@
     </a>
   </div>
 
-  <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="flags"
+  <!-- <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="flags"
     placeholder="Select a Country">
     <ng-template pTemplate="selectedItem">
       <div class="flex align-items-center gap-2" *ngIf="selectedCountry">
@@ -60,7 +62,7 @@
         <div>{{ country.name }}</div>
       </div>
     </ng-template>
-  </p-dropdown>
+  </p-dropdown> -->
 
   <div class="sidebar-footer__rights">
     <p class="sidebar-footer__text1">Using <span style="color : rgb(250, 87, 87)">Angular</span></p>
