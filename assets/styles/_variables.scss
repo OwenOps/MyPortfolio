@@ -1,0 +1,17 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$height-breakpoints: (
+  mobile-portrait: 480px,
+  tablet-portrait: 600px,
+  tablet-landscape: 768px,
+  small-laptop: 900px,
+  standard-laptop: 1024px,
+  large-desktop: 1200px
+);
