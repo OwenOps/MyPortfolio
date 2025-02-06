@@ -12,9 +12,9 @@ export class SkillsComponent {
   @ViewChild('typedElement2', { static: true }) typedElement2!: ElementRef;
 
   constructor
-  (
-    private readonly utilitiesServices: UtilitiesService
-  ) {}
+    (
+      private readonly utilitiesServices: UtilitiesService
+    ) { }
 
   ngOnInit() {
     const options = {
@@ -38,6 +38,6 @@ export class SkillsComponent {
   }
 
   goToWork() {
-    this.utilitiesServices.goToAPage("work");
+    this.utilitiesServices.goToAPage(`work/${this.utilitiesServices.getProFromStorage()}`);
   }
 }

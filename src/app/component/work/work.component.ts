@@ -38,6 +38,6 @@ export class WorkComponent {
   }
 
   goToOther() {
-    this.utilitiesServices.goToAPage("other");
+    this.utilitiesServices.goToAPage(`other/${this.utilitiesServices.getProFromStorage()}`);
   }
 }

@@ -13,9 +13,9 @@ export class HomeComponent {
   showButton: boolean = false;
 
   constructor
-  (
-    private readonly utilitiesServices : UtilitiesService
-  ) {}
+    (
+      private readonly utilitiesServices: UtilitiesService
+    ) { }
 
   ngOnInit() {
     const options = {
@@ -44,6 +44,6 @@ export class HomeComponent {
   }
 
   goToAbout() {
-    this.utilitiesServices.goToAPage("about");
+    this.utilitiesServices.goToAPage(`about/${this.utilitiesServices.getProFromStorage()}`);
   }
 }

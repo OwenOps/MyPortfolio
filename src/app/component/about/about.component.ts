@@ -38,6 +38,6 @@ export class AboutComponent {
   }
 
   goToSkills() {
-    this.utilitiesServices.goToAPage("skills");
+    this.utilitiesServices.goToAPage(`skills/${this.utilitiesServices.getProFromStorage()}`);
   }
 }
