@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './component/home/home.component';
-import { AboutComponent } from './component/about/about.component';
-import { SkillsComponent } from './component/skills/skills.component';
-import { WorkComponent } from './component/work/work.component';
-import { OtherComponent } from './component/other/other.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/pages/home/home.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { SkillsComponent } from './components/pages/skills/skills.component';
+import { WorkComponent } from './components/pages/work/work.component';
+import { OtherComponent } from './components/pages/other/other.component';
 import { StatusGuard } from './guard/auth.guard';
 
 // Parameter is for showing professional portfolio or not

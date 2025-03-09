@@ -6,12 +6,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //-------Component-------//
 import { AppComponent } from './app.component';
-import { HomeComponent } from './component/home/home.component';
-import { AboutComponent } from './component/about/about.component';
-import { SkillsComponent } from './component/skills/skills.component';
-import { WorkComponent } from './component/work/work.component';
-import { OtherComponent } from './component/other/other.component';
-import { FooterComponent } from './component/footer/footer.component';
 
 //-------PrimeNG-------//
 import { ButtonModule } from 'primeng/button';
@@ -23,14 +17,21 @@ import { DropdownModule } from 'primeng/dropdown';
 
 //-------Service-------//
 import { AppRoutingModule } from './app-routing.module';
-import { SideBarComponent } from './component/side-bar/side-bar.component';
-import { TimelineComponent } from './layouts/timeline/timeline.component';
-import { AccordionComponent } from './layouts/accordion/accordion.component';
-import { MusicComponent } from './layouts/music/music.component';
-import { PhoneComponent } from './layouts/phone/phone.component';
-import { GamesComponent } from './layouts/games/games.component';
 import { FormsModule } from '@angular/forms';
-import { UtilitiesService } from './services/utilities/utilities.service';
+import { HomeComponent } from './components/pages/home/home.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { SkillsComponent } from './components/pages/skills/skills.component';
+import { WorkComponent } from './components/pages/work/work.component';
+import { OtherComponent } from './components/pages/other/other.component';
+import { SideBarFooterComponent } from './components/layouts/side-bar-footer/side-bar-footer.component';
+import { SideBarComponent } from './components/pages/side-bar/side-bar.component';
+import { TimelineComponent } from './components/layouts/timeline/timeline.component';
+import { AccordionComponent } from './components/layouts/accordion/accordion.component';
+import { MusicComponent } from './components/layouts/music/music.component';
+import { PhoneComponent } from './components/layouts/phone/phone.component';
+import { GamesComponent } from './components/layouts/games/games.component';
+import { ButtonNextComponent } from './components/layouts/button-next/button-next.component';
+import { UtilitiesService } from './core/services/utilities/utilities.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
+    SideBarFooterComponent,
     HomeComponent,
     AboutComponent,
     SkillsComponent,
@@ -50,7 +51,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccordionComponent,
     MusicComponent,
     PhoneComponent,
-    GamesComponent
+    GamesComponent,
+    ButtonNextComponent,
   ],
   imports: [
     BrowserModule,
