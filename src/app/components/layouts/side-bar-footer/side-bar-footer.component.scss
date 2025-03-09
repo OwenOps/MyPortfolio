@@ -18,9 +18,9 @@
   &__social-buttons {
     display: flex;
 
-    @include mixins.media-breakpoint-down(sm) {
+    // @include mixins.media-breakpoint-down(sm) {
 
-    }
+    // }
   }
 
   &__link {
