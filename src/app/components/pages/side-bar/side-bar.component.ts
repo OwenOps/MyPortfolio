@@ -16,7 +16,6 @@ export class SideBarComponent {
     (
       private readonly utilitiesService: UtilitiesService,
       protected translate: TranslateService,
-      private readonly ref: ElementRef
     ) { }
 
   ngAfterViewInit() {
