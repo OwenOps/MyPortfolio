@@ -1,18 +1,9 @@
 @use "../../../styles/mixin" as mixins;
-@import "../../../../constant/colors.scss";
-
-.home-content {
-  margin-left: 250px;
-
-  @include mixins.media-breakpoint-down(md) {
-    margin-left: 0;
-  }
-}
 
 .home {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +44,6 @@
   font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--tertiary-color-white);
   text-align: center;
 }

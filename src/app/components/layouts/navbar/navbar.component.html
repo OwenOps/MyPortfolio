@@ -1,0 +1,27 @@
+<header>
+  <nav class="navbar">
+    <label class="hamburger-container">
+      <input type="checkbox" [(ngModel)]="isMenuOpen">
+      <div class="checkmark">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+
+    <div class="navbar__links--mobile" *ngIf="isMenuOpen">
+      <ul>
+        <ng-container *ngFor="let link of lstSection">
+          <li>
+            <a (click)="goToThePage(link.root)">{{
+              link.header }}</a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+
+    <a routerLink="/" class="navbar__link-logo">
+      <img src="assets/img/test.jpg" alt="subsea7-brand" width="40" height="40" class="navbar__logo">
+    </a>
+  </nav>
+</header>

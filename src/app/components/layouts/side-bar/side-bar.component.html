@@ -1,11 +1,4 @@
-<label class="burger" for="burger">
-  <input type="checkbox" id="burger" (click)="toggleSidebar()">
-  <span></span>
-  <span></span>
-  <span></span>
-</label>
-
-<div class="sidebar" [ngClass]="{'sidebar--active': sideBarActive == true}">
+<div class="sidebar">
   <div class="sidebar__user">
     <img src="assets/img/test.jpg" alt="me" class="sidebar__user-img">
   </div>

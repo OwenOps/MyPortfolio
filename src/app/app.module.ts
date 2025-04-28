@@ -24,7 +24,7 @@ import { SkillsComponent } from './components/pages/skills/skills.component';
 import { WorkComponent } from './components/pages/work/work.component';
 import { OtherComponent } from './components/pages/other/other.component';
 import { SideBarFooterComponent } from './components/layouts/side-bar-footer/side-bar-footer.component';
-import { SideBarComponent } from './components/pages/side-bar/side-bar.component';
+import { SideBarComponent } from './components/layouts/side-bar/side-bar.component';
 import { TimelineComponent } from './components/layouts/timeline/timeline.component';
 import { AccordionComponent } from './components/layouts/accordion/accordion.component';
 import { MusicComponent } from './components/layouts/music/music.component';
@@ -32,6 +32,7 @@ import { PhoneComponent } from './components/layouts/phone/phone.component';
 import { GamesComponent } from './components/layouts/games/games.component';
 import { ButtonNextComponent } from './components/layouts/button-next/button-next.component';
 import { UtilitiesService } from './core/services/utilities/utilities.service';
+import { NavbarComponent } from './components/layouts/navbar/navbar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PhoneComponent,
     GamesComponent,
     ButtonNextComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

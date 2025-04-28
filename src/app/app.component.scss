@@ -1,4 +1,4 @@
-@use '../app/styles/mixin' as mixins;
+@use '../app/styles/mixin' as *;
 
 * {
   margin: 0;
@@ -15,21 +15,20 @@ h1 {
   color: white;
 }
 
-.main-content {
-  margin-left: 250px;
-  margin-top: 30px;
-}
-
 .content-title {
   display: flex;
   width: 90%;
   justify-content: center;
 }
 
-@include mixins.media-breakpoint-down(md) {
-  .main-content {
-    margin-left: 0;
-    flex-direction: column;
-    align-items: center;
+@include media-breakpoint-down(sm) {
+  .navbar {
+    display: block;
+    position: fixed;
+    z-index: 555;
+  }
+
+  .sidebar {
+    display: none;
   }
 }

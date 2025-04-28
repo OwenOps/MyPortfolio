@@ -1,0 +1,140 @@
+@use '../../../styles/mixin' as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--primary-color-dark-brown);
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 555;
+  transition: 0.5s ease;
+
+  @include media-breakpoint-down(md) {
+    width: 160px;
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  &__user-img {
+    position: relative;
+    top: 15px;
+    width: 180px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--quinary-color-black);
+
+    @include media-breakpoint-down(md) {
+      top: 25px;
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+  }
+
+  &__subtitle {
+    opacity: 0.8;
+  }
+
+  &__top::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: var(--secondary-color-orange-light);
+  }
+
+  &__nav {
+    padding: 0;
+    text-align: center;
+  }
+
+  &__nav-item {
+    position: relative;
+    line-height: 50px;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--tertiary-color-white);
+  }
+
+  &__nav-link {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-color: var(--secondary-color-orange);
+      transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+    }
+
+    &--active::after,
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    text-align: center;
+  }
+
+  & p {
+    opacity: 0;
+
+    &.bold {
+      font-weight: 600;
+    }
+
+    &--visible {
+      opacity: 1;
+    }
+  }
+}

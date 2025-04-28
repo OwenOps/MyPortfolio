@@ -1,8 +1,18 @@
-@use '../../../styles/mixin' as mixins;
-@import '../../../../constant/colors.scss';
+@use '../../../styles/mixin' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// html,
+// body {
+//   height: 100%;
+// }
 
 body {
-  background: #f4f4f4;
+  background: var(--tertiary-color-white);
   display: flex;
 }
 
@@ -12,7 +22,7 @@ body {
   padding: 0 15px;
   text-align: center;
 
-  @include mixins.media-breakpoint-down(md) {
+  @include media-breakpoint-down(md) {
     max-width: none;
   }
 }
@@ -41,13 +51,13 @@ ul li i:after {
 }
 
 #faq h1 {
-  color: #ffffff;
+  color: var(--tertiary-color-white);
   margin-bottom: 30px;
   margin-top: 0;
 }
 
 #faq h2 {
-  color: $color-light-orange-red;
+  color: var(--secondary-color-light-orange-red);
   font-size: 20px;
   line-height: 34px;
   text-align: left;
@@ -62,7 +72,7 @@ ul li i:after {
 }
 
 #faq p {
-  color: #ffffff;
+  color: var(--tertiary-color-white);
   text-align: left;
   font-size: 16px;
   line-height: 1.45;
@@ -100,11 +110,10 @@ ul li i:after {
   background: rgba(51, 51, 51, 0.24);
   box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.1);
   -webkit-tap-highlight-color: transparent;
-
 }
 
 #faq ul li:hover {
-  border: 1px solid $color-light-orange-red;
+  border: 1px solid var(--secondary-color-light-orange-red);
 }
 
 #faq ul li+li {
@@ -126,7 +135,7 @@ ul li i:after {
 ul li i:after {
   content: "";
   position: absolute;
-  background-color: $color-light-orange-red;
+  background-color: var(--secondary-color-light-orange-red);
   width: 3px;
   height: 9px;
 }
@@ -150,7 +159,7 @@ ul li i:after {
 }
 
 #faq ul li input[type=checkbox]:checked~h2 {
-  color: #ffffff;
+  color: var(--tertiary-color-white);
 }
 
 #faq ul li input[type=checkbox]:checked~p {
@@ -167,17 +176,6 @@ ul li i:after {
 
 #faq ul li input[type=checkbox]:checked~i:after {
   transform: translate(-2px, 0) rotate(-45deg);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 a,
@@ -210,25 +208,6 @@ img {
   vertical-align: middle;
   height: auto;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .container-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cardC,
-  .cardA,
-  .cardB,
-  .cardE,
-  .cardG,
-  .cardH,
-  .cardI,
-  .cardJ {
-    width: 80%;
-    margin: 15px 0;
-  }
 }
 
 @media (max-width: 576px) {
