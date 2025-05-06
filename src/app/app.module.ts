@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -38,45 +38,37 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    SideBarFooterComponent,
-    HomeComponent,
-    AboutComponent,
-    SkillsComponent,
-    WorkComponent,
-    OtherComponent,
-    SideBarComponent,
-    TimelineComponent,
-    AccordionComponent,
-    MusicComponent,
-    PhoneComponent,
-    GamesComponent,
-    ButtonNextComponent,
-    NavbarComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    AppRoutingModule,
-    TimelineModule,
-    CardModule,
-    DropdownModule,
-    FormsModule,
-    AccordionModule,
-    BrowserAnimationsModule,
-    ButtonModule,
-  ],
-
-  providers: [UtilitiesService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        SideBarFooterComponent,
+        HomeComponent,
+        AboutComponent,
+        SkillsComponent,
+        WorkComponent,
+        OtherComponent,
+        SideBarComponent,
+        TimelineComponent,
+        AccordionComponent,
+        MusicComponent,
+        PhoneComponent,
+        GamesComponent,
+        ButtonNextComponent,
+        NavbarComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        AppRoutingModule,
+        TimelineModule,
+        CardModule,
+        DropdownModule,
+        FormsModule,
+        AccordionModule,
+        BrowserAnimationsModule,
+        ButtonModule], providers: [UtilitiesService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
