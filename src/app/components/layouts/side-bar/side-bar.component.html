@@ -4,7 +4,7 @@
   </div>
   <div class="sidebar__top">
     <div class="sidebar__logo">
-      <h1 class="sidebar__title">Owen Rebeller</h1>
+      <h1 class="sidebar__title">{{ currentUser.fullName }}</h1>
       <ng-container *ngIf="sideBarActive">
         <p class="sidebar__subtitle animate__hinge animate__slow">
           {{ 'DEVELOPPER' | translate }}

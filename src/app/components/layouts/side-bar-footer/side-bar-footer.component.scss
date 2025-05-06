@@ -1,4 +1,4 @@
-@use '../../../styles/mixin' as mixins;
+@use '../../../styles/mixin' as *;
 
 .sidebar-footer {
   width: 100%;
@@ -18,7 +18,7 @@
   &__social-buttons {
     display: flex;
 
-    // @include mixins.media-breakpoint-down(sm) {
+    // @include min-width(sm) {
 
     // }
   }
@@ -39,7 +39,7 @@
       box-shadow: 0px 0px 6px 3px #00000027;
     }
 
-    @include mixins.media-breakpoint-down(sm) {
+    @include min-width(sm) {
       margin: 10px 5px;
     }
   }
@@ -103,7 +103,7 @@
   &__rights {
     font-size: 10px;
 
-    @include mixins.media-breakpoint-down(sm) {
+    @include min-width(sm) {
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -113,7 +113,7 @@
   &__text1 {
     text-align: center;
 
-    @include mixins.media-breakpoint-down(sm) {
+    @include min-width(sm) {
       margin: 10px 0px;
     }
   }

@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 
 @Component({
-  selector: 'app-button-next',
-  templateUrl: './button-next.component.html',
-  styleUrls: ['./button-next.component.scss']
+    selector: 'app-button-next',
+    templateUrl: './button-next.component.html',
+    styleUrls: ['./button-next.component.scss'],
+    standalone: false
 })
 export class ButtonNextComponent implements OnInit {
   @Input({ required: true }) showButton: boolean = false;

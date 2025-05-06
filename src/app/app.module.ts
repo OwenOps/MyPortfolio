@@ -7,17 +7,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 //-------Component-------//
 import { AppComponent } from './app.component';
 
-//-------PrimeNG-------//
-import { ButtonModule } from 'primeng/button';
-import { TimelineModule } from 'primeng/timeline';
-import { CardModule } from 'primeng/card';
-import { AccordionModule } from 'primeng/accordion';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DropdownModule } from 'primeng/dropdown';
-
 //-------Service-------//
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
@@ -33,42 +24,46 @@ import { GamesComponent } from './components/layouts/games/games.component';
 import { ButtonNextComponent } from './components/layouts/button-next/button-next.component';
 import { UtilitiesService } from './core/services/utilities/utilities.service';
 import { NavbarComponent } from './components/layouts/navbar/navbar.component';
+import { PrimengModule } from './shared/primeng.module';
+import { FormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@NgModule({ declarations: [
-        AppComponent,
-        SideBarFooterComponent,
-        HomeComponent,
-        AboutComponent,
-        SkillsComponent,
-        WorkComponent,
-        OtherComponent,
-        SideBarComponent,
-        TimelineComponent,
-        AccordionComponent,
-        MusicComponent,
-        PhoneComponent,
-        GamesComponent,
-        ButtonNextComponent,
-        NavbarComponent,
+@NgModule({
+  declarations:
+    [
+      AppComponent,
+      SideBarFooterComponent,
+      HomeComponent,
+      AboutComponent,
+      SkillsComponent,
+      WorkComponent,
+      OtherComponent,
+      SideBarComponent,
+      TimelineComponent,
+      AccordionComponent,
+      MusicComponent,
+      PhoneComponent,
+      GamesComponent,
+      ButtonNextComponent,
+      NavbarComponent,
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        AppRoutingModule,
-        TimelineModule,
-        CardModule,
-        DropdownModule,
-        FormsModule,
-        AccordionModule,
-        BrowserAnimationsModule,
-        ButtonModule], providers: [UtilitiesService, provideHttpClient(withInterceptorsFromDi())] })
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    AppRoutingModule,
+    FormsModule,
+    PrimengModule
+  ],
+  providers: [UtilitiesService, provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule { }

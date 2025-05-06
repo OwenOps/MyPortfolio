@@ -5,7 +5,8 @@ import { BaseNextComponent } from '../../shared/base-next/base-next.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  standalone: false
 })
 export class HomeComponent extends BaseNextComponent {
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
@@ -22,7 +23,7 @@ export class HomeComponent extends BaseNextComponent {
   override ngOnInit() {
     this.pathNextPage = "about/";
 
-    super.ngOnInit('Hello,', 'Welcome To My Portfolio !!', this.typedElement, this.typedElement2, this.showDelayButton)
+    super.ngOnInit('Hello,', 'Welcome To My Portfolio !', this.typedElement, this.typedElement2, this.showDelayButton)
 
     setTimeout(() => {
       this.showButton = true;

@@ -1,4 +1,4 @@
-@use "../../../styles/mixin" as mixins;
+@use "../../../styles/mixin" as *;
 
 .home {
   position: relative;
@@ -31,17 +31,14 @@
   flex-direction: column;
   margin: 0 auto;
   z-index: 55;
-  align-items: flex-start;
+  // align-items: flex-start;
   width: auto;
   justify-content: center;
-
-  @include mixins.media-breakpoint-down(md) {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 .typed-text {
-  font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
+  font-size: clamp(2.5rem, calc(3vw + 1rem), 4rem);
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 700;
   color: var(--tertiary-color-white);

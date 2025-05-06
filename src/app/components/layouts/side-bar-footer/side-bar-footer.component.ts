@@ -9,9 +9,10 @@ export interface Country {
 }
 
 @Component({
-  selector: 'app-side-bar-footer',
-  templateUrl: './side-bar-footer.component.html',
-  styleUrls: ['./side-bar-footer.component.scss']
+    selector: 'app-side-bar-footer',
+    templateUrl: './side-bar-footer.component.html',
+    styleUrls: ['./side-bar-footer.component.scss'],
+    standalone: false
 })
 export class SideBarFooterComponent {
   countries: Country[] | undefined;

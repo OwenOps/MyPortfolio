@@ -3,7 +3,7 @@
 .navbar {
   display: none;
 
-  @include media-breakpoint-down(sm) {
+  @include max-width(sm) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,13 +23,23 @@
     display: flex;
   }
 
+  &__left {
+    border-right: 1px solid var(--tertiary-color-white);
+    padding: 9px 15px 9px 0;
+  }
+
   &__link-logo {
     border-left: 1px solid var(--tertiary-color-white);
     padding-left: 15px;
   }
 
+  &__middle {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+  }
+
   &__logo {
-    width: 2.5rem;
+    width: 3.5rem;
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -44,7 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--primary-color-light-brown);
+    background-color: rgb(39 38 38);
     color: var(--tertiary-color-white);
     position: absolute;
     top: 100%;

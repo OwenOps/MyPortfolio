@@ -1,41 +1,42 @@
 @use 'variables' as *;
+@use 'sass:map';
 
-@mixin media-breakpoint-up($size) {
-    $breakpoint: map-get($grid-breakpoints, $size);
+@mixin min-width($size) {
+  $breakpoint: map.get($grid-breakpoints, $size);
 
-    @if $breakpoint !=null {
-        @media (min-width: #{$breakpoint}) {
-            @content;
-        }
+  @if $breakpoint !=null {
+    @media (min-width: #{$breakpoint}) {
+      @content;
     }
+  }
 }
 
-@mixin media-breakpoint-down($size) {
-    $breakpoint: map-get($grid-breakpoints, $size);
+@mixin max-width($size) {
+  $breakpoint: map.get($grid-breakpoints, $size);
 
-    @if $breakpoint !=null {
-        @media (max-width: #{$breakpoint}) {
-            @content;
-        }
+  @if $breakpoint !=null {
+    @media (max-width: #{$breakpoint}) {
+      @content;
     }
+  }
 }
 
-@mixin media-height-up($breakpoint) {
-    @if map-has-key($height-breakpoints, $breakpoint) {
-        $value: map-get($height-breakpoints, $breakpoint);
+@mixin min-height($breakpoint) {
+  @if map-has-key($height-breakpoints, $breakpoint) {
+    $value: map-get($height-breakpoints, $breakpoint);
 
-        @media (min-height: #{$value}) {
-            @content;
-        }
+    @media (min-height: #{$value}) {
+      @content;
     }
+  }
 }
 
-@mixin media-height-down($breakpoint) {
-    @if map-has-key($height-breakpoints, $breakpoint) {
-        $value: map-get($height-breakpoints, $breakpoint);
+@mixin max-height($breakpoint) {
+  @if map-has-key($height-breakpoints, $breakpoint) {
+    $value: map-get($height-breakpoints, $breakpoint);
 
-        @media (max-height: #{$value}) {
-            @content;
-        }
+    @media (max-height: #{$value}) {
+      @content;
     }
+  }
 }

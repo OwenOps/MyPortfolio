@@ -1,4 +1,4 @@
-@use '../../../styles/mixin' as mixins;
+@use '../../../styles/mixin' as *;
 
 .skills {
   display: flex;
@@ -46,11 +46,11 @@
   margin-top: 30px;
   justify-content: center;
 
-  @include mixins.media-breakpoint-down(md) {
+  @include min-width(md) {
     width: 65%;
   }
 
-  @include mixins.media-breakpoint-down(sm) {
+  @include min-width(sm) {
     width: 90%;
   }
 }

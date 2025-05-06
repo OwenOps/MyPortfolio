@@ -3,9 +3,10 @@ import { UtilitiesService } from 'src/app/core/services/utilities/utilities.serv
 import { BaseNextComponent } from '../../shared/base-next/base-next.component';
 
 @Component({
-  selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+    selector: 'app-work',
+    templateUrl: './work.component.html',
+    styleUrls: ['./work.component.scss'],
+    standalone: false
 })
 export class WorkComponent extends BaseNextComponent {
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;

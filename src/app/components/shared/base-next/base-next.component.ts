@@ -3,7 +3,8 @@ import { UtilitiesService } from 'src/app/core/services/utilities/utilities.serv
 import Typed from 'typed.js';
 
 @Directive({
-  selector: 'app-base-next',
+    selector: 'app-base-next',
+    standalone: false
 })
 export abstract class BaseNextComponent {
   pathNextPage: string = "";
