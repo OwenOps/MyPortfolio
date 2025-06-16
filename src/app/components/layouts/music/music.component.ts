@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class MusicComponent {
 
+    public playAudio(event: Event, audioId: string): void {
+        event.preventDefault();
+
+        const audioElement = document.getElementById(audioId) as HTMLAudioElement;
+        if (audioElement) {
+            audioElement.volume = 0.35;
+            audioElement.play();
+        }
+    }
 }
