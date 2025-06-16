@@ -15,13 +15,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../../../assets/img/b_skills.png");
+  background-image: url("../../../../assets/img/b_skills_blur.webp");
   background-size: cover;
-  filter: blur(4px) brightness(40%);
   background-attachment: fixed;
-  -webkit-filter: blur(4px) brightness(40%);
   z-index: 2;
-  opacity: 1;
 }
 
 #container-skills {

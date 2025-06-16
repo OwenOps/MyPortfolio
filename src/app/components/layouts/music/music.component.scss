@@ -1,3 +1,5 @@
+@use '../../../styles/mixin' as *;
+
 * {
   text-decoration: none;
 }
@@ -9,9 +11,10 @@
   border-radius: 15px;
   margin: 1em;
   color: #FFFFFF;
-  width: 310px;
+  width: 350px;
 }
 
+// SPOTIFY
 .loader {
   display: flex;
   flex-direction: row;
@@ -111,6 +114,10 @@
   align-self: center;
 }
 
+.name {
+  width: 150px;
+}
+
 .artist {
   font-size: 0.6em;
 }
@@ -131,4 +138,180 @@
   100% {
     height: 0.2em;
   }
+}
+
+// ACCORDION 
+#faq {
+  max-width: 20rem;
+  margin: auto;
+  text-align: center;
+
+  @include max-width(md) {
+    max-width: none;
+  }
+}
+
+section.faq {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#faq ul {
+  text-align: left;
+}
+
+.transition,
+p,
+ul li i:before,
+ul li i:after {
+  transition: all 0.3s;
+}
+
+#faq .no-select,
+#faq h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+#faq h1 {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#faq h2 {
+  font-size: 20px;
+  line-height: 34px;
+  text-align: left;
+  padding: 15px 15px 0;
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#faq label {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.45;
+  position: relative;
+  overflow-y: auto;
+  max-height: 250px;
+  will-change: max-height;
+  contain: layout;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: .3s opacity, .6s max-height;
+  hyphens: auto;
+  z-index: 2;
+  width: 100%;
+  display: inline-block;
+}
+
+#faq ul li:has(input[type=checkbox]:checked) {
+  background-color: rgb(26 26 26);
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+#faq ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+
+#faq ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#faq ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+#faq ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 25px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+#faq ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  touch-action: manipulation;
+}
+
+#faq ul li input[type=checkbox]:checked~h2 {
+  color: var(--tertiary-color-white);
+}
+
+#faq ul li input[type=checkbox]:checked~p {
+  margin-top: 0;
+  max-height: 0;
+  transition: .3s;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
+}
+
+a {
+  color: currentColor;
+  transition: .2s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: .3em 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
+
+.embed-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  padding: 0 20px;
+}
+
+#faq ul li input[type=checkbox]:checked~.embed-container {
+  max-height: 90px;
+  opacity: 1;
+  position: relative;
+  z-index: 5;
 }
