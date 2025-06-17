@@ -21,6 +21,7 @@
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "@primeng/themes": "^19.1.2",
+    "@primeuix/utils": "^0.5.4",
     "boxicons": "^2.1.4",
     "primeicons": "^6.0.1",
     "primeng": "^19.1.2",

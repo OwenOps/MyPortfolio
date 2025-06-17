@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { spotifyTracks, Track } from 'src/app/core/models/track';
 
 @Component({
     selector: 'app-music',
@@ -7,14 +8,16 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class MusicComponent {
+    tracks: Track[] = spotifyTracks;
+    lastTrackClicked?: Track;
 
-    public playAudio(event: Event, audioId: string): void {
-        event.preventDefault();
+    loadIframe(track: Track) {
+        if (this.lastTrackClicked != null)
+            this.lastTrackClicked.isLoaded = false;
 
-        const audioElement = document.getElementById(audioId) as HTMLAudioElement;
-        if (audioElement) {
-            audioElement.volume = 0.35;
-            audioElement.play();
-        }
+        track.isLoaded = true;
+        this.lastTrackClicked = track;
+
+        console.log(this.tracks)
     }
 }

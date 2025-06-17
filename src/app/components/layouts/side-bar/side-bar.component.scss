@@ -125,16 +125,4 @@
     width: 100%;
     text-align: center;
   }
-
-  & p {
-    opacity: 0;
-
-    &.bold {
-      font-weight: 600;
-    }
-
-    &--visible {
-      opacity: 1;
-    }
-  }
 }

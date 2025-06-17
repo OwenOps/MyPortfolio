@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { APP_CONSTANTS } from 'src/app/constants/app.constants';
+import { LANGUAGES } from 'src/app/constants/language.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +10,11 @@ import { Router } from '@angular/router';
 export class UtilitiesService {
   private isPro: boolean = false
 
-  constructor(private readonly router: Router) { }
+  constructor
+  (
+    private readonly router: Router,
+    private readonly translateService: TranslateService
+  ) { }
 
   goToAPage(route: string): void {
     this.router.navigate([route]);
@@ -28,5 +35,10 @@ export class UtilitiesService {
 
   getIsPro() {
     return this.isPro;
+  }
+
+  changeSiteLanguage(language: string) {
+    this.translateService.setDefaultLang(language ?? LANGUAGES.FR);
+    window.localStorage.setItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE, language);
   }
 }

@@ -1,23 +1,29 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LANGUAGES } from './constants/language.constants';
+import { APP_CONSTANTS } from './constants/app.constants';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class AppComponent {
 
   constructor
     (
       private readonly translate: TranslateService,
-      private readonly activatedRoute: ActivatedRoute
     ) {
     translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
-    translate.use('en');
+  }
+
+  ngOnInit(): void {
+    let currentLang = window.localStorage.getItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE)
+
+    if (currentLang != null)
+      this.translate.setDefaultLang(currentLang);
+    else this.translate.setDefaultLang(LANGUAGES.FR);
   }
 }
