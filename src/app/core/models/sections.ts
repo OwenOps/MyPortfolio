@@ -27,8 +27,8 @@ export const lstSections: Sections[] =
       "translationKey": "SIDEBAR.Work",
     },
     {
-      "header": "OTHER",
-      "root": "other",
-      "translationKey": "SIDEBAR.Other",
+      "header": "HOBBIES",
+      "root": "hobbies",
+      "translationKey": "SIDEBAR.Hobbies",
     }
   ]

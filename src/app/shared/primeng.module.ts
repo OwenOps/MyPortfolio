@@ -13,6 +13,7 @@ import { MessageModule } from 'primeng/message';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TagModule } from 'primeng/tag';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
@@ -30,6 +31,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     SelectModule,
     TagModule,
     ProgressSpinnerModule,
+    TooltipModule
   ],
   exports: [
     ButtonModule,
@@ -45,6 +47,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     SelectModule,
     TagModule,
     ProgressSpinnerModule,
+    TooltipModule
   ],
   providers: [
     MessageService

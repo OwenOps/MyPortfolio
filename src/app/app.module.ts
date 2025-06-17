@@ -15,7 +15,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { WorkComponent } from './components/pages/work/work.component';
-import { OtherComponent } from './components/pages/other/other.component';
+import { HobbiesComponent } from './components/pages/hobbies/hobbies.component';
 import { SideBarFooterComponent } from './components/layouts/side-bar-footer/side-bar-footer.component';
 import { SideBarComponent } from './components/layouts/side-bar/side-bar.component';
 import { TimelineComponent } from './components/layouts/timeline/timeline.component';
@@ -46,7 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       AboutComponent,
       SkillsComponent,
       WorkComponent,
-      OtherComponent,
+      HobbiesComponent,
       SideBarComponent,
       TimelineComponent,
       AccordionComponent,

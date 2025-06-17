@@ -1,4 +1,6 @@
 <div class="sidebar-footer">
+  <i class="pi pi-cog sidebar-footer__settings" [ngClass]="{ 'pi-spin': settingHover }"
+    (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" routerLink="/other/false"></i>
   <h3 class="sidebar-footer__title">Contact</h3>
   <div class="sidebar-footer__social-buttons">
     <a href="https://github.com/OwenOps" class="sidebar-footer__link sidebar-footer__github" target="_blank">

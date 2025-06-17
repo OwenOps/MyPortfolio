@@ -20,6 +20,8 @@ export class SideBarFooterComponent {
 
   selectedCountry: Country | undefined;
 
+  settingHover: boolean = false;
+
   constructor
     (
       private readonly translate: TranslateService,
