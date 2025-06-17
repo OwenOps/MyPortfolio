@@ -1,6 +1,7 @@
 export interface Sections {
   header: string,
   root: string,
+  translationKey: string;
 }
 
 export const lstSections: Sections[] =
@@ -8,21 +9,26 @@ export const lstSections: Sections[] =
     {
       "header": "HOME",
       "root": "home",
+      "translationKey": "SIDEBAR.Home",
     },
     {
       "header": "ABOUT",
-      "root": "about"
+      "root": "about",
+      "translationKey": "SIDEBAR.About",
     },
     {
       "header": "SKILLS",
-      "root": "skills"
+      "root": "skills",
+      "translationKey": "SIDEBAR.Skills",
     },
     {
       "header": "WORK",
-      "root": "work"
+      "root": "work",
+      "translationKey": "SIDEBAR.Work",
     },
     {
       "header": "OTHER",
-      "root": "other"
+      "root": "other",
+      "translationKey": "SIDEBAR.Other",
     }
   ]

@@ -1,4 +1,76 @@
 {
-  "home-welcome": "bienvenue",
-  "FULL_STACK_DEVELOPPER": "Full Stackss"
+  "SIDEBAR": {
+    "Full_Stack_Developper": "Full Stack",
+    "Home": "ACCUEIL",
+    "About": "À PROPOS",
+    "Skills": "COMPÉTENCES",
+    "Work": "PROJETS",
+    "Other": "AUTRE",
+    "Settings": "PARAMÈTRES",
+    "Contact": "Contact",
+    "Copyright": "© 2025 {{firstName}} {{name}} - Tous droits réservés"
+  },
+  "HOME": {
+    "Hello": "Bonjour,",
+    "Welcome": "Bienvenue sur mon portfolio !"
+  },
+  "ABOUT": {
+    "Title1": "À PROPOS DE MOI",
+    "Title2": "QUI SUIS-JE ?",
+    "Description": "Je m'appelle Owen, j'ai 21 ans et j'étudie l'informatique à Paris Descartes. Ma passion pour les ordinateurs remonte à l'enfance, lorsque j'ai découvert les jeux vidéo. Depuis, mon intérêt pour ce domaine n'a cessé de croître. J'aime explorer de nouvelles technologies et acquérir sans cesse de nouvelles compétences.",
+    "CareerPathTitle": "Mon Parcours",
+    "Timeline": {
+      "2020-2021": {
+        "Title": "Passé",
+        "Description": "J’ai suivi un lycée général avec une spécialité technologique (STI2D). Durant ces années, nous avons réalisé divers projets liés à l’internet des objets, en utilisant notamment des cartes Arduino."
+      },
+      "2022-2023": {
+        "Title": "Présent",
+        "Description": "Je prépare actuellement un Bachelor universitaire de technologie à Paris Cité. Nous y menons de nombreux projets dans des domaines variés, comme le développement d’applications ou les systèmes."
+      },
+      "2023-2025": {
+        "Title": "Présent",
+        "Description": "Je suis actuellement apprenti Développeur Full Stack chez Subsea7. Je participe à plusieurs projets de création d'applications web."
+      },
+      "2026": {
+        "Title": "Futur",
+        "Description": "Après l’obtention de mon BUT, je souhaiterais intégrer une école d’ingénieurs en informatique. Mon projet professionnel reste à affiner, mais je m’oriente vers une carrière de Développeur Full Stack ou DevOps."
+      }
+    }
+  },
+  "SKILLS": {
+    "Subtitle": "Mes Compétences",
+    "SectionTitle": "Compétences Techniques",
+    "Description": "Durant ces années en développement, j'ai réalisé plusieurs projets. Pour chaque projet, j'ai utilisé un langage de programmation différent et utilisé GitHub pour apprendre de nouvelles technologies. Vous pouvez retrouver ces projets sur mon profil GitHub.",
+    "CSharp": "J'ai implémenté le backend avec C# et développé des API REST, en utilisant Swagger pour la documentation.",
+    "Angular": "J'ai réalisé plusieurs projets Angular dans une entreprise pour développer de nouvelles solutions. J'ai également créé ce portfolio avec Angular.",
+    "AzureDevOps": "J'ai utilisé Azure et AzureDevOps pour créer des pipelines CI/CD durant mon apprentissage.",
+    "Java": "Nous avons créé des projets Java donnés par notre université, disponibles sur Github.",
+    "Flutter": "J'ai développé une application mobile adaptée pour le reporting des médicaments.",
+    "CPlusPlus": "Mon premier projet en C++, qui m'a permis de comprendre la logique de la programmation.",
+    "Git": "J'utilise git et github pour mettre en ligne les différents projets que j'ai réalisés.",
+    "Firebase": "Nous avons opté pour Firebase comme base de données pour notre application mobile, développée en Flutter."
+  },
+  "WORK": {
+    "Subtitle": "Mes Travaux",
+    "SectionTitle": "Projets",
+    "Description": "Sur cette page, vous trouverez une brève description des projets que j'ai créés. Grâce à eux, j'ai pu découvrir l'univers du codage et des nouvelles technologies. Pour chacun d'entre eux, vous pouvez les retrouver sur ma page GitHub.",
+    "SomeProjectsTitle": "Quelques projets",
+    "ProjectRedesignTitle": "Refonte d'un site",
+    "ProjectRedesignDesc": "Dans le cadre de notre cursus, j'ai dû sélectionner une commune et un site web existant, puis le redessiner pour le rendre plus moderne.",
+    "ProjectGraphsTitle": "Graphes",
+    "ProjectGraphsDesc": "Je me suis lancé dans l'implémentation de l'algorithme de Dijkstra sur différents types de graphes pour trouver le chemin le plus court pour chaque graphe donné. L'objectif principal était d'optimiser cet algorithme pour obtenir les temps de calcul les plus courts possibles, même sur de très grands graphes.",
+    "ProjectMastermindTitle": "Mastermind",
+    "ProjectMastermindDesc": "L'application recrée le jeu Mastermind, où le premier joueur crée une combinaison secrète que le second joueur doit deviner. Ce projet a été développé dans le cadre de mon cours d'informatique, où nous devions pratiquer l'utilisation de VB.NET.",
+    "ProjectMobileAppTitle": "Application Mobile",
+    "ProjectMobileAppDesc": "J'ai dû développer une application mobile. Cette application est complète, incluant un système d'authentification et des mises à jour de données à partir d'une base de données Firebase. Elle a également été conçue pour iOS et Android en utilisant Flutter."
+  },
+  "HOBBIES": {
+    "Subtitle": "Mes Loisirs",
+    "SectionTitle": "Activités",
+    "Description": "Voici mes loisirs et les activités que j'apprécie faire pendant mon temps libre.",
+    "CurrentlyListening": "Écoute actuelle",
+    "MoviesLoved": "Films Adorés",
+    "CurrentlyPlaying": "Joue actuellement"
+  }
 }

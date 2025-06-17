@@ -61,7 +61,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    pointer-events: none;
+    gap: 0.5rem;
   }
 
   &__title {
@@ -71,20 +71,14 @@
 
   &__subtitle {
     opacity: 0.8;
-  }
-
-  &__top::after {
-    content: "";
-    position: absolute;
-    left: 25%;
-    width: 50%;
-    height: 1px;
-    background-color: var(--secondary-color-orange-light);
+    margin-bottom: 10px;
   }
 
   &__nav {
-    padding: 0;
+    padding: 3.5rem;
     text-align: center;
+    border-top: 1px solid #fa7d0987;
+    border-bottom: 1px solid #fa7d0987;
   }
 
   &__nav-item {

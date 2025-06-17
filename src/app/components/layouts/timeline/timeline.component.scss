@@ -60,7 +60,7 @@ ul li {
   grid-row: span 2;
   display: grid;
   grid-template-rows: min-content min-content min-content;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color-light-brown);
 
   @include min-width(lg) {
     --inlineP: 0;

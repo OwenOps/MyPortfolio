@@ -3,8 +3,8 @@ import { UtilitiesService } from 'src/app/core/services/utilities/utilities.serv
 import Typed from 'typed.js';
 
 @Directive({
-    selector: 'app-base-next',
-    standalone: false
+  selector: 'app-base-next',
+  standalone: false
 })
 export abstract class BaseNextComponent {
   pathNextPage: string = "";
@@ -17,30 +17,36 @@ export abstract class BaseNextComponent {
   }
 
   ngOnInit(stringOption1: string, stringOption2: string, typedElement: ElementRef, typedElement2: ElementRef, showDelay?: number): void {
-    const options = {
-      strings: [stringOption1],
-      typeSpeed: 70,
-      backSpeed: 0,
-      loop: false,
-      showCursor: false,
-    };
 
-    const options2 = {
-      strings: [stringOption2],
-      startDelay: showDelay ?? 0,
-      typeSpeed: 70,
-      backSpeed: 0,
-      loop: false,
-      showCursor: false,
-    };
 
-    if (typedElement.nativeElement) {
-      new Typed(typedElement.nativeElement, options);
-    }
+    this.utilities.getTranslatedStrings([stringOption1, stringOption2]).subscribe(translations => {
+      const opt1 = translations[stringOption1];
+      const opt2 = translations[stringOption2];
 
-    if (typedElement2.nativeElement) {
-      new Typed(typedElement2.nativeElement, options2);
-    }
+      const options = {
+        strings: [opt1],
+        typeSpeed: 70,
+        backSpeed: 0,
+        loop: false,
+        showCursor: false,
+      };
 
+      const options2 = {
+        strings: [opt2],
+        startDelay: showDelay ?? 0,
+        typeSpeed: 70,
+        backSpeed: 0,
+        loop: false,
+        showCursor: false,
+      };
+
+      if (typedElement.nativeElement) {
+        new Typed(typedElement.nativeElement, options);
+      }
+
+      if (typedElement2.nativeElement) {
+        new Typed(typedElement2.nativeElement, options2);
+      }
+    });
   }
 }

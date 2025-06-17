@@ -1,4 +1,76 @@
 {
-  "home-welcome": "welcome",
-  "FULL_STACK_DEVELOPPER": "Full Stack"
+  "SIDEBAR": {
+    "Full_Stack_Developper": "Full Stack",
+    "Home": "HOME",
+    "About": "ABOUT",
+    "Skills": "SKILLS",
+    "Work": "WORK",
+    "Other": "OTHER",
+    "Settings": "SETTINGS",
+    "Contact": "Contact",
+    "Copyright": "© 2025 {{firstName}} {{name}} - All rights reserved"
+  },
+  "HOME": {
+    "Hello": "Hello,",
+    "Welcome": "Welcome To My Portfolio !"
+  },
+  "ABOUT": {
+    "Title1": "ABOUT ME",
+    "Title2": "WHO AM I?",
+    "Description": "My name is Owen, I'm 21 years old, and I'm studying computer science at Paris Descartes. My interest in computers goes back to my childhood, when I discovered video games. Since then, my passion for this field has continued to grow. I love exploring new technologies and learning new skills.",
+    "CareerPathTitle": "My Career Path",
+    "Timeline": {
+      "2020-2021": {
+        "Title": "Past",
+        "Description": "I attended a general high school with a technological specialization (STI2D). During these years, we created various IoT projects using Arduino boards."
+      },
+      "2022-2023": {
+        "Title": "Present",
+        "Description": "I am currently preparing a Bachelor's degree in technology at Paris Cité. We work on various projects in fields such as systems and application development."
+      },
+      "2023-2025": {
+        "Title": "Present",
+        "Description": "I am currently an apprentice Full Stack Developer at Subsea7. I am involved in multiple projects creating web applications."
+      },
+      "2026": {
+        "Title": "Future",
+        "Description": "After completing my Bachelor's in technology, I plan to attend a computer engineering school. My career path is still undecided, but I am considering becoming either a Full Stack Developer or a DevOps engineer."
+      }
+    }
+  },
+  "SKILLS": {
+    "Subtitle": "My Skills",
+    "SectionTitle": "Technical Skills",
+    "Description": "During those years in development, I did several projects. For each project, I used a different programming language and utilized GitHub to learn new technologies. You can find these projects on my GitHub profile.",
+    "CSharp": "I implemented the backend with C# and developed REST APIs, utilizing Swagger for documentation.",
+    "Angular": "I did several Angular projects in a company to develop new solutions. I also did this portfolio with Angular.",
+    "AzureDevOps": "Using Azure and AzureDevOps to create CI/CD pipelines during my apprenticeship.",
+    "Java": "We created java projects given by our university available on Github.",
+    "Flutter": "I have developed a mobile application tailored for reporting medications.",
+    "CPlusPlus": "My first project in C++, which helped me understand the logic of coding.",
+    "Git": "I am using git and github to put the various projects I've done.",
+    "Firebase": "We opted for Firebase as the database for our mobile application, developed in Flutter."
+  },
+  "WORK": {
+    "Subtitle": "My Work",
+    "SectionTitle": "Projects",
+    "Description": "On this page, you'll find a brief description of the projects that I created. Thanks to them, I've been able to discover the world of coding and new technologies. For each of them, you can find them on my GitHub page.",
+    "SomeProjectsTitle": "Some projects",
+    "ProjectRedesignTitle": "Redesign of a Site",
+    "ProjectRedesignDesc": "As part of our cursus, I had to select a commune and an existing website, then redesign the site to make it more modern.",
+    "ProjectGraphsTitle": "Graphs",
+    "ProjectGraphsDesc": "I set out to implement Dijkstra's algorithm on various types of graphs to find the shortest path for each given graph. The main objective was to optimize this algorithm to achieve the shortest possible computation times, even on very large graphs.",
+    "ProjectMastermindTitle": "Mastermind",
+    "ProjectMastermindDesc": "The application recreates the Mastermind game, where the first player creates a secret combination that the second player must guess. This project was developed as part of my computer science course, where we had to practice using VB.NET.",
+    "ProjectMobileAppTitle": "Mobile Application",
+    "ProjectMobileAppDesc": "I had to develop a mobile application. This application is complete, including an authentication system and data updates from a Firebase database. It has also been designed for iOS and Android using Flutter."
+  },
+  "HOBBIES": {
+    "Subtitle": "My Hobbies",
+    "SectionTitle": "Activities",
+    "Description": "Here you can find my hobbies and the activities I enjoy doing in my free time.",
+    "CurrentlyListening": "Currently Listening",
+    "MoviesLoved": "Loved Movies",
+    "CurrentlyPlaying": "Currently Playing"
+  }
 }

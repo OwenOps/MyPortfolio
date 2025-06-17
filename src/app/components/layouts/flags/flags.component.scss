@@ -1,0 +1,25 @@
+.p-select {
+    background-color: var(--primary-color-dark-brown);
+    border: 1px solid var(--primary-color-light-brown);
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.1rem 0.5rem;
+    width: 4rem;
+
+    &:hover {
+        border: 1px solid var(--secondary-color-orange);
+    }
+}
+
+::ng-deep .p-select-dropdown {
+    justify-content: end;
+    width: 0;
+}
+
+::ng-deep .p-select-option.p-select-option-selected.p-focus {
+    background-color: var(--primary-color-dark-brown);
+}
+
+::ng-deep .p-select-option:not(.p-select-option-selected):not(.p-disabled).p-focus {
+    background-color: var(--primary-color-light-brown);
+}

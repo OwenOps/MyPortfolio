@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { APP_CONSTANTS } from 'src/app/constants/app.constants';
 import { LANGUAGES } from 'src/app/constants/language.constants';
-import { Flag } from 'src/app/core/models/flags';
 import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 
 @Component({
@@ -13,7 +12,7 @@ import { UtilitiesService } from 'src/app/core/services/utilities/utilities.serv
 export class FlagsComponent {
 
   languagesOption: string[] = [];
-  selectedLanguage: string = localStorage.getItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE) ?? LANGUAGES.FR;
+  selectedLanguage: string = localStorage.getItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE) ?? LANGUAGES.EN;
 
   constructor
     (

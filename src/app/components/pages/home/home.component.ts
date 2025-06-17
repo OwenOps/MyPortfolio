@@ -20,10 +20,10 @@ export class HomeComponent extends BaseNextComponent {
       utilitiesServices: UtilitiesService
     ) { super(utilitiesServices) }
 
-  override ngOnInit() {
+  override ngOnInit(): void {
     this.pathNextPage = "about/";
 
-    super.ngOnInit('Hello,', 'Welcome To My Portfolio !', this.typedElement, this.typedElement2, this.showDelayButton)
+    super.ngOnInit('HOME.Hello', 'HOME.Welcome', this.typedElement, this.typedElement2, this.showDelayButton);
 
     setTimeout(() => {
       this.showButton = true;

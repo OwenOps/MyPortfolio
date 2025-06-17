@@ -1,13 +1,13 @@
-<p-select [options]="languagesOption" [(ngModel)]="selectedLanguage" optionLabel="name" filterBy="name"
-    styleClass="w-5rem" (ngModelChange)="changeSiteLanguage($event)" appendTo="body">
+<p-select [options]="languagesOption" [(ngModel)]="selectedLanguage" filterBy="name"
+    (ngModelChange)="changeSiteLanguage($event)" appendTo="body" styleClass="test">
     <ng-template pTemplate="selectedItem" let-selectedOption>
-        <div class="flex align-items-center gap-1">
-            <img src="assets/i18n_flags/{{selectedOption}}.png" style="width: 18px" alt="{{selectedOption}} flag" />
+        <div style="display: flex; align-items: center;">
+            <img src="assets/i18n_flags/{{selectedOption}}.png" style="width: 25px" alt="{{selectedOption}} flag" />
         </div>
     </ng-template>
     <ng-template let-country pTemplate="item">
-        <div class="flex align-items-center gap-1">
-            <img src="assets/i18n_flags/{{country}}.png" style="width: 18px" alt="countries flag" />
+        <div style="display: flex; align-items: center; padding: 0 5px;">
+            <img src="assets/i18n_flags/{{country}}.png" style="width: 25px" alt="countries flag" />
         </div>
     </ng-template>
 </p-select>

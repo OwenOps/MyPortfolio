@@ -18,6 +18,6 @@ export class OtherComponent extends BaseNextComponent {
     ) { super(utilitiesServices) }
 
   override ngOnInit() {
-    super.ngOnInit('HOBBIES', 'OTHER', this.typedElement, this.typedElement2)
+    super.ngOnInit('HOBBIES.Subtitle', 'HOBBIES.SectionTitle', this.typedElement, this.typedElement2)
   }
 }

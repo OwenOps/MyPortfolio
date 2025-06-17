@@ -16,7 +16,7 @@ export class AppComponent {
     (
       private readonly translate: TranslateService,
     ) {
-    translate.addLangs(['en', 'fr']);
+    translate.addLangs([LANGUAGES.EN, LANGUAGES.FR]);
   }
 
   ngOnInit(): void {
@@ -24,6 +24,6 @@ export class AppComponent {
 
     if (currentLang != null)
       this.translate.setDefaultLang(currentLang);
-    else this.translate.setDefaultLang(LANGUAGES.FR);
+    else this.translate.setDefaultLang(LANGUAGES.EN);
   }
 }

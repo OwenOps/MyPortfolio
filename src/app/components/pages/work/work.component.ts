@@ -20,6 +20,6 @@ export class WorkComponent extends BaseNextComponent {
   override ngOnInit() {
     this.pathNextPage = "other/"
 
-    super.ngOnInit('MY PROJECTS', 'MY WORK', this.typedElement, this.typedElement2)
+    super.ngOnInit('WORK.Subtitle', 'WORK.SectionTitle', this.typedElement, this.typedElement2)
   }
 }

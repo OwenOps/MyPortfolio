@@ -45,27 +45,8 @@
       </svg>
     </a>
   </div>
-
-  <!-- <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="flags" placeholder="Select a Country">
-    <ng-template pTemplate="selectedItem">
-      <div class="flex align-items-center gap-2" *ngIf="selectedCountry">
-        <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
-          [class]="'flag flag-' + selectedCountry.code.toLowerCase()" style="width: 18px" />
-        <div>{{ selectedCountry.name }}</div>
-      </div>
-    </ng-template>
-    <ng-template let-country pTemplate="item">
-      <div class="flex align-items-center gap-2">
-        <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
-          [class]="'flag flag-' + country.code.toLowerCase()" style="width: 18px" />
-        <div>{{ country.name }}</div>
-      </div>
-    </ng-template>
-  </p-dropdown> -->
-
   <div class="sidebar-footer__rights">
-    <p class="sidebar-footer__text1">Using <span style="color : rgb(250, 87, 87)">Angular</span></p>
-    <p class="sidebar-footer__text2">© 2025 {{currentUser.firstName}} {{currentUser.name}} - Tous droits réservés</p>
+    <p class="sidebar-footer__text2">{{ 'SIDEBAR.Copyright' | translate:{ firstName: currentUser.firstName, name:
+      currentUser.name } }}</p>
   </div>
-
 </div>
