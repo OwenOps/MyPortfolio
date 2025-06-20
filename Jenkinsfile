@@ -52,10 +52,10 @@ pipeline {
 
   post {
     success {
-      echo '🚀 Site déployé sur GitHub Pages avec succès !'
+      echo 'Site déployé sur GitHub Pages avec succès !'
     }
     failure {
-      echo '❌ Une erreur est survenue lors du build ou du déploiement.'
+      echo 'Une erreur est survenue lors du build ou du déploiement.'
     }
   }
 }
