@@ -1,25 +1,26 @@
 import { Directive, ElementRef } from '@angular/core';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 import Typed from 'typed.js';
+import { BaseComponent } from '../base/base.component';
 
 @Directive({
   selector: 'app-base-next',
   standalone: false
 })
-export abstract class BaseNextComponent {
+export abstract class BaseNextComponent extends BaseComponent {
   pathNextPage: string = "";
 
-  constructor
-    (
-      protected readonly utilities: UtilitiesService
-    ) {
-
+  constructor() {
+    super();
   }
 
-  ngOnInit(stringOption1: string, stringOption2: string, typedElement: ElementRef, typedElement2: ElementRef, showDelay?: number): void {
-
-
-    this.utilities.getTranslatedStrings([stringOption1, stringOption2]).subscribe(translations => {
+  initialize(
+    stringOption1: string,
+    stringOption2: string,
+    typedElement: ElementRef,
+    typedElement2: ElementRef,
+    showDelay?: number
+  ): void {
+    this.utilitiesService.getTranslatedStrings([stringOption1, stringOption2]).subscribe(translations => {
       const opt1 = translations[stringOption1];
       const opt2 = translations[stringOption2];
 

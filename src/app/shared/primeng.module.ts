@@ -14,6 +14,10 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { TagModule } from 'primeng/tag';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { TooltipModule } from 'primeng/tooltip';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { CheckboxModule } from 'primeng/checkbox';
+import { TextareaModule } from 'primeng/textarea';
 
 @NgModule({
   declarations: [],
@@ -31,7 +35,11 @@ import { TooltipModule } from 'primeng/tooltip';
     SelectModule,
     TagModule,
     ProgressSpinnerModule,
-    TooltipModule
+    TooltipModule,
+    DynamicDialogModule,
+    SelectButtonModule,
+    CheckboxModule,
+    TextareaModule,
   ],
   exports: [
     ButtonModule,
@@ -47,7 +55,11 @@ import { TooltipModule } from 'primeng/tooltip';
     SelectModule,
     TagModule,
     ProgressSpinnerModule,
-    TooltipModule
+    TooltipModule,
+    DynamicDialogModule,
+    SelectButtonModule,
+    CheckboxModule,
+    TextareaModule,
   ],
   providers: [
     MessageService

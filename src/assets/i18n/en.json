@@ -8,7 +8,8 @@
     "Hobbies": "HOBBIES",
     "Settings": "SETTINGS",
     "Contact": "Contact",
-    "Copyright": "© 2025 {{firstName}} {{name}} - All rights reserved"
+    "Copyright": "© 2025 {{firstName}} {{name}} - All rights reserved",
+    "Last_Update": "Last Update: {{date}}"
   },
   "HOME": {
     "Hello": "Hello,",
@@ -72,5 +73,25 @@
     "CurrentlyListening": "Currently Listening",
     "MoviesLoved": "Loved Movies",
     "CurrentlyPlaying": "Currently Playing"
+  },
+  "PREFERENCES": {
+    "Themes": "Themes",
+    "Navigation": "Navigation",
+    "Contact": "Contact",
+    "Theme_Brown": "Brown",
+    "Theme_Light": "Light",
+    "Theme_Green": "Green",
+    "Theme_Blue": "Blue",
+    "Theme_Gray": "Gray",
+    "Theme_Red": "Red",
+    "Theme_Purple": "Purple",
+    "Single_Page": "Single Page",
+    "Pro_Mode": "Pro Mode",
+    "Phone_Mode": "Phone Mode",
+    "Send": "Send",
+    "Contact_Title": "Contact Me",
+    "Name": "Name",
+    "Email": "Email",
+    "Message": "Message"
   }
 }

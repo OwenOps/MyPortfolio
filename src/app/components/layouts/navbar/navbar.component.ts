@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { lstSections, Sections } from 'src/app/core/models/sections';
 import { lstUser, User } from 'src/app/core/models/user';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
+import { BaseComponent } from '../../shared/base/base.component';
+import { DialogPreferencesComponent } from '../_dialogs/dialog-preferences/dialog-preferences.component';
 
 @Component({
   selector: 'app-navbar',
@@ -9,18 +10,38 @@ import { UtilitiesService } from 'src/app/core/services/utilities/utilities.serv
   styleUrls: ['./navbar.component.scss'],
   standalone: false
 })
-export class NavbarComponent {
+export class NavbarComponent extends BaseComponent {
   isMenuOpen: boolean = false;
   lstSection: Sections[] = lstSections;
   currentUser: User = lstUser[0];
 
-  constructor
-    (
-      private readonly utilitiesService: UtilitiesService
-    ) { }
+  settingHover: boolean = false;
+
+  constructor() { super() }
 
   goToThePage(path: string): void {
-    this.utilitiesService.goToAPage(`${path}/${this.utilitiesService.getProFromStorage()}`);
-    this.isMenuOpen = false;
+    if (!this.isSinglePage) {
+      this.utilitiesService.goToAPage(`${path}/${this.isPro}`);
+      this.isMenuOpen = false;
+    }
+    this.goToSection(path);
+  }
+
+  goToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+
+    if (!section)
+      return;
+
+    if (this.isPhoneSize) {
+      const offset = 100;
+      const top = section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+    else section.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  openDialog() {
+    this.utilitiesService.openDialog(DialogPreferencesComponent, "Preferences");
   }
 }

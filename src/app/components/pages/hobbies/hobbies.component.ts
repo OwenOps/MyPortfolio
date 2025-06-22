@@ -1,12 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 import { BaseNextComponent } from '../../shared/base-next/base-next.component';
 
 @Component({
-    selector: 'app-hobbies',
-    templateUrl: './hobbies.component.html',
-    styleUrls: ['./hobbies.component.scss'],
-    standalone: false
+  selector: 'app-hobbies',
+  templateUrl: './hobbies.component.html',
+  styleUrls: ['./hobbies.component.scss'],
+  standalone: false
 })
 export class HobbiesComponent extends BaseNextComponent {
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
@@ -14,10 +13,9 @@ export class HobbiesComponent extends BaseNextComponent {
 
   constructor
     (
-      protected utilitiesServices: UtilitiesService
-    ) { super(utilitiesServices) }
+  ) { super() }
 
-  override ngOnInit() {
-    super.ngOnInit('HOBBIES.Subtitle', 'HOBBIES.SectionTitle', this.typedElement, this.typedElement2)
+  ngOnInit() {
+    this.initialize('HOBBIES.Subtitle', 'HOBBIES.SectionTitle', this.typedElement, this.typedElement2)
   }
 }

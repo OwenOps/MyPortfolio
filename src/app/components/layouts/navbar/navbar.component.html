@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar">
+  <nav class="navbar" [ngClass]="{'display-flex': isPhoneMode || isPhoneSize, 'display-none': !isPhoneMode && !isPhoneSize}">
     <div class="navbar__left">
       <label class="hamburger-container">
         <input type="checkbox" [(ngModel)]="isMenuOpen">
@@ -9,6 +9,11 @@
           <span></span>
         </div>
       </label>
+
+      <div class="settings-container">
+        <i class="pi pi-cog navbar__left-settings" [ngClass]="{ 'pi-spin': settingHover }"
+          (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" (click)="openDialog()"></i>
+      </div>
     </div>
 
     <div class="navbar__links--mobile" *ngIf="isMenuOpen">

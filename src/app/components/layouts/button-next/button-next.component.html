@@ -1,4 +1,4 @@
-<button *ngIf="showButton" class="button" (click)="gotNextPage()">
+<button *ngIf="showButton && !isSinglePage" class="button" (click)="gotNextPage()">
   <div class="button-box">
     <span class="button-elem">
       <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">

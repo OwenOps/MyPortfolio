@@ -11,7 +11,7 @@
 
   &__settings {
     font-size: 1.5rem;
-    color: var(--secondary-color-orange);
+    color: var(--secondary-color);
 
     &:hover {
       cursor: pointer;
@@ -110,6 +110,5 @@
 
   &__text2 {
     text-align: center;
-    margin: 10px 0px;
   }
 }

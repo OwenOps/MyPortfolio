@@ -1,4 +1,4 @@
-<div class="other">
+<div class="other" [ngClass]="{'no-background': isSinglePage}">
   <div id="container-other">
     <div class="content-title">
       <div id="title">
@@ -13,7 +13,7 @@
       <div>
         <app-phone></app-phone>
       </div>
-      <div *ngIf="!utilitiesServices.getIsPro()">
+      <div *ngIf="!isPro">
         <app-games></app-games>
       </div>
     </div>

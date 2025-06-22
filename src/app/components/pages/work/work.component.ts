@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 import { BaseNextComponent } from '../../shared/base-next/base-next.component';
 
 @Component({
@@ -14,12 +13,12 @@ export class WorkComponent extends BaseNextComponent {
 
   constructor
     (
-      utilitiesServices: UtilitiesService
-    ) { super(utilitiesServices) }
+      
+    ) { super() }
 
-  override ngOnInit() {
+  ngOnInit() {
     this.pathNextPage = "hobbies/"
 
-    super.ngOnInit('WORK.Subtitle', 'WORK.SectionTitle', this.typedElement, this.typedElement2)
+    this.initialize('WORK.Subtitle', 'WORK.SectionTitle', this.typedElement, this.typedElement2)
   }
 }

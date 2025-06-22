@@ -1,0 +1,44 @@
+@use '../../../styles/mixin' as *;
+
+.contact-us {
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgb(42, 42, 42);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    @include max-width(xl) {
+        gap: 3rem;
+    }
+
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--tertiary-color-white);
+        padding: 0 15px 15px;
+        border-radius: 10px;
+        align-items: center;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+
+            input,
+            button,
+            p-select {
+                width: 100% !important;
+            }
+        }
+    }
+}

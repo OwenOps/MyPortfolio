@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 import { BaseNextComponent } from '../../shared/base-next/base-next.component';
 
 @Component({
@@ -17,13 +16,13 @@ export class HomeComponent extends BaseNextComponent {
 
   constructor
     (
-      utilitiesServices: UtilitiesService
-    ) { super(utilitiesServices) }
+      
+    ) { super() }
 
-  override ngOnInit(): void {
+  ngOnInit(): void {
     this.pathNextPage = "about/";
 
-    super.ngOnInit('HOME.Hello', 'HOME.Welcome', this.typedElement, this.typedElement2, this.showDelayButton);
+    this.initialize('HOME.Hello', 'HOME.Welcome', this.typedElement, this.typedElement2, this.showDelayButton);
 
     setTimeout(() => {
       this.showButton = true;

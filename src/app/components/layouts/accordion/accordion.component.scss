@@ -6,11 +6,6 @@
   padding: 0;
 }
 
-// html,
-// body {
-//   height: 100%;
-// }
-
 body {
   background: var(--tertiary-color-white);
   display: flex;
@@ -57,7 +52,7 @@ ul li i:after {
 }
 
 #faq h2 {
-  color: var(--secondary-color-light-orange-red);
+  color: var(--secondary-color-light);
   font-size: 20px;
   line-height: 34px;
   text-align: left;
@@ -78,7 +73,6 @@ ul li i:after {
   line-height: 1.45;
   position: relative;
   overflow-y: auto;
-  /* Ajout du défilement vertical */
   max-height: 250px;
   will-change: max-height;
   contain: layout;
@@ -113,7 +107,7 @@ ul li i:after {
 }
 
 #faq ul li:hover {
-  border: 1px solid var(--secondary-color-light-orange-red);
+  border: 1px solid var(--secondary-color-light);
 }
 
 #faq ul li+li {
@@ -135,7 +129,7 @@ ul li i:after {
 ul li i:after {
   content: "";
   position: absolute;
-  background-color: var(--secondary-color-light-orange-red);
+  background-color: var(--secondary-color-ligh);
   width: 3px;
   height: 9px;
 }

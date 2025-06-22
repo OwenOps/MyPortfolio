@@ -1,26 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @use '/src/app/styles/mixin' as *;
+@use 'app/styles/themes.scss';
 
 @import "primeicons/primeicons.css";
-
-:root {
-  --primary-color-dark-brown: #2F2519;
-  --primary-color-light-brown: #4A3F35;
-  --primary-color-light-brown: #4a3f35cf;
-  --secondary-color-orange: #FA7D09;
-  --secondary-color-orange-light: #fa7d0987;
-  --secondary-color-light-orange-red: #FF4301;
-
-  --admin-color-red: rgb(233, 10, 10);
-  --tertiary-color-white: white;
-  --quinary-color-black: #000000;
-
-  --spotify-color: #54b758;
-
-  --gray-color: gray;
-  --gray-light-line: rgb(128 128 128 / 11%);
-  --gray-bold: rgb(75, 74, 74);
-}
 
 html {
   padding: 0;
@@ -29,7 +11,7 @@ html {
 }
 
 body {
-  background-color: var(--primary-color-light-brown);
+  background-color: var(--primary-color-light);
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
   line-height: 1.8;
@@ -40,8 +22,8 @@ body::-webkit-scrollbar {
 }
 
 .p-card {
-  background-color: var(--primary-color-dark-brown);
-  color: white;
+  background-color: var(--primary-color-dark);
+  color: var(--tertiary-color-white);
   padding: 0px;
   margin: 0px;
 }
@@ -56,7 +38,7 @@ body::-webkit-scrollbar {
 }
 
 #title h3 {
-  color: var(--secondary-color-orange);
+  color: var(--secondary-color);
 }
 
 .subtitle {
@@ -64,7 +46,7 @@ body::-webkit-scrollbar {
   font-size: 15px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
-  color: var(--gray-color);
+  color: var(--gray-color) !important;
   font-weight: 550;
   letter-spacing: 5px;
 }
@@ -79,10 +61,74 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
+.p-dialog.custom-dialog {
+  background-color: rgb(39, 38, 38);
+  color: var(--tertiary-color-white);
+  border-radius: 12px;
+  border: 1px solid var(--gray-light-line);
+  padding: 0.7rem;
+
+  .p-dialog-header {
+    background-color: transparent;
+    color: var(--tertiary-color-white);
+    font-weight: bold;
+    padding: 0 1.5rem;
+    align-items: self-end;
+    margin-bottom: 1rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--tertiary-color-white-light);
+      left: 0;
+      top: 60px;
+    }
+  }
+
+  .p-dialog-footer {
+    background-color: transparent;
+    border-top: 1px solid var(--gray-light-line);
+    padding: 0.3rem 0.3rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-checkbox {
+  display: block;
+
+  &.p-disabled {
+    opacity: var(--p-disabled-opacity);
+  }
+}
+
+.required {
+  color: var(--admin-color-red);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-none {
+  display: none;
+}
+
+.no-background::before {
+  background-image: none !important;
+}
+
 .main-content {
   margin-left: 250px;
   margin-top: 30px;
 
+  // Responsive fallback (media queries)
   @include max-width(md) {
     margin-left: 160px;
   }
@@ -90,5 +136,27 @@ body::-webkit-scrollbar {
   @include max-width(sm) {
     margin-left: 0;
     margin-top: 80px;
+  }
+
+  // When parent or self has mode classes
+  &.phone-mode {
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  &.computer-mode {
+    margin-left: 250px;
+    margin-top: 30px;
+  }
+
+  // OR if applied on a parent:
+  .phone-mode & {
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .computer-mode & {
+    margin-left: 250px;
+    margin-top: 30px;
   }
 }

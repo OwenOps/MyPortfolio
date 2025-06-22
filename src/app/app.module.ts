@@ -27,11 +27,16 @@ import { ButtonNextComponent } from './components/layouts/button-next/button-nex
 import { UtilitiesService } from './core/services/utilities/utilities.service';
 import { NavbarComponent } from './components/layouts/navbar/navbar.component';
 import { PrimengModule } from './shared/primeng.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SafeUrlPipe } from './components/shared/pipe/safe-url.pipe';
 import { FlagsComponent } from './components/layouts/flags/flags.component';
 
 import Aura from '@primeng/themes/aura';
+import { DialogService } from 'primeng/dynamicdialog';
+import { DialogPreferencesComponent } from './components/layouts/_dialogs/dialog-preferences/dialog-preferences.component';
+import { FormContactComponent } from './components/layouts/form-contact/form-contact.component';
+import { CustomLoadingComponent } from './components/layouts/custom-loading/custom-loading.component';
+import { AllPagesComponent } from './components/pages/all-pages/all-pages.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,7 +60,11 @@ export function HttpLoaderFactory(http: HttpClient) {
       GamesComponent,
       ButtonNextComponent,
       NavbarComponent,
-      FlagsComponent
+      FlagsComponent,
+      DialogPreferencesComponent,
+      FormContactComponent,
+      CustomLoadingComponent,
+      AllPagesComponent,
     ],
   bootstrap: [AppComponent],
   imports: [
@@ -69,11 +78,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     PrimengModule,
     SafeUrlPipe
+
   ],
   providers: [
     UtilitiesService,
+    DialogService,
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimationsAsync(),
     providePrimeNG({

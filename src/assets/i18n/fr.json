@@ -8,7 +8,8 @@
     "Hobbies": "LOISIRS",
     "Settings": "PARAMÈTRES",
     "Contact": "Contact",
-    "Copyright": "© 2025 {{firstName}} {{name}} - Tous droits réservés"
+    "Copyright": "© 2025 {{firstName}} {{name}} - Tous droits réservés",
+    "Last_Update": "Dernière mise à jour : {{date}}"
   },
   "HOME": {
     "Hello": "Bonjour,",
@@ -40,7 +41,7 @@
   },
   "SKILLS": {
     "Subtitle": "Mes Compétences",
-    "SectionTitle": "Compétences Techniques",
+    "SectionTitle": "Compétences",
     "Description": "Durant ces années en développement, j'ai réalisé plusieurs projets. Pour chaque projet, j'ai utilisé un langage de programmation différent et utilisé GitHub pour apprendre de nouvelles technologies. Vous pouvez retrouver ces projets sur mon profil GitHub.",
     "CSharp": "J'ai implémenté le backend avec C# et développé des API REST, en utilisant Swagger pour la documentation.",
     "Angular": "J'ai réalisé plusieurs projets Angular dans une entreprise pour développer de nouvelles solutions. J'ai également créé ce portfolio avec Angular.",
@@ -72,5 +73,25 @@
     "CurrentlyListening": "Écoute actuelle",
     "MoviesLoved": "Films Adorés",
     "CurrentlyPlaying": "Joue actuellement"
+  },
+  "PREFERENCES": {
+    "Themes": "Thèmes",
+    "Navigation": "Navigation",
+    "Contact": "Contact",
+    "Theme_Brown": "Marron",
+    "Theme_Light": "Clair",
+    "Theme_Green": "Vert",
+    "Theme_Blue": "Bleu",
+    "Theme_Red": "Rouge",
+    "Theme_Gray": "Gris",
+    "Theme_Purple": "Violet",
+    "Single_Page": "Page unique",
+    "Pro_Mode": "Mode Pro",
+    "Phone_Mode": "Mode Téléphone",
+    "Send": "Envoyer",
+    "Contact_Title": "Me contacter",
+    "Name": "Nom",
+    "Email": "Email",
+    "Message": "Message"
   }
 }

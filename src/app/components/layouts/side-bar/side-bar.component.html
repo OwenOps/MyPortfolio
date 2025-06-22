@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" [ngClass]="{'display-flex': !isPhoneMode && !isPhoneSize, 'display-none': isPhoneMode || isPhoneSize}">
   <div class="sidebar__user">
     <img src="assets/img/test.jpg" alt="me" class="sidebar__user-img">
   </div>

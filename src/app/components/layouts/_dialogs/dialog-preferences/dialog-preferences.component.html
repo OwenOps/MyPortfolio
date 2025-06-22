@@ -1,0 +1,55 @@
+<div class="dialog-content">
+    <div class="dialog-content__section">
+        <div class="dialog-content__section__title">
+            <h3>{{ 'PREFERENCES.Themes' | translate }}</h3>
+            <i class="pi pi-palette"></i>
+        </div>
+
+        <div class="radio-input">
+            <label *ngFor="let theme of themes; let i = index"
+                [ngClass]="selectedTheme === theme.value ? theme.value : ''">
+                <input type="radio" name="value-radio" [value]="theme.value" [(ngModel)]="selectedTheme"
+                    (change)="onThemeChange(i)" />
+                <span>{{ 'PREFERENCES.' + theme.label | translate }}</span>
+            </label>
+            <span class="selection"
+                [ngStyle]="{transform: 'translateX(calc(100% * ' + selectedIndex + ' / ' + themes.length + '))'}"
+                [ngClass]="selectedTheme"></span>
+        </div>
+    </div>
+
+    <div class="dialog-content__section">
+
+        <div class="dialog-content__section__title">
+            <h3>{{ 'PREFERENCES.Navigation' | translate }}</h3>
+            <i class="pi pi-directions"></i>
+        </div>
+
+        <div class="dialog-content__elements">
+            <p-checkbox value="Single Page" [binary]="true" inputId="single-page" [(ngModel)]="isSinglePage"
+                (onChange)="setSinglePage($event)" />
+            <label for="single-page">{{ 'PREFERENCES.Single_Page' | translate }}</label>
+        </div>
+
+        <div class="dialog-content__elements">
+            <p-checkbox value="Pro Mode" [binary]="true" inputId="pro-mode" (onChange)="setProMode($event)"
+                [disabled]="!isUserAdmin" [(ngModel)]="isPro" />
+            <label for="pro-mode">{{ 'PREFERENCES.Pro_Mode' | translate }}</label>
+        </div>
+
+        <div class="dialog-content__elements" *ngIf="!isPhoneSize">
+            <p-checkbox value="Mobile Phone" [binary]="true" [(ngModel)]="isPhoneMode" inputId="mobile-phone"
+                (onChange)="setPhoneMode($event)" />
+            <label for="mobile-phone">{{ 'PREFERENCES.Phone_Mode' | translate }}</label>
+        </div>
+    </div>
+
+    <div class="dialog-content__section">
+        <div class="dialog-content__section__title">
+            <h3>{{ 'PREFERENCES.Contact' | translate }}</h3>
+            <i class="pi pi-user"></i>
+        </div>
+
+        <app-form-contact></app-form-contact>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
+import { BaseComponent } from '../../shared/base/base.component';
 
 @Component({
     selector: 'app-button-next',
@@ -7,17 +7,17 @@ import { UtilitiesService } from 'src/app/core/services/utilities/utilities.serv
     styleUrls: ['./button-next.component.scss'],
     standalone: false
 })
-export class ButtonNextComponent implements OnInit {
+export class ButtonNextComponent extends BaseComponent implements OnInit {
   @Input({ required: true }) showButton: boolean = false;
   @Input({ required: true }) pathNextPage: string = "";
 
-  constructor(private readonly utilities: UtilitiesService) { }
+  constructor() { super() }
 
   ngOnInit(): void {
-    this.pathNextPage = `${this.pathNextPage}/${this.utilities.getProFromStorage()}`
+    this.pathNextPage = `${this.pathNextPage}/${this.isPro}`
   }
 
   gotNextPage() {
-    this.utilities.goToAPage(this.pathNextPage);
+    this.utilitiesService.goToAPage(this.pathNextPage);
   }
 }

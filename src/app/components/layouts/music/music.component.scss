@@ -4,6 +4,10 @@
   text-decoration: none;
 }
 
+p, h2, h3, h1 {
+    color: var(--tertiary-color-white);
+}
+
 .main {
   background-color: #191414;
   padding: 1em;

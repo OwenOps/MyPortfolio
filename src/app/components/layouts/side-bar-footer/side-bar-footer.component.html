@@ -1,6 +1,6 @@
 <div class="sidebar-footer">
-  <!-- <i class="pi pi-cog sidebar-footer__settings" [ngClass]="{ 'pi-spin': settingHover }"
-    (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" routerLink="/other/false"></i> -->
+  <i class="pi pi-cog sidebar-footer__settings" [ngClass]="{ 'pi-spin': settingHover }"
+    (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" (click)="openDialog()"></i>
   <h3 class="sidebar-footer__title">Contact</h3>
   <div class="sidebar-footer__social-buttons">
     <a href="https://github.com/OwenOps" class="sidebar-footer__link sidebar-footer__github" target="_blank">
@@ -24,7 +24,7 @@
         </g>
       </svg>
     </a>
-    <ng-container *ngIf="!utilitiesService.getIsPro()">
+    <ng-container *ngIf="!isPro">
       <a href="https://steamcommunity.com/profiles/76561198857582544" class="sidebar-footer__link sidebar-footer__steam"
         target="_blank">
         <img src="assets/img/steam.png" alt="steam-valve" width="31px">
@@ -50,5 +50,8 @@
   <div class="sidebar-footer__rights">
     <p class="sidebar-footer__text2">{{ 'SIDEBAR.Copyright' | translate:{ firstName: currentUser.firstName, name:
       currentUser.name } }}</p>
+    <p>
+      {{ 'SIDEBAR.Last_Update' | translate:{ date: '22 / 06 / 2025' } }}
+    </p>
   </div>
 </div>

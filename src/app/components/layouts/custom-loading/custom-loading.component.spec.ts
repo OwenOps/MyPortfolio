@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OtherComponent } from './other.component';
+import { CustomLoadingComponent } from './custom-loading.component';
 
-describe('OtherComponent', () => {
-  let component: OtherComponent;
-  let fixture: ComponentFixture<OtherComponent>;
+describe('CustomLoadingComponent', () => {
+  let component: CustomLoadingComponent;
+  let fixture: ComponentFixture<CustomLoadingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OtherComponent]
+      imports: [CustomLoadingComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OtherComponent);
+    fixture = TestBed.createComponent(CustomLoadingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
