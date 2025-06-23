@@ -37,8 +37,8 @@ body::-webkit-scrollbar {
   padding: 0;
 }
 
-#title h3 {
-  color: var(--secondary-color);
+.page-title h3 {
+  color: var(--secondary-color) !important;
 }
 
 .subtitle {
@@ -122,6 +122,15 @@ body::-webkit-scrollbar {
 
 .no-background::before {
   background-image: none !important;
+}
+
+// TOAST
+.p-toast-detail {
+  line-height: 18px;
+}
+
+.p-toast-message-text {
+  gap: 0;
 }
 
 .main-content {

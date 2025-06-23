@@ -72,7 +72,8 @@
     "Description": "Here you can find my hobbies and the activities I enjoy doing in my free time.",
     "CurrentlyListening": "Currently Listening",
     "MoviesLoved": "Loved Movies",
-    "CurrentlyPlaying": "Currently Playing"
+    "CurrentlyPlaying": "Currently Playing",
+    "Music_Warning": "The music might start loudly — adjust your volume if needed."
   },
   "PREFERENCES": {
     "Themes": "Themes",

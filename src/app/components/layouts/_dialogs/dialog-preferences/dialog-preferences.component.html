@@ -28,19 +28,23 @@
         <div class="dialog-content__elements">
             <p-checkbox value="Single Page" [binary]="true" inputId="single-page" [(ngModel)]="isSinglePage"
                 (onChange)="setSinglePage($event)" />
-            <label for="single-page">{{ 'PREFERENCES.Single_Page' | translate }}</label>
-        </div>
-
-        <div class="dialog-content__elements">
-            <p-checkbox value="Pro Mode" [binary]="true" inputId="pro-mode" (onChange)="setProMode($event)"
-                [disabled]="!isUserAdmin" [(ngModel)]="isPro" />
-            <label for="pro-mode">{{ 'PREFERENCES.Pro_Mode' | translate }}</label>
+            <label for="single-page" class="label">{{ 'PREFERENCES.Single_Page' | translate }}</label>
         </div>
 
         <div class="dialog-content__elements" *ngIf="!isPhoneSize">
             <p-checkbox value="Mobile Phone" [binary]="true" [(ngModel)]="isPhoneMode" inputId="mobile-phone"
                 (onChange)="setPhoneMode($event)" />
-            <label for="mobile-phone">{{ 'PREFERENCES.Phone_Mode' | translate }}</label>
+            <label for="mobile-phone" class="label">{{ 'PREFERENCES.Phone_Mode' | translate }}</label>
+        </div>
+
+        <div class="dialog-content__elements">
+            <p-checkbox value="Pro Mode" [binary]="true" inputId="pro-mode" (onChange)="setProMode($event)"
+                [disabled]="!isUserAdmin" [(ngModel)]="isPro" />
+            <div class="label">
+                <label for="pro-mode">{{ 'PREFERENCES.Pro_Mode' | translate }}</label>
+                <i class="pi pi-info-circle" pTooltip="Show more personnal infos" tooltipPosition="right"
+                    [showDelay]="500"></i>
+            </div>
         </div>
     </div>
 

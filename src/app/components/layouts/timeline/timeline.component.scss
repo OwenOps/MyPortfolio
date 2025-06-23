@@ -61,6 +61,7 @@ ul li:not(:last-child) {
 }
 
 ul li {
+  border-radius: 25px;
   grid-column: 2;
   --inlineP: 1.5rem;
   margin-inline: var(--inlineP);

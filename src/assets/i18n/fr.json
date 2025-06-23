@@ -72,7 +72,8 @@
     "Description": "Voici mes loisirs et les activités que j'apprécie faire pendant mon temps libre.",
     "CurrentlyListening": "Écoute actuelle",
     "MoviesLoved": "Films Adorés",
-    "CurrentlyPlaying": "Joue actuellement"
+    "CurrentlyPlaying": "Joue actuellement",
+    "Music_Warning": "La musique est assez forte — ajustez le volume si nécessaire."
   },
   "PREFERENCES": {
     "Themes": "Thèmes",

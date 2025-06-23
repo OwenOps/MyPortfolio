@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { spotifyTracks, Track } from 'src/app/core/models/track';
+import { MessageService } from 'src/app/core/services/message/message.service';
+import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 
 @Component({
     selector: 'app-music',
@@ -10,6 +12,13 @@ import { spotifyTracks, Track } from 'src/app/core/models/track';
 export class MusicComponent {
     tracks: Track[] = spotifyTracks;
     lastTrackClicked?: Track;
+    userHasBeenWarnedMusic: boolean = false;
+
+    constructor
+        (
+            private readonly messageService: MessageService,
+            private readonly utilitiesService: UtilitiesService
+        ) { }
 
     loadIframe(track: Track) {
         if (this.lastTrackClicked != null)
@@ -18,6 +27,11 @@ export class MusicComponent {
         track.isLoaded = true;
         this.lastTrackClicked = track;
 
-        console.log(this.tracks)
+        if (!this.userHasBeenWarnedMusic) {
+            this.utilitiesService.getTranslatedStrings(["HOBBIES.Music_Warning"]).subscribe(translations => {
+                this.messageService.showMessageInfo(translations["HOBBIES.Music_Warning"]);
+                this.userHasBeenWarnedMusic = true;
+            });
+        }
     }
 }
