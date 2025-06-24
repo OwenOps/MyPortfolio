@@ -37,6 +37,7 @@ import { DialogPreferencesComponent } from './components/layouts/_dialogs/dialog
 import { FormContactComponent } from './components/layouts/form-contact/form-contact.component';
 import { CustomLoadingComponent } from './components/layouts/custom-loading/custom-loading.component';
 import { AllPagesComponent } from './components/pages/all-pages/all-pages.component';
+import { SocialMediaComponent } from "./components/layouts/social-media/social-media.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -70,19 +71,19 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
     }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     PrimengModule,
-    SafeUrlPipe
-
-  ],
+    SafeUrlPipe,
+    SocialMediaComponent,
+],
   providers: [
     UtilitiesService,
     DialogService,

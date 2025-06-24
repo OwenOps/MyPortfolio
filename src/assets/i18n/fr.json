@@ -55,7 +55,7 @@
   "WORK": {
     "Subtitle": "Mes Travaux",
     "SectionTitle": "Projets",
-    "Description": "Sur cette page, vous trouverez une brève description des projets que j'ai créés. Grâce à eux, j'ai pu découvrir l'univers du codage et des nouvelles technologies. Pour chacun d'entre eux, vous pouvez les retrouver sur ma page GitHub.",
+    "Description": "Sur cette page, vous trouverez une brève description des projets que j'ai créés. Grâce à eux, j'ai pu découvrir l'univers du codage et des nouvelles technologies.",
     "SomeProjectsTitle": "Quelques projets",
     "ProjectRedesignTitle": "Refonte d'un site",
     "ProjectRedesignDesc": "Dans le cadre de notre cursus, j'ai dû sélectionner une commune et un site web existant, puis le redessiner pour le rendre plus moderne.",
@@ -64,7 +64,11 @@
     "ProjectMastermindTitle": "Mastermind",
     "ProjectMastermindDesc": "L'application recrée le jeu Mastermind, où le premier joueur crée une combinaison secrète que le second joueur doit deviner. Ce projet a été développé dans le cadre de mon cours d'informatique, où nous devions pratiquer l'utilisation de VB.NET.",
     "ProjectMobileAppTitle": "Application Mobile",
-    "ProjectMobileAppDesc": "J'ai dû développer une application mobile. Cette application est complète, incluant un système d'authentification et des mises à jour de données à partir d'une base de données Firebase. Elle a également été conçue pour iOS et Android en utilisant Flutter."
+    "ProjectMobileAppDesc": "J'ai dû développer une application mobile. Cette application est complète, incluant un système d'authentification et des mises à jour de données à partir d'une base de données Firebase. Elle a également été conçue pour iOS et Android en utilisant Flutter.",
+    "NamiFlow": "NamiFlow",
+    "NamiFlowDesc": "Ce projet consiste à recréer un transfert de fichiers tout en ajoutant une nouvelle sécurité. Contrairement aux autres, les fichiers sont analysés grâce à l'API de VirusTotal.",
+    "FolderCompare": "Comparaison de dossier",
+    "FolderCompareDesc": "Un petit algorithme en C# qui permet, à partir de deux chemins, de scanner deux dossiers et de voir les différences. Le résultat est stocké dans un fichier Excel et, à la fin, je reçois un mail."
   },
   "HOBBIES": {
     "Subtitle": "Mes Loisirs",
@@ -93,6 +97,9 @@
     "Contact_Title": "Me contacter",
     "Name": "Nom",
     "Email": "Email",
-    "Message": "Message"
+    "Message": "Message",
+    "Form_Already_Sent": "Vous avez déjà envoyé un mail.",
+    "Email_Sent_Success": "Email envoyé avec succès.",
+    "Email_Sent_Error": "Erreur lors de l'envoi de l'email."
   }
 }

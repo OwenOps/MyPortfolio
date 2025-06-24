@@ -15,6 +15,7 @@ import { BaseComponent } from './components/shared/base/base.component';
   standalone: false
 })
 export class AppComponent extends BaseComponent {
+  isMdMode: boolean = false;
 
   constructor
     (
@@ -28,9 +29,16 @@ export class AppComponent extends BaseComponent {
 
     translate.addLangs([LANGUAGES.EN, LANGUAGES.FR]);
 
-    this.breakpointObserver.observe(['(max-width: 576px)'])
+    this.breakpointObserver.observe(['(max-width: 576px)',])
       .subscribe(result => {
         this.userState.setIsPhoneSize(result.matches);
+      });
+
+    this.breakpointObserver.observe([
+      `(min-width: 576px) and (max-width: 768px)`
+    ])
+      .subscribe(result => {
+        this.isMdMode = result.matches;
       });
   }
 

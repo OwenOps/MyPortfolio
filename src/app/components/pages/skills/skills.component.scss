@@ -198,8 +198,22 @@ h1 {
   .cardH,
   .cardI,
   .cardJ {
-    width: 80%;
+    width: 57%;
     margin: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .cardC,
+  .cardA,
+  .cardB,
+  .cardE,
+  .cardG,
+  .cardH,
+  .cardI,
+  .cardJ {
+    width: 65%;
   }
 }
 

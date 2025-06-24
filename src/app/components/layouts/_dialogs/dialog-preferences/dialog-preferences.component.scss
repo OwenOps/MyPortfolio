@@ -1,3 +1,5 @@
+@use '../../../../styles/mixin' as *;
+
 .dialog-content {
     margin-top: 1rem;
     height: 500px;
@@ -56,15 +58,22 @@
 
 // RADIO BUTTON
 .radio-input {
-    display: flex;
-    overflow-x: scroll;
-    border-radius: 999px;
-    border: 1px solid gray;
+    --container_width: 420px;
     position: relative;
-    width: 100%;
-    max-width: 400px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--gray-bold) transparent;
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid gray;
+    width: var(--container_width);
+    overflow: hidden;
+
+    @include max-width(md) {
+        overflow-x: scroll;
+        width: 100%;
+        max-width: 400px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--gray-bold) transparent;
+    }
 }
 
 .radio-input input {
@@ -72,7 +81,7 @@
 }
 
 .radio-input label {
-    flex: 0 0 60px;
+    flex: 0 0 35px;
     scroll-snap-align: start;
     background-color: rgb(39, 38, 38);
     padding: 15px;
@@ -86,6 +95,12 @@
     color: inherit;
     transition: color 0.2s ease, background-color 0.2s ease;
     border-radius: 10px;
+
+    @include max-width(md) {
+        flex: 0 0 60px;
+        padding: 13px 15px;
+        font-size: 11px;
+    }
 }
 
 .radio-input label.light {
@@ -149,11 +164,5 @@
 @media (max-width: 600px) {
     .selection {
         display: none;
-    }
-
-    .radio-input label {
-        flex: 0 0 60px;
-        font-size: 12px;
-        padding: 8px;
     }
 }

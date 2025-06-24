@@ -137,11 +137,6 @@ body::-webkit-scrollbar {
   margin-left: 250px;
   margin-top: 30px;
 
-  // Responsive fallback (media queries)
-  @include max-width(md) {
-    margin-left: 160px;
-  }
-
   @include max-width(sm) {
     margin-left: 0;
     margin-top: 80px;
@@ -167,5 +162,9 @@ body::-webkit-scrollbar {
   .computer-mode & {
     margin-left: 250px;
     margin-top: 30px;
+  }
+
+  &.md-mode {
+    margin-left: 160px !important;
   }
 }

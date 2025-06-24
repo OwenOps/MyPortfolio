@@ -1,6 +1,13 @@
 <div class="contact-us">
     <div class="contact-us__form-container">
-        <h1>{{ 'PREFERENCES.Contact_Title' | translate }}</h1>
+        <div>
+            <h1>{{ 'PREFERENCES.Contact_Title' | translate }}</h1>
+
+            <ng-container *ngIf="isPhoneSize || isPhoneMode">
+                <app-social-media></app-social-media>
+            </ng-container>
+
+        </div>
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <p-floatlabel variant="on">
                 <label for="name">
@@ -40,8 +47,8 @@
 
             <div class="p-field">
                 <ng-container *ngIf="!isLoading else loading">
-                    <button type="submit" pButton [label]="'PREFERENCES.Send' | translate" [disabled]="contactForm.invalid"
-                        class="secondary-button active"></button>
+                    <button type="submit" pButton [label]="'PREFERENCES.Send' | translate"
+                        [disabled]="contactForm.invalid" class="secondary-button active"></button>
                 </ng-container>
                 <ng-template #loading>
                     <app-custom-loading [isLoading]="isLoading"></app-custom-loading>

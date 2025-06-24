@@ -8,6 +8,7 @@ export class StorageService {
   private readonly ADMIN_KEY = 'APP_IS_ADMIN';
   private readonly PHONE_MODE_KEY = 'APP_IS_PHONE';
   private readonly SINGLE_MODE_KEY = 'APP_IS_SINGLE';
+  private readonly FORM_CONTACT_SENT = 'FORM_CONTACT_SENT';
 
   saveIsPro(val: boolean): void {
     localStorage.setItem(this.PRO_KEY, val ? 'true' : 'false');
@@ -26,6 +27,10 @@ export class StorageService {
     return localStorage.getItem(this.SINGLE_MODE_KEY) == 'true';
   }
 
+  getIsFormSent(): boolean {
+    return localStorage.getItem(this.FORM_CONTACT_SENT) == 'true';
+  }
+
   saveIsAdmin(): void {
     localStorage.setItem(this.ADMIN_KEY, 'true');
   }
@@ -36,6 +41,10 @@ export class StorageService {
 
   saveIsSinglePage(val: boolean): void {
     localStorage.setItem(this.SINGLE_MODE_KEY, val ? 'true' : 'false');
+  }
+
+  saveIsFormSent(val: boolean): void {
+    localStorage.setItem(this.FORM_CONTACT_SENT, val ? 'true' : 'false');
   }
 
   isAdmin(): boolean {

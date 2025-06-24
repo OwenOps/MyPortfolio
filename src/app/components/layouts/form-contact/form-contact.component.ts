@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { lstUser, User } from 'src/app/core/models/user';
-import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 import { BaseComponent } from '../../shared/base/base.component';
-import { MessageService } from 'src/app/core/services/message/message.service';
+import { StorageService } from 'src/app/core/services/storage/storage.service';
 
 @Component({
   selector: 'app-form-contact',
@@ -19,6 +18,7 @@ export class FormContactComponent extends BaseComponent {
   constructor
     (
       private readonly fb: FormBuilder,
+      private readonly storageService: StorageService
     ) { super() }
 
   ngOnInit() {
@@ -43,23 +43,39 @@ export class FormContactComponent extends BaseComponent {
       userMessage: formValue.message,
     };
 
+    // One per person
+    if (this.storageService.getIsFormSent()) {
+      this.utilitiesService.getTranslatedStrings(["PREFERENCES.Form_Already_Sent"]).subscribe(translation => {
+        const error = translation["PREFERENCES.Form_Already_Sent"]
+        this.messageService.showMessageError(error);
+        this.contactForm.reset();
+      })
+      return;
+    }
+
     this.sendMail(data);
   }
 
   sendMail(data: any) {
     this.startLoading();
-    this.messageService.showMessageSuccess("Email envoyé avec succès.");
-    this.utilitiesService.sendEmail(data).then(
-      () => {
-        this.messageService.showMessageSuccess("Email envoyé avec succès.");
-        this.contactForm.reset();
-      },
-      (error) => {
-        this.messageService.showMessageError('Erreur lors de l\'envoi de l\'email');
-        console.error(error);
-      }
-    ).finally(() => {
-      this.stopLoading();
-    });
+
+    this.utilitiesService.getTranslatedStrings(["PREFERENCES.Email_Sent_Success", "CONTACT.Email_Sent_Error"]).subscribe(translation => {
+      const successMessage = translation["PREFERENCES.Email_Sent_Success"]
+      const errorMessage = translation["PREFERENCES.Email_Sent_Error"];
+
+      this.utilitiesService.sendEmail(data).then(
+        () => {
+          this.storageService.saveIsFormSent(true);
+          this.messageService.showMessageSuccess(successMessage);
+          this.contactForm.reset();
+        },
+        (error) => {
+          this.messageService.showMessageError(errorMessage);
+          console.error(error);
+        }
+      ).finally(() => {
+        this.stopLoading();
+      });
+    })
   }
 }
