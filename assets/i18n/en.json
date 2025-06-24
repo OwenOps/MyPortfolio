@@ -8,11 +8,12 @@
     "Hobbies": "HOBBIES",
     "Settings": "SETTINGS",
     "Contact": "Contact",
-    "Copyright": "© 2025 {{firstName}} {{name}} - All rights reserved"
+    "Copyright": "© 2025 {{firstName}} {{name}} - All rights reserved",
+    "Last_Update": "Last Update: {{date}}"
   },
   "HOME": {
     "Hello": "Hello,",
-    "Welcome": "Welcome To My Portfolio !!"
+    "Welcome": "Welcome To My Portfolio !"
   },
   "ABOUT": {
     "Title1": "ABOUT ME",
@@ -54,7 +55,7 @@
   "WORK": {
     "Subtitle": "My Work",
     "SectionTitle": "Projects",
-    "Description": "On this page, you'll find a brief description of the projects that I created. Thanks to them, I've been able to discover the world of coding and new technologies. For each of them, you can find them on my GitHub page.",
+    "Description": "On this page, you'll find a brief description of the projects that I created. Thanks to them, I've been able to discover the world of coding and new technologies.",
     "SomeProjectsTitle": "Some projects",
     "ProjectRedesignTitle": "Redesign of a Site",
     "ProjectRedesignDesc": "As part of our cursus, I had to select a commune and an existing website, then redesign the site to make it more modern.",
@@ -63,7 +64,11 @@
     "ProjectMastermindTitle": "Mastermind",
     "ProjectMastermindDesc": "The application recreates the Mastermind game, where the first player creates a secret combination that the second player must guess. This project was developed as part of my computer science course, where we had to practice using VB.NET.",
     "ProjectMobileAppTitle": "Mobile Application",
-    "ProjectMobileAppDesc": "I had to develop a mobile application. This application is complete, including an authentication system and data updates from a Firebase database. It has also been designed for iOS and Android using Flutter."
+    "ProjectMobileAppDesc": "I had to develop a mobile application. This application is complete, including an authentication system and data updates from a Firebase database. It has also been designed for iOS and Android using Flutter.",
+    "NamiFlow": "NamiFlow",
+    "NamiFlowDesc": "This project aims to recreate a file transfer while adding a new layer of security. Unlike others,  the files are annalyze using the VirusTotal API.",
+    "FolderCompare": "Folder Compare",
+    "FolderCompareDesc": "A small algorithm in C# that, using two paths, scans two folders and identifies the differences. The result is stored in an Excel file and, at the end, I receive an email."
   },
   "HOBBIES": {
     "Subtitle": "My Hobbies",
@@ -71,6 +76,30 @@
     "Description": "Here you can find my hobbies and the activities I enjoy doing in my free time.",
     "CurrentlyListening": "Currently Listening",
     "MoviesLoved": "Loved Movies",
-    "CurrentlyPlaying": "Currently Playing"
+    "CurrentlyPlaying": "Currently Playing",
+    "Music_Warning": "The music might start loudly — adjust your volume if needed."
+  },
+  "PREFERENCES": {
+    "Themes": "Themes",
+    "Navigation": "Navigation",
+    "Contact": "Contact",
+    "Theme_Brown": "Brown",
+    "Theme_Light": "Light",
+    "Theme_Green": "Green",
+    "Theme_Blue": "Blue",
+    "Theme_Gray": "Gray",
+    "Theme_Red": "Red",
+    "Theme_Purple": "Purple",
+    "Single_Page": "Single Page",
+    "Pro_Mode": "Pro Mode",
+    "Phone_Mode": "Phone Mode",
+    "Send": "Send",
+    "Contact_Title": "Contact Me",
+    "Name": "Name",
+    "Email": "Email",
+    "Message": "Message",
+    "Form_Already_Sent": "You have already sent a message.",
+    "Email_Sent_Success": "Email sent successfully.",
+    "Email_Sent_Error": "An error occurred while sending the email."
   }
 }

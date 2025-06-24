@@ -8,7 +8,8 @@
     "Hobbies": "LOISIRS",
     "Settings": "PARAMÈTRES",
     "Contact": "Contact",
-    "Copyright": "© 2025 {{firstName}} {{name}} - Tous droits réservés"
+    "Copyright": "© 2025 {{firstName}} {{name}} - Tous droits réservés",
+    "Last_Update": "Dernière mise à jour : {{date}}"
   },
   "HOME": {
     "Hello": "Bonjour,",
@@ -40,7 +41,7 @@
   },
   "SKILLS": {
     "Subtitle": "Mes Compétences",
-    "SectionTitle": "Compétences Techniques",
+    "SectionTitle": "Compétences",
     "Description": "Durant ces années en développement, j'ai réalisé plusieurs projets. Pour chaque projet, j'ai utilisé un langage de programmation différent et utilisé GitHub pour apprendre de nouvelles technologies. Vous pouvez retrouver ces projets sur mon profil GitHub.",
     "CSharp": "J'ai implémenté le backend avec C# et développé des API REST, en utilisant Swagger pour la documentation.",
     "Angular": "J'ai réalisé plusieurs projets Angular dans une entreprise pour développer de nouvelles solutions. J'ai également créé ce portfolio avec Angular.",
@@ -54,7 +55,7 @@
   "WORK": {
     "Subtitle": "Mes Travaux",
     "SectionTitle": "Projets",
-    "Description": "Sur cette page, vous trouverez une brève description des projets que j'ai créés. Grâce à eux, j'ai pu découvrir l'univers du codage et des nouvelles technologies. Pour chacun d'entre eux, vous pouvez les retrouver sur ma page GitHub.",
+    "Description": "Sur cette page, vous trouverez une brève description des projets que j'ai créés. Grâce à eux, j'ai pu découvrir l'univers du codage et des nouvelles technologies.",
     "SomeProjectsTitle": "Quelques projets",
     "ProjectRedesignTitle": "Refonte d'un site",
     "ProjectRedesignDesc": "Dans le cadre de notre cursus, j'ai dû sélectionner une commune et un site web existant, puis le redessiner pour le rendre plus moderne.",
@@ -63,7 +64,11 @@
     "ProjectMastermindTitle": "Mastermind",
     "ProjectMastermindDesc": "L'application recrée le jeu Mastermind, où le premier joueur crée une combinaison secrète que le second joueur doit deviner. Ce projet a été développé dans le cadre de mon cours d'informatique, où nous devions pratiquer l'utilisation de VB.NET.",
     "ProjectMobileAppTitle": "Application Mobile",
-    "ProjectMobileAppDesc": "J'ai dû développer une application mobile. Cette application est complète, incluant un système d'authentification et des mises à jour de données à partir d'une base de données Firebase. Elle a également été conçue pour iOS et Android en utilisant Flutter."
+    "ProjectMobileAppDesc": "J'ai dû développer une application mobile. Cette application est complète, incluant un système d'authentification et des mises à jour de données à partir d'une base de données Firebase. Elle a également été conçue pour iOS et Android en utilisant Flutter.",
+    "NamiFlow": "NamiFlow",
+    "NamiFlowDesc": "Ce projet consiste à recréer un transfert de fichiers tout en ajoutant une nouvelle sécurité. Contrairement aux autres, les fichiers sont analysés grâce à l'API de VirusTotal.",
+    "FolderCompare": "Comparaison de dossier",
+    "FolderCompareDesc": "Un petit algorithme en C# qui permet, à partir de deux chemins, de scanner deux dossiers et de voir les différences. Le résultat est stocké dans un fichier Excel et, à la fin, je reçois un mail."
   },
   "HOBBIES": {
     "Subtitle": "Mes Loisirs",
@@ -71,6 +76,30 @@
     "Description": "Voici mes loisirs et les activités que j'apprécie faire pendant mon temps libre.",
     "CurrentlyListening": "Écoute actuelle",
     "MoviesLoved": "Films Adorés",
-    "CurrentlyPlaying": "Joue actuellement"
+    "CurrentlyPlaying": "Joue actuellement",
+    "Music_Warning": "La musique est assez forte — ajustez le volume si nécessaire."
+  },
+  "PREFERENCES": {
+    "Themes": "Thèmes",
+    "Navigation": "Navigation",
+    "Contact": "Contact",
+    "Theme_Brown": "Marron",
+    "Theme_Light": "Clair",
+    "Theme_Green": "Vert",
+    "Theme_Blue": "Bleu",
+    "Theme_Red": "Rouge",
+    "Theme_Gray": "Gris",
+    "Theme_Purple": "Violet",
+    "Single_Page": "Page unique",
+    "Pro_Mode": "Mode Pro",
+    "Phone_Mode": "Mode Téléphone",
+    "Send": "Envoyer",
+    "Contact_Title": "Me contacter",
+    "Name": "Nom",
+    "Email": "Email",
+    "Message": "Message",
+    "Form_Already_Sent": "Vous avez déjà envoyé un mail.",
+    "Email_Sent_Success": "Email envoyé avec succès.",
+    "Email_Sent_Error": "Erreur lors de l'envoi de l'email."
   }
 }
