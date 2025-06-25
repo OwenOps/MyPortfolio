@@ -18,6 +18,7 @@ import { filter } from 'rxjs';
 })
 export class AppComponent extends BaseComponent {
   isMdMode: boolean = false;
+  isCvPage = this.userState.getIsCvPage();
 
   constructor
     (
@@ -43,16 +44,10 @@ export class AppComponent extends BaseComponent {
       .subscribe(result => {
         this.isMdMode = result.matches;
       });
-
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      const url = event.urlAfterRedirects;
-      this.userState.setIsCvPage(url.includes('/cv'));
-    });
   }
 
   ngOnInit(): void {
+
     let currentLang = localStorage.getItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE)
 
     // Init
@@ -64,5 +59,12 @@ export class AppComponent extends BaseComponent {
     else this.translate.setDefaultLang(LANGUAGES.EN);
 
     this.themeService.initTheme();
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      const url = (event as NavigationEnd).urlAfterRedirects;
+      this.userState.setIsCvPage(url.includes('/cv'));
+    });;
   }
 }

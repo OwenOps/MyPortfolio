@@ -1,8 +1,8 @@
 <body>
-  <app-navbar class="navbar"></app-navbar>
-  <app-side-bar class="sidebar"></app-side-bar>
+  <app-navbar class="navbar" *ngIf="!isCvPage()"></app-navbar>
+  <app-side-bar class="sidebar" *ngIf="!isCvPage()"></app-side-bar>
   <div class="main-content"
-    [ngClass]="{'phone-mode': isPhoneMode || isPhoneSize, 'computer-mode': !isPhoneMode && !isPhoneSize, 'md-mode': !isPhoneSize && !isPhoneMode && isMdMode}">
+    [ngClass]="{'phone-mode': isPhoneMode || isPhoneSize, 'computer-mode': !isPhoneMode && !isPhoneSize, 'md-mode': !isPhoneSize && !isPhoneMode && isMdMode, 'cv-page': isCvPage()}">
     <router-outlet></router-outlet>
     <p-toast life="2500" [breakpoints]="{ '576px': { width: '80%', right: '0' } }"></p-toast>
   </div>

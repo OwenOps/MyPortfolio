@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { lstUser, User } from 'src/app/core/models/user';
-import { MessageService } from 'src/app/core/services/message/message.service';
 import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
 
 @Component({

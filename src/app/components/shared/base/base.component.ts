@@ -18,7 +18,6 @@ export abstract class BaseComponent {
   isPhoneMode: boolean = false;
   isPhoneSize: boolean = false;
   isSinglePage: boolean = false;
-  isCvPage: boolean = false;
 
   constructor() {
     effect(() => {
@@ -27,7 +26,6 @@ export abstract class BaseComponent {
       this.isPhoneMode = this.userState.getIsPhoneMode()();
       this.isPhoneSize = this.userState.getIsPhoneSize()();
       this.isSinglePage = this.userState.getIsSinglePage()();
-      this.isCvPage = this.userState.getIsCvPage()();
     });
   }
 

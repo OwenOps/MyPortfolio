@@ -1,118 +1,185 @@
-<div class="cv">
-    <div class="cv__column cv__column--left">
-        <section class="cv__block cv__block--contact">
-            <img src="assets/img/test.jpg" alt="me" class="cv__img">
+<div class="cv-page">
+    <p-speeddial [model]="items" direction="down" [style]="{ position: 'absolute', top: '-5px', left: 0 }"
+        [buttonProps]="{ severity: 'help', rounded: true }" [tooltipOptions]="{ tooltipPosition: 'left' }" />
 
-            <h3 class="cv__heading">Contact</h3>
+    <div class="cv">
+        <div class="cv__column cv__column--left">
+            <section class="cv__block cv__block--contact">
+                <img src="assets/img/test.jpg" alt="me" class="cv__img">
 
-            <div class="cv__contact--container">
-                <app-icon [name]="'linkedin'"></app-icon>
+                <h3 class="cv__heading">Contact</h3>
 
-                <div class="cv__contact__description">
-                    <h3>Linkedin</h3>
+                <div class="cv__contact--container">
+                    <app-icon [name]="'linkedin'"></app-icon>
+
+                    <div class="cv__contact__description">
+                        <h3>Linkedin</h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="cv__contact--container">
-                <app-icon [name]="'address'"></app-icon>
+                <div class="cv__contact--container">
+                    <app-icon [name]="'address'"></app-icon>
 
-                <div class="cv__contact__description">
-                    <h3>Adresse</h3>
-                    <p class="cv__text">78****</p>
+                    <div class="cv__contact__description">
+                        <h3>Adresse</h3>
+                        <p class="cv__text">78****</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="cv__contact--container">
-                <app-icon [name]="'phone'"></app-icon>
+                <div class="cv__contact--container">
+                    <app-icon [name]="'phone'"></app-icon>
 
-                <div class="cv__contact__description">
-                    <h3>Telephone</h3>
-                    <p class="cv__text">07 ** ** ** **</p>
+                    <div class="cv__contact__description">
+                        <h3>Telephone</h3>
+                        <p class="cv__text">07 ** ** ** **</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="cv__contact--container">
-                <app-icon [name]="'email'"></app-icon>
+                <div class="cv__contact--container">
+                    <app-icon [name]="'email'"></app-icon>
 
-                <div class="cv__contact__description">
-                    <h3>E-Mail</h3>
-                    <p class="cv__text">{{ user.email }}</p>
+                    <div class="cv__contact__description">
+                        <h3>E-Mail</h3>
+                        <p class="cv__text">{{ user.email }}</p>
+                    </div>
                 </div>
-            </div>
 
-        </section>
+            </section>
 
-        <section class="cv__block cv__block--qualities">
-            <h3 class="cv__heading">Qualités</h3>
-            <ul class="cv__list">
-                <li class="cv__list-item"><p-tag value="Déterminé" severity="success" /></li>
-                <li class="cv__list-item"><p-tag value="Curieux" severity="info" /></li>
-                <li class="cv__list-item"><p-tag value="Adaptable" severity="warn" /></li>
-                <li class="cv__list-item"><p-tag value="Autonome" severity="secondary" /></li>
-            </ul>
-        </section>
+            <section class="cv__block cv__block--qualities">
+                <h3 class="cv__heading">Qualités</h3>
+                <ul class="cv__list">
+                    <li class="cv__list-item"><p-tag value="Déterminé" severity="success" /></li>
+                    <li class="cv__list-item"><p-tag value="Curieux" severity="info" /></li>
+                    <li class="cv__list-item"><p-tag value="Adaptable" severity="warn" /></li>
+                    <li class="cv__list-item"><p-tag value="Autonome" severity="secondary" /></li>
+                </ul>
+            </section>
 
-        <section class="cv__block cv__block--languages">
-            <h3 class="cv__heading">Langues</h3>
-            <p class="cv__text">Français : Langue maternelle</p>
-            <p class="cv__text">Anglais : Bon niveau</p>
-            <p class="cv__text">Espagnol : Scolaire</p>
-        </section>
+            <section class="cv__block cv__block--languages">
+                <h3 class="cv__heading">Langues</h3>
+                <p class="cv__text">Français : Langue maternelle</p>
+                <p class="cv__text">Anglais : Bon niveau</p>
+                <p class="cv__text">Espagnol : Scolaire</p>
+            </section>
 
-        <section class="cv__block cv__block--hobbies">
-            <h3 class="cv__heading">Centres d’intérêt</h3>
-            <ul class="cv__list">
-                <li class="cv__list-item">Judo (+10 ans), Musculation</li>
-                <li class="cv__list-item">Culture japonaise</li>
-                <li class="cv__list-item">Jeux vidéo (stratégie)</li>
-            </ul>
-        </section>
-    </div>
+            <section class="cv__block cv__block--hobbies">
+                <h3 class="cv__heading">Centres d’intérêt</h3>
+                <ul class="cv__list">
+                    <li class="cv__list-item">Judo (+10 ans), Musculation</li>
+                    <li class="cv__list-item">Culture japonaise</li>
+                    <li class="cv__list-item">Jeux vidéo (stratégie)</li>
+                </ul>
+            </section>
+        </div>
 
-    <div class="cv__column cv__column--right">
-        <section class="cv__block cv__block--about">
-            <h2 class="cv__title">Owen REBELLER</h2>
-            <h4 class="cv__subtitle">Étudiant en informatique en alternance</h4>
-            <p class="cv__text">
-                Étudiant en 3e année de BUT informatique, passionné par la technologie,
-                je souhaite évoluer en continu dans ce domaine, notamment en
-                alternance, pour gagner en expertise.
-            </p>
-        </section>
+        <div class="cv__column cv__column--right">
+            <section class="cv__block cv__block--about">
+                <h1 class="cv__title">{{ user.name + " " + user.firstName }}</h1>
+                <h4 class="cv__subtitle">Étudiant Apprentissage</h4>
+                <h3 class="cv__heading">A propos de moi</h3>
+                <p class="cv__text">
+                    Étudiant en 3e année de BUT informatique, passionné par la technologie,
+                    je souhaite évoluer en continu dans ce domaine, notamment en
+                    alternance, pour gagner en expertise.
+                </p>
+            </section>
 
-        <section class="cv__block cv__block--education">
-            <h3 class="cv__heading--opposite">Éducation</h3>
-            <p class="cv__text"><strong>BUT Informatique</strong> (2022–2025) – Université Paris Cité</p>
-            <p class="cv__text"><strong>BAC STI2D – SIN</strong> (2020–2022) – Lycée Les Pierres Vives</p>
-        </section>
+            <section class="cv__block cv__block--education">
+                <h3 class="cv__heading">Éducation</h3>
 
-        <section class="cv__block cv__block--experience">
-            <h3 class="cv__heading--opposite">Expérience professionnelle</h3>
-            <p class="cv__text"><strong>SubSea 7 – Dev Full Stack / DevOps</strong> (2023–2025)</p>
-            <ul class="cv__list">
-                <li class="cv__list-item">App web de gestion d’inventaire</li>
-                <li class="cv__list-item">Script C# de comparaison de fichiers</li>
-            </ul>
-            <p class="cv__text"><strong>SubSea 7 – Job d’été</strong> (2023)</p>
-            <p class="cv__text">Service informatique</p>
-        </section>
+                <div class="cv__container--section">
+                    <h2 class="cv__subtitle">BUT Informatique</h2>
+                    <h4 class="cv__subsubtitle">Université Paris Rives de Seine, Paris (75)</h4>
 
-        <section class="cv__block cv__block--projects">
-            <h3 class="cv__heading--opposite">Projets réalisés</h3>
-            <ul class="cv__list">
-                <li class="cv__list-item">Refonte d’un site web</li>
-                <li class="cv__list-item">App mobile de gestion de signaux pharmaceutiques</li>
-                <li class="cv__list-item">Projet cybersécurité (coloration de fichiers)</li>
-                <li class="cv__list-item">Optimisation d’applications</li>
-            </ul>
-        </section>
+                    <ul class="cv__experiences">
+                        <li>Parcours Réalisation d’applications : conception, développement, validation</li>
+                        <li>Coloration cybersécurité</li>
+                    </ul>
+                    <p class="cv__date">2022-2025</p>
+                </div>
 
-        <section class="cv__block cv__block--skills">
-            <h3 class="cv__heading--opposite">Outils & Technologies</h3>
-            <p class="cv__text"><strong>Langages :</strong> C, C++, C#, Java, VB.NET, SQL, Python, LaTeX</p>
-            <p class="cv__text"><strong>Web :</strong> HTML, CSS, SCSS, JS, TS</p>
-            <p class="cv__text"><strong>Frameworks :</strong> Angular, Spring Boot, Entity Framework</p>
-            <p class="cv__text"><strong>Outils :</strong> GitHub, Azure, DevOps, Packet Tracer, VirtualBox, SSMS</p>
-        </section>
+                <div class="cv__container--section">
+                    <h2 class="cv__subtitle">Bac STI2D Option SIN</h2>
+                    <h4 class="cv__subsubtitle">Lycée Les Pierres Vives, Carrières-sur-Seine (78)</h4>
+
+                    <ul class="cv__experiences">
+                        <li>Developpement d’un appareil IoT pour le covid dans un groupe de 3 (arduino)</li>
+                    </ul>
+                    <p class="cv__date">2020-2022</p>
+                </div>
+            </section>
+
+            <section class="cv__block cv__block--experience">
+                <h3 class="cv__heading">Expérience professionnelle</h3>
+
+                <div class="cv__container--section">
+                    <h2 class="cv__subtitle">Job ETE</h2>
+                    <h4 class="cv__subsubtitle">SubSea 7, Suresnes (92)</h4>
+
+                    <ul class="cv__experiences">
+                        <li>Service informatique</li>
+                    </ul>
+                    <p class="cv__date">2023</p>
+                </div>
+
+                <div class="cv__container--section">
+                    <h2 class="cv__subtitle">Developpeur Full Stack / DevOps</h2>
+                    <h4 class="cv__subsubtitle">SubSea 7</h4>
+
+                    <ul class="cv__experiences">
+                        <li>Développement d’une application web pour gérer l’inventaire de l’entreprise</li>
+                        <li>Mise en place d’un script en C# pour parcourir et comparer des fichiers entre deux
+                            répertoires
+                        </li>
+                        <li>Création d’un gestionnaire de fichier avancé</li>
+                    </ul>
+                    <p class="cv__date">2023-2025</p>
+                </div>
+            </section>
+
+            <section class="cv__block cv__block--projects">
+                <h3 class="cv__heading">Projets Réalisés</h3>
+
+                <div class="cv__container--section">
+                    <h2 class="cv__subtitle">Projets principaux</h2>
+
+                    <ul class="cv__experiences">
+                        <li>Refonte d’un site web</li>
+                        <li>Projet mobile pour simplifier la gestion des signaux pharmaceutiques.</li>
+                        <li>Projet visant à développer des compétences en optimisation d'applications.</li>
+                    </ul>
+                    <p class="cv__date">2023-2025</p>
+                </div>
+            </section>
+
+            <section class="cv__block cv__block--skills">
+                <h3 class="cv__heading">Outils & Technologies</h3>
+
+                <div class="cv__container--section">
+                    <div>
+                        <h4 class="cv__subtitle">Framework : </h4>
+                        <ul>
+                            <li>Angular, Spring boot, Entity Framework</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="cv__subtitle">Technologie : </h4>
+                        <ul>
+                            <li>Azure, Azure Devops, Jenkins, Docker, Github</li>
+                            <li>SSMS, Virtual Box, Cisco Packet Tracer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="cv__subtitle">Languages : </h4>
+                        <ul>
+                            <li>C#, Java, VB.NET, .NET, SQL, Python, LateX</li>
+                            <li>SCSS, HTML, JavaScript, TypeScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
