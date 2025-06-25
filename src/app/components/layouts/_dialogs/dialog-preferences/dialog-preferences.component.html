@@ -18,6 +18,15 @@
         </div>
     </div>
 
+    <div class="dialog-content__section" *ngIf="isPhoneMode || isPhoneSize">
+        <div class="dialog-content__section__title">
+            <h3>{{ 'PREFERENCES.LANGUAGES' | translate }}</h3>
+            <i class="pi pi-flag"></i>
+        </div>
+
+        <app-flags></app-flags>
+    </div>
+
     <div class="dialog-content__section">
 
         <div class="dialog-content__section__title">

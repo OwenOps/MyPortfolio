@@ -100,6 +100,7 @@
     "Message": "Message",
     "Form_Already_Sent": "You have already sent a message.",
     "Email_Sent_Success": "Email sent successfully.",
-    "Email_Sent_Error": "An error occurred while sending the email."
+    "Email_Sent_Error": "An error occurred while sending the email.",
+    "LANGUAGES": "Languages"
   }
 }
