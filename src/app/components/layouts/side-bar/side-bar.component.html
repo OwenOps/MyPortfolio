@@ -1,24 +1,27 @@
-<div class="sidebar" [ngClass]="{'display-flex': !isPhoneMode && !isPhoneSize, 'display-none': isPhoneMode || isPhoneSize}">
-  <div class="sidebar__user">
-    <img src="assets/img/test.jpg" alt="me" class="sidebar__user-img">
-  </div>
-  <div class="sidebar__top">
-    <div class="sidebar__logo">
-      <h1 class="sidebar__title">{{ currentUser.fullName }}</h1>
-      <p class="sidebar__subtitle">
-        {{ 'SIDEBAR.Full_Stack_Developper' | translate }}
-      </p>
-      <app-flags></app-flags>
+<ng-container *ngIf="!isCvPage">
+  <div class="sidebar"
+    [ngClass]="{'display-flex': !isPhoneMode && !isPhoneSize, 'display-none': isPhoneMode || isPhoneSize}">
+    <div class="sidebar__user">
+      <img src="assets/img/test.jpg" alt="me" class="sidebar__user-img">
+    </div>
+    <div class="sidebar__top">
+      <div class="sidebar__logo">
+        <h1 class="sidebar__title">{{ currentUser.fullName }}</h1>
+        <p class="sidebar__subtitle">
+          {{ 'SIDEBAR.Full_Stack_Developper' | translate }}
+        </p>
+        <app-flags></app-flags>
+      </div>
+    </div>
+    <ul class="sidebar__nav">
+      <div *ngFor="let item of lstSection">
+        <li class="sidebar__nav-item">
+          <a class="sidebar__nav-link" (click)="goToThePage(item.root)">{{ item.translationKey | translate }}</a>
+        </li>
+      </div>
+    </ul>
+    <div class="sidebar__footer">
+      <app-side-bar-footer></app-side-bar-footer>
     </div>
   </div>
-  <ul class="sidebar__nav">
-    <div *ngFor="let item of lstSection">
-      <li class="sidebar__nav-item">
-        <a class="sidebar__nav-link" (click)="goToThePage(item.root)" >{{ item.translationKey | translate }}</a>
-      </li>
-    </div>
-  </ul>
-  <div class="sidebar__footer">
-    <app-side-bar-footer></app-side-bar-footer>
-  </div>
-</div>
+</ng-container>

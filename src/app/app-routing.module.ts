@@ -7,6 +7,7 @@ import { WorkComponent } from './components/pages/work/work.component';
 import { HobbiesComponent } from './components/pages/hobbies/hobbies.component';
 import { StatusGuard } from './guard/auth.guard';
 import { AllPagesComponent } from './components/pages/all-pages/all-pages.component';
+import { CvComponent } from './components/pages/cv/cv.component';
 
 // Parameter is for showing professional portfolio or not
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'work/:isPro', component: WorkComponent, canActivate: [StatusGuard] },
   { path: 'hobbies/:isPro', component: HobbiesComponent, canActivate: [StatusGuard], },
   { path: 'portfolio/:isPro', component: AllPagesComponent, canActivate: [StatusGuard] },
+  { path: 'cv', component: CvComponent },
   { path: '', redirectTo: 'home/true', pathMatch: 'full' },
   { path: '**', redirectTo: 'home/true', pathMatch: 'full' }
 ];

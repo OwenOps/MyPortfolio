@@ -7,6 +7,7 @@ export class UserStateService {
   private readonly _isPro = signal<boolean>(false);
   private readonly _isUserAdmin = signal<boolean>(false);
   private readonly _isSinglePage = signal<boolean>(false);
+  private readonly _IsCvPage = signal<boolean>(false); // Its the real phone size
 
   private readonly _isPhoneMode = signal<boolean>(false); // Its the preferences mode
   private readonly _isPhoneSize = signal<boolean>(false); // Its the real phone size
@@ -31,6 +32,10 @@ export class UserStateService {
     return this._isSinglePage.asReadonly();
   }
 
+  getIsCvPage(): Signal<boolean> {
+    return this._IsCvPage.asReadonly();
+  }
+
   setIsPro(value: boolean) {
     this._isPro.set(value);
   }
@@ -49,5 +54,9 @@ export class UserStateService {
 
   setIsSinglePage(value: boolean) {
     this._isSinglePage.set(value);
+  }
+
+  setIsCvPage(value: boolean) {
+    this._IsCvPage.set(value);
   }
 }

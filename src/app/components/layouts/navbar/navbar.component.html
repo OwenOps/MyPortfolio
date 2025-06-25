@@ -1,5 +1,6 @@
-<header>
-  <nav class="navbar" [ngClass]="{'display-flex': isPhoneMode || isPhoneSize, 'display-none': !isPhoneMode && !isPhoneSize}">
+<header *ngIf="!isCvPage">
+  <nav class="navbar"
+    [ngClass]="{'display-flex': isPhoneMode || isPhoneSize, 'display-none': !isPhoneMode && !isPhoneSize}">
     <div class="navbar__left">
       <label class="hamburger-container">
         <input type="checkbox" [(ngModel)]="isMenuOpen">

@@ -1,12 +1,22 @@
-<div class="social-media">
-    <a href="https://github.com/OwenOps" class="social-media__link social-media__github" target="_blank">
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { lstUser, User } from 'src/app/core/models/user';
+import { MessageService } from 'src/app/core/services/message/message.service';
+import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
+
+@Component({
+  selector: 'app-icon',
+  imports: [CommonModule],
+  template: `
+  <ng-container [ngSwitch]="name">
+    <a *ngSwitchCase="'github'" href="https://github.com/OwenOps" class="social-media__link github" target="_blank">
         <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19">
             <path
                 d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z">
             </path>
         </svg>
     </a>
-    <a href="https://www.linkedin.com/in/owen-rebeller" class="social-media__link social-media__linkedin"
+    <a *ngSwitchCase="'linkedin'" href="https://www.linkedin.com/in/owen-rebeller" class="social-media__link linkedin"
         target="_blank">
         <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -20,13 +30,11 @@
             </g>
         </svg>
     </a>
-    <ng-container *ngIf="!isPro">
-        <a href="https://steamcommunity.com/profiles/76561198857582544" class="social-media__link social-media__steam"
+    <a *ngSwitchCase="'steam'" href="https://steamcommunity.com/profiles/76561198857582544" class="social-media__link steam"
             target="_blank">
             <img src="assets/img/steam.png" alt="steam-valve" width="31px">
-        </a>
-    </ng-container>
-    <a href="https://www.instagram.com/je_sappelle_owen/" class="social-media__link social-media__instagram"
+    </a>
+    <a *ngSwitchCase="'instagram'" href="https://www.instagram.com/je_sappelle_owen/" class="social-media__link instagram"
         target="_blank">
         <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -42,5 +50,51 @@
             </g>
         </svg>
     </a>
-</div>
+    <a *ngSwitchCase="'email'" class="social-media__link email" (click)="copyEmail()" style="cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+    </svg>
+    </a>
+    <a *ngSwitchCase="'phone'" class="social-media__link phone" (click)="copyPhone()" style="cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+    </svg>
+    </a>
+    <a *ngSwitchCase="'address'" class="social-media__link address" (click)="copyLocation()" style="cursor: pointer;" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
+    </svg>
+    </a>
+    <!-- etc. -->
+  </ng-container>
+  `,
+  styleUrl: './icon.component.scss'
+})
+export class IconComponent {
+  @Input() name!: 'github' | 'linkedin' | 'steam' | 'instagram' | 'email' | 'phone' | 'address';
 
+  user: User = lstUser[0];
+
+  constructor
+    (
+      private readonly utilitiesService: UtilitiesService
+    ) { }
+
+  copyPhone(): void {
+    this.utilitiesService.copyToClipboard(this.user.phoneNumber, "CV.Phonenumber")
+  }
+
+  copyLocation(): void {
+    this.utilitiesService.copyToClipboard(this.user.location, "CV.Location")
+  }
+
+  copyEmail(): void {
+    this.utilitiesService.copyToClipboard(this.user.email, "CV.Email")
+  }
+}

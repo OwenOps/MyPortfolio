@@ -6,6 +6,8 @@ import { ThemeService } from './core/services/themes/theme.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { StorageService } from './core/services/storage/storage.service';
 import { BaseComponent } from './components/shared/base/base.component';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,7 @@ export class AppComponent extends BaseComponent {
       private readonly themeService: ThemeService,
       private readonly breakpointObserver: BreakpointObserver,
       private readonly storageService: StorageService,
+      private readonly router: Router,
     ) {
 
     super();
@@ -40,6 +43,13 @@ export class AppComponent extends BaseComponent {
       .subscribe(result => {
         this.isMdMode = result.matches;
       });
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      const url = event.urlAfterRedirects;
+      this.userState.setIsCvPage(url.includes('/cv'));
+    });
   }
 
   ngOnInit(): void {

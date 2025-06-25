@@ -1,0 +1,115 @@
+@use '../../../styles/mixin' as *;
+
+.social-media__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0px 0px 4px #00000027;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #f2f2f2;
+        box-shadow: 0px 0px 6px 3px #00000027;
+    }
+
+    @include min-width(sm) {
+        margin: 5px;
+    }
+}
+
+svg {
+    transition: 0.3s;
+    height: 18px;
+}
+
+.github {
+    background-color: #333;
+
+    &>svg {
+        width: 25px;
+        height: 25px;
+        fill: #f2f2f2;
+    }
+
+    &:hover>svg {
+        fill: #333;
+    }
+}
+
+.linkedin {
+    background-color: #0077b5;
+
+    &>svg {
+        fill: #f2f2f2;
+    }
+
+    &:hover>svg {
+        fill: #0077b5;
+    }
+}
+
+.steam {
+
+    &>img {
+        transition: 0.3s;
+    }
+
+    &:hover>img {
+        filter: brightness(0.7) invert(1);
+    }
+}
+
+.instagram {
+    background-color: #c13584;
+
+    &>svg {
+        fill: #f2f2f2;
+    }
+
+    &:hover>svg {
+        fill: #c13584;
+    }
+}
+
+.email {
+    background-color: #ea4335;
+    border: 2px solid #f2f2f2;
+
+    &>svg {
+        fill: #f2f2f2;
+    }
+
+    &:hover>svg {
+        fill: #ea4335;
+    }
+}
+
+.phone {
+    background-color: #34b7f1;
+    border: 2px solid #f2f2f2;
+
+    &>svg {
+        fill: #f2f2f2;
+    }
+
+    &:hover>svg {
+        fill: #34b7f1;
+    }
+}
+
+.address {
+    background-color: #34a853;
+    border: 2px solid #f2f2f2;
+
+    &>svg {
+        fill: #f2f2f2;
+    }
+
+    &:hover>svg {
+        fill: #34a853;
+    }
+}

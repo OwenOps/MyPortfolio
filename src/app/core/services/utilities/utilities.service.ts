@@ -7,6 +7,7 @@ import { APP_CONSTANTS } from 'src/app/constants/app.constants';
 import { LANGUAGES } from 'src/app/constants/language.constants';
 import emailjs from '@emailjs/browser';
 import { environment } from 'src/environments/environment';
+import { MessageService } from '../message/message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class UtilitiesService {
     (
       private readonly router: Router,
       private readonly translateService: TranslateService,
+      private readonly messageService: MessageService,
       private readonly dialogService: DialogService
     ) { }
 
@@ -63,5 +65,15 @@ export class UtilitiesService {
 
   getTranslatedStrings(keys: string[]): Observable<{ [key: string]: string }> {
     return this.translateService.get(keys);
+  }
+
+  copyToClipboard(elementToCopy: string, messageElementKey: string) {
+    navigator.clipboard.writeText(elementToCopy).then(() => {
+      this.getTranslatedStrings(["CV.Copied", "CV.MessageElementKey"]).subscribe(translation => {
+        this.messageService.showMessageSuccess(`${translation["CV.MessageElementKey"]} ${translation["CV.Copied"]}`)
+      })
+    }).catch(err => {
+      console.error('Failed to copy phone number: ', err);
+    });
   }
 }

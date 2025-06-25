@@ -1,0 +1,118 @@
+<div class="cv">
+    <div class="cv__column cv__column--left">
+        <section class="cv__block cv__block--contact">
+            <img src="assets/img/test.jpg" alt="me" class="cv__img">
+
+            <h3 class="cv__heading">Contact</h3>
+
+            <div class="cv__contact--container">
+                <app-icon [name]="'linkedin'"></app-icon>
+
+                <div class="cv__contact__description">
+                    <h3>Linkedin</h3>
+                </div>
+            </div>
+
+            <div class="cv__contact--container">
+                <app-icon [name]="'address'"></app-icon>
+
+                <div class="cv__contact__description">
+                    <h3>Adresse</h3>
+                    <p class="cv__text">78****</p>
+                </div>
+            </div>
+
+            <div class="cv__contact--container">
+                <app-icon [name]="'phone'"></app-icon>
+
+                <div class="cv__contact__description">
+                    <h3>Telephone</h3>
+                    <p class="cv__text">07 ** ** ** **</p>
+                </div>
+            </div>
+
+            <div class="cv__contact--container">
+                <app-icon [name]="'email'"></app-icon>
+
+                <div class="cv__contact__description">
+                    <h3>E-Mail</h3>
+                    <p class="cv__text">{{ user.email }}</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="cv__block cv__block--qualities">
+            <h3 class="cv__heading">Qualités</h3>
+            <ul class="cv__list">
+                <li class="cv__list-item"><p-tag value="Déterminé" severity="success" /></li>
+                <li class="cv__list-item"><p-tag value="Curieux" severity="info" /></li>
+                <li class="cv__list-item"><p-tag value="Adaptable" severity="warn" /></li>
+                <li class="cv__list-item"><p-tag value="Autonome" severity="secondary" /></li>
+            </ul>
+        </section>
+
+        <section class="cv__block cv__block--languages">
+            <h3 class="cv__heading">Langues</h3>
+            <p class="cv__text">Français : Langue maternelle</p>
+            <p class="cv__text">Anglais : Bon niveau</p>
+            <p class="cv__text">Espagnol : Scolaire</p>
+        </section>
+
+        <section class="cv__block cv__block--hobbies">
+            <h3 class="cv__heading">Centres d’intérêt</h3>
+            <ul class="cv__list">
+                <li class="cv__list-item">Judo (+10 ans), Musculation</li>
+                <li class="cv__list-item">Culture japonaise</li>
+                <li class="cv__list-item">Jeux vidéo (stratégie)</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="cv__column cv__column--right">
+        <section class="cv__block cv__block--about">
+            <h2 class="cv__title">Owen REBELLER</h2>
+            <h4 class="cv__subtitle">Étudiant en informatique en alternance</h4>
+            <p class="cv__text">
+                Étudiant en 3e année de BUT informatique, passionné par la technologie,
+                je souhaite évoluer en continu dans ce domaine, notamment en
+                alternance, pour gagner en expertise.
+            </p>
+        </section>
+
+        <section class="cv__block cv__block--education">
+            <h3 class="cv__heading--opposite">Éducation</h3>
+            <p class="cv__text"><strong>BUT Informatique</strong> (2022–2025) – Université Paris Cité</p>
+            <p class="cv__text"><strong>BAC STI2D – SIN</strong> (2020–2022) – Lycée Les Pierres Vives</p>
+        </section>
+
+        <section class="cv__block cv__block--experience">
+            <h3 class="cv__heading--opposite">Expérience professionnelle</h3>
+            <p class="cv__text"><strong>SubSea 7 – Dev Full Stack / DevOps</strong> (2023–2025)</p>
+            <ul class="cv__list">
+                <li class="cv__list-item">App web de gestion d’inventaire</li>
+                <li class="cv__list-item">Script C# de comparaison de fichiers</li>
+            </ul>
+            <p class="cv__text"><strong>SubSea 7 – Job d’été</strong> (2023)</p>
+            <p class="cv__text">Service informatique</p>
+        </section>
+
+        <section class="cv__block cv__block--projects">
+            <h3 class="cv__heading--opposite">Projets réalisés</h3>
+            <ul class="cv__list">
+                <li class="cv__list-item">Refonte d’un site web</li>
+                <li class="cv__list-item">App mobile de gestion de signaux pharmaceutiques</li>
+                <li class="cv__list-item">Projet cybersécurité (coloration de fichiers)</li>
+                <li class="cv__list-item">Optimisation d’applications</li>
+            </ul>
+        </section>
+
+        <section class="cv__block cv__block--skills">
+            <h3 class="cv__heading--opposite">Outils & Technologies</h3>
+            <p class="cv__text"><strong>Langages :</strong> C, C++, C#, Java, VB.NET, SQL, Python, LaTeX</p>
+            <p class="cv__text"><strong>Web :</strong> HTML, CSS, SCSS, JS, TS</p>
+            <p class="cv__text"><strong>Frameworks :</strong> Angular, Spring Boot, Entity Framework</p>
+            <p class="cv__text"><strong>Outils :</strong> GitHub, Azure, DevOps, Packet Tracer, VirtualBox, SSMS</p>
+        </section>
+    </div>
+</div>

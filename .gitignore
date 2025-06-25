@@ -40,3 +40,5 @@ Thumbs.db
 /docs
 
 environments/
+
+src/app/core/models/user.ts

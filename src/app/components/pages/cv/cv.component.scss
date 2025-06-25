@@ -1,0 +1,143 @@
+.cv {
+    display: flex;
+    width: 794px;
+    height: 1123px;
+    margin: 2rem auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--gray-bold);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 15px;
+    color: #333;
+
+    &__column {
+        padding: 1.5rem;
+
+        &--left {
+            width: 35%;
+            background-color: var(--primary-color-dark);
+            border-right: 1px solid #ddd;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        &--right {
+            width: 65%;
+        }
+    }
+
+    &__img {
+        display: flex;
+        width: 200px;
+        height: 170px;
+        border-radius: 50%;
+        border: 1px solid var(--quinary-color-black);
+        margin: 0 auto 50px;
+    }
+
+    &__block {
+        margin-bottom: 1.5rem;
+
+        &--languages {
+            p {
+                margin: 20px 0;
+            }
+        }
+
+        &--hobbies {
+            ul {
+                padding-left: 0;
+                list-style: disc;
+                display: block;
+                flex-wrap: nowrap;
+                gap: 20px;
+                margin: 15px 0;
+
+                li {
+                    margin: 20px 0;
+                    color: var(--text-color);
+                }
+            }
+        }
+
+        &--qualities {
+
+            ul {
+                margin: 25px 0 0;
+            }
+        }
+    }
+
+    &__contact {
+        &--container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 5px 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.25rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        margin-top: -0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    &__heading {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--gray-color);
+        color: var(--text-color);
+        font-size: 1.5rem;
+
+        &--opposite {
+            color: black;
+        }
+    }
+
+    &__text {
+        margin: 0.25rem 0;
+    }
+
+    &__link {
+        display: block;
+        color: #007acc;
+        text-decoration: none;
+        font-size: 13px;
+        margin-bottom: 4px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__list {
+        padding-left: 0;
+        list-style: disc;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    &__list-item {
+        margin-bottom: 0.25rem;
+
+        p-tag {
+            width: 80px;
+            padding: 2px;
+        }
+    }
+}
