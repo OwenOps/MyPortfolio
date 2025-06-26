@@ -188,7 +188,7 @@
 
     &__date {
         position: absolute;
-        top: 0;
+        top: -2px;
         font-size: 20px;
         color: var(--secondary-color-light) !important;
         right: 0;
@@ -232,8 +232,18 @@
         margin-bottom: 0.25rem;
 
         p-tag {
-            width: 80px;
+            width: 95px;
             padding: 2px;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
+}
+
+.phone-size {
+    width: 0px;
+    margin: 0;
 }

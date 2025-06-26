@@ -69,11 +69,11 @@ export class UtilitiesService {
 
   copyToClipboard(elementToCopy: string, messageElementKey: string) {
     navigator.clipboard.writeText(elementToCopy).then(() => {
-      this.getTranslatedStrings(["CV.Copied", "CV.MessageElementKey"]).subscribe(translation => {
-        this.messageService.showMessageSuccess(`${translation["CV.MessageElementKey"]} ${translation["CV.Copied"]}`)
-      })
+      this.getTranslatedStrings(["CV.Copied", messageElementKey]).subscribe(translation => {
+        this.messageService.showMessageSuccess(`${translation[messageElementKey]} ${translation["CV.Copied"]}`);
+      });
     }).catch(err => {
-      console.error('Failed to copy phone number: ', err);
+      console.error('Failed to copy: ', err);
     });
   }
 }

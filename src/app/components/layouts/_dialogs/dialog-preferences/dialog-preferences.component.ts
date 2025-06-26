@@ -24,10 +24,10 @@ export class DialogPreferencesComponent extends BaseComponent {
       private readonly router: Router
     ) {
     super();
-    this.themes = themeService.getThemes();
   }
 
   ngOnInit(): void {
+    this.themes = this.themeService.getThemes();
     this.selectedTheme = this.themeService.getSelectedTheme();
   }
 
@@ -60,5 +60,20 @@ export class DialogPreferencesComponent extends BaseComponent {
   setPhoneMode(event: CheckboxChangeEvent) {
     this.userState.setIsPhoneMode(event.checked);
     this.storageService.saveIsPhoneMode(event.checked);
+  }
+
+  setCVPage(event: CheckboxChangeEvent) {
+    if (event.checked) {
+      this.utilitiesService.goToAPage(`cv/true`)
+      return
+    }
+
+    this.utilitiesService.goToAPage('/');
+
+    setTimeout(() => {
+      document.body.style.zoom = '100%';
+    }, 150)
+
+    this.userState.setIsPhoneMode(event.checked);
   }
 }

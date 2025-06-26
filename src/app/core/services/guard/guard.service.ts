@@ -52,10 +52,12 @@ export class GuardService {
       return false;
     }
 
+    const statusBool = status === 'true';
     const prevPro = this.storageService.getIsPro();
+    
     if (prevPro == null) {
       this.storageService.saveIsPro(status);
-      this.userStateService.setIsPro(status);
+      this.userStateService.setIsPro(statusBool);
       return true;
     }
 
@@ -67,7 +69,7 @@ export class GuardService {
     }
 
     this.storageService.saveIsPro(status);
-    this.userStateService.setIsPro(status);
+    this.userStateService.setIsPro(statusBool);
 
     return true;
   }

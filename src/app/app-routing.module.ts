@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'work/:isPro', component: WorkComponent, canActivate: [StatusGuard] },
   { path: 'hobbies/:isPro', component: HobbiesComponent, canActivate: [StatusGuard], },
   { path: 'portfolio/:isPro', component: AllPagesComponent, canActivate: [StatusGuard] },
-  { path: 'cv', component: CvComponent },
+  { path: 'cv/true', component: CvComponent },
   { path: '', redirectTo: 'home/true', pathMatch: 'full' },
   { path: '**', redirectTo: 'home/true', pathMatch: 'full' }
 ];

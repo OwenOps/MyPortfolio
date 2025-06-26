@@ -18,7 +18,6 @@ import { filter } from 'rxjs';
 })
 export class AppComponent extends BaseComponent {
   isMdMode: boolean = false;
-  isCvPage = this.userState.getIsCvPage();
 
   constructor
     (

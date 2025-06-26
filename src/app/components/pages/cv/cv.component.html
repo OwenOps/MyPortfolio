@@ -1,4 +1,4 @@
-<div class="cv-page">
+<div class="cv-page" [ngClass]="{'phone-size': isPhoneSize}">
     <p-speeddial [model]="items" direction="down" [style]="{ position: 'absolute', top: '-5px', left: 0 }"
         [buttonProps]="{ severity: 'help', rounded: true }" [tooltipOptions]="{ tooltipPosition: 'left' }" />
 
@@ -7,175 +7,157 @@
             <section class="cv__block cv__block--contact">
                 <img src="assets/img/test.jpg" alt="me" class="cv__img">
 
-                <h3 class="cv__heading">Contact</h3>
+                <h3 class="cv__heading">{{ 'CV.Contact' | translate }}</h3>
 
                 <div class="cv__contact--container">
                     <app-icon [name]="'linkedin'"></app-icon>
-
                     <div class="cv__contact__description">
-                        <h3>Linkedin</h3>
+                        <h3>LinkedIn</h3>
                     </div>
                 </div>
 
                 <div class="cv__contact--container">
                     <app-icon [name]="'address'"></app-icon>
-
                     <div class="cv__contact__description">
-                        <h3>Adresse</h3>
+                        <h3>{{ 'CV.Address' | translate }}</h3>
                         <p class="cv__text">78****</p>
                     </div>
                 </div>
 
                 <div class="cv__contact--container">
                     <app-icon [name]="'phone'"></app-icon>
-
                     <div class="cv__contact__description">
-                        <h3>Telephone</h3>
+                        <h3>{{ 'CV.Phone' | translate }}</h3>
                         <p class="cv__text">07 ** ** ** **</p>
                     </div>
                 </div>
 
                 <div class="cv__contact--container">
                     <app-icon [name]="'email'"></app-icon>
-
                     <div class="cv__contact__description">
-                        <h3>E-Mail</h3>
+                        <h3>{{ 'CV.Email' | translate }}</h3>
                         <p class="cv__text">{{ user.email }}</p>
                     </div>
                 </div>
-
             </section>
 
             <section class="cv__block cv__block--qualities">
-                <h3 class="cv__heading">Qualités</h3>
+                <h3 class="cv__heading">{{ 'CV.Qualities' | translate }}</h3>
                 <ul class="cv__list">
-                    <li class="cv__list-item"><p-tag value="Déterminé" severity="success" /></li>
-                    <li class="cv__list-item"><p-tag value="Curieux" severity="info" /></li>
-                    <li class="cv__list-item"><p-tag value="Adaptable" severity="warn" /></li>
-                    <li class="cv__list-item"><p-tag value="Autonome" severity="secondary" /></li>
+                    <li class="cv__list-item">
+                        <p-tag [value]="'CV.Determined' | translate" severity="success" />
+                    </li>
+                    <li class="cv__list-item">
+                        <p-tag [value]="'CV.Curious' | translate" severity="info" />
+                    </li>
+                    <li class="cv__list-item">
+                        <p-tag [value]="'CV.Adaptable' | translate" severity="warn" />
+                    </li>
+                    <li class="cv__list-item">
+                        <p-tag [value]="'CV.Autonomous' | translate" severity="secondary" />
+                    </li>
                 </ul>
             </section>
 
             <section class="cv__block cv__block--languages">
-                <h3 class="cv__heading">Langues</h3>
-                <p class="cv__text">Français : Langue maternelle</p>
-                <p class="cv__text">Anglais : Bon niveau</p>
-                <p class="cv__text">Espagnol : Scolaire</p>
+                <h3 class="cv__heading">{{ 'CV.Languages' | translate }}</h3>
+                <p class="cv__text">{{ 'CV.French' | translate }}</p>
+                <p class="cv__text">{{ 'CV.English' | translate }}</p>
+                <p class="cv__text">{{ 'CV.Spanish' | translate }}</p>
             </section>
 
             <section class="cv__block cv__block--hobbies">
-                <h3 class="cv__heading">Centres d’intérêt</h3>
+                <h3 class="cv__heading">{{ 'CV.Hobbies' | translate }}</h3>
                 <ul class="cv__list">
-                    <li class="cv__list-item">Judo (+10 ans), Musculation</li>
-                    <li class="cv__list-item">Culture japonaise</li>
-                    <li class="cv__list-item">Jeux vidéo (stratégie)</li>
+                    <li class="cv__list-item">{{ 'CV.Hobby1' | translate }}</li>
+                    <li class="cv__list-item">{{ 'CV.Hobby2' | translate }}</li>
+                    <li class="cv__list-item">{{ 'CV.Hobby3' | translate }}</li>
                 </ul>
             </section>
         </div>
 
         <div class="cv__column cv__column--right">
             <section class="cv__block cv__block--about">
-                <h1 class="cv__title">{{ user.name + " " + user.firstName }}</h1>
-                <h4 class="cv__subtitle">Étudiant Apprentissage</h4>
-                <h3 class="cv__heading">A propos de moi</h3>
-                <p class="cv__text">
-                    Étudiant en 3e année de BUT informatique, passionné par la technologie,
-                    je souhaite évoluer en continu dans ce domaine, notamment en
-                    alternance, pour gagner en expertise.
-                </p>
+                <h1 class="cv__title">{{ user.name + ' ' + user.firstName }}</h1>
+                <h4 class="cv__subtitle">{{ 'CV.StudentApprenticeship' | translate }}</h4>
+                <h3 class="cv__heading">{{ 'CV.AboutMe' | translate }}</h3>
+                <p class="cv__text">{{ 'CV.AboutText' | translate }}</p>
             </section>
 
             <section class="cv__block cv__block--education">
-                <h3 class="cv__heading">Éducation</h3>
-
+                <h3 class="cv__heading">{{ 'CV.Education' | translate }}</h3>
                 <div class="cv__container--section">
-                    <h2 class="cv__subtitle">BUT Informatique</h2>
-                    <h4 class="cv__subsubtitle">Université Paris Rives de Seine, Paris (75)</h4>
-
+                    <h2 class="cv__subtitle">{{ 'CV.ButTitle' | translate }}</h2>
+                    <h4 class="cv__subsubtitle">{{ 'CV.ButSchool' | translate }}</h4>
                     <ul class="cv__experiences">
-                        <li>Parcours Réalisation d’applications : conception, développement, validation</li>
-                        <li>Coloration cybersécurité</li>
+                        <li>{{ 'CV.ButDetail1' | translate }}</li>
+                        <li>{{ 'CV.ButDetail2' | translate }}</li>
                     </ul>
                     <p class="cv__date">2022-2025</p>
                 </div>
-
                 <div class="cv__container--section">
-                    <h2 class="cv__subtitle">Bac STI2D Option SIN</h2>
-                    <h4 class="cv__subsubtitle">Lycée Les Pierres Vives, Carrières-sur-Seine (78)</h4>
-
+                    <h2 class="cv__subtitle">{{ 'CV.BacTitle' | translate }}</h2>
+                    <h4 class="cv__subsubtitle">{{ 'CV.BacSchool' | translate }}</h4>
                     <ul class="cv__experiences">
-                        <li>Developpement d’un appareil IoT pour le covid dans un groupe de 3 (arduino)</li>
+                        <li>{{ 'CV.BacDetail1' | translate }}</li>
                     </ul>
                     <p class="cv__date">2020-2022</p>
                 </div>
             </section>
 
             <section class="cv__block cv__block--experience">
-                <h3 class="cv__heading">Expérience professionnelle</h3>
-
+                <h3 class="cv__heading">{{ 'CV.Experience' | translate }}</h3>
                 <div class="cv__container--section">
-                    <h2 class="cv__subtitle">Job ETE</h2>
-                    <h4 class="cv__subsubtitle">SubSea 7, Suresnes (92)</h4>
-
+                    <h2 class="cv__subtitle">{{ 'CV.JobSummer' | translate }}</h2>
+                    <h4 class="cv__subsubtitle">{{ 'CV.JobCompany' | translate }}</h4>
                     <ul class="cv__experiences">
-                        <li>Service informatique</li>
+                        <li>{{ 'CV.JobTask1' | translate }}</li>
                     </ul>
                     <p class="cv__date">2023</p>
                 </div>
-
                 <div class="cv__container--section">
-                    <h2 class="cv__subtitle">Developpeur Full Stack / DevOps</h2>
-                    <h4 class="cv__subsubtitle">SubSea 7</h4>
-
+                    <h2 class="cv__subtitle">{{ 'CV.AltTitle' | translate }}</h2>
+                    <h4 class="cv__subsubtitle">{{ 'CV.AltCompany' | translate }}</h4>
                     <ul class="cv__experiences">
-                        <li>Développement d’une application web pour gérer l’inventaire de l’entreprise</li>
-                        <li>Mise en place d’un script en C# pour parcourir et comparer des fichiers entre deux
-                            répertoires
-                        </li>
-                        <li>Création d’un gestionnaire de fichier avancé</li>
+                        <li>{{ 'CV.AltTask1' | translate }}</li>
+                        <li>{{ 'CV.AltTask2' | translate }}</li>
+                        <li>{{ 'CV.AltTask3' | translate }}</li>
                     </ul>
                     <p class="cv__date">2023-2025</p>
                 </div>
             </section>
 
             <section class="cv__block cv__block--projects">
-                <h3 class="cv__heading">Projets Réalisés</h3>
-
+                <h3 class="cv__heading">{{ 'CV.Projects' | translate }}</h3>
                 <div class="cv__container--section">
-                    <h2 class="cv__subtitle">Projets principaux</h2>
-
+                    <h2 class="cv__subtitle">{{ 'CV.ProjectsMain' | translate }}</h2>
                     <ul class="cv__experiences">
-                        <li>Refonte d’un site web</li>
-                        <li>Projet mobile pour simplifier la gestion des signaux pharmaceutiques.</li>
-                        <li>Projet visant à développer des compétences en optimisation d'applications.</li>
+                        <li>{{ 'CV.Project1' | translate }}</li>
+                        <li>{{ 'CV.Project2' | translate }}</li>
+                        <li>{{ 'CV.Project3' | translate }}</li>
                     </ul>
-                    <p class="cv__date">2023-2025</p>
                 </div>
             </section>
 
             <section class="cv__block cv__block--skills">
-                <h3 class="cv__heading">Outils & Technologies</h3>
-
+                <h3 class="cv__heading">{{ 'CV.Tools' | translate }}</h3>
                 <div class="cv__container--section">
                     <div>
-                        <h4 class="cv__subtitle">Framework : </h4>
+                        <h4 class="cv__subtitle">{{ 'CV.Frameworks' | translate }}</h4>
                         <ul>
-                            <li>Angular, Spring boot, Entity Framework</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="cv__subtitle">Technologie : </h4>
-                        <ul>
-                            <li>Azure, Azure Devops, Jenkins, Docker, Github</li>
-                            <li>SSMS, Virtual Box, Cisco Packet Tracer</li>
+                            <li>{{ 'CV.FrameworkList' | translate }}</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="cv__subtitle">Languages : </h4>
+                        <h4 class="cv__subtitle">{{ 'CV.Technologies' | translate }}</h4>
                         <ul>
-                            <li>C#, Java, VB.NET, .NET, SQL, Python, LateX</li>
-                            <li>SCSS, HTML, JavaScript, TypeScript</li>
+                            <li>{{ 'CV.TechnologyList' | translate }}</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="cv__subtitle">{{ 'CV.LanguagesTitle' | translate }}</h4>
+                        <ul>
+                            <li>{{ 'CV.LanguagesList' | translate }}</li>
                         </ul>
                     </div>
                 </div>

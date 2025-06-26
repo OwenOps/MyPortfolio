@@ -4,7 +4,7 @@ import { Injectable, Signal, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class UserStateService {
-  private readonly _isPro = signal<boolean>(false);
+  private readonly _isPro = signal<boolean>(true);
   private readonly _isUserAdmin = signal<boolean>(false);
   private readonly _isSinglePage = signal<boolean>(false);
   private readonly _IsCvPage = signal<boolean>(false); // Its the real phone size

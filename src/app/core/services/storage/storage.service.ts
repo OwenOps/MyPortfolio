@@ -19,6 +19,10 @@ export class StorageService {
     return localStorage.getItem(this.PRO_KEY);
   }
 
+  getIsProBoolean(): boolean {
+    return this.getIsPro() === 'true';
+  }
+
   getIsPhoneMode(): boolean {
     return localStorage.getItem(this.PHONE_MODE_KEY) == 'true';
   }

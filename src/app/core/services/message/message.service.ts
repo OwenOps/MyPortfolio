@@ -5,7 +5,6 @@ import { MessageService as MessagePr } from 'primeng/api';
   providedIn: 'root'
 })
 export class MessageService {
-  private readonly timeout: number = 2000;
 
   constructor
     (
