@@ -4,7 +4,7 @@ import { BaseComponent } from '../base/base.component';
 
 @Directive({
   selector: 'app-base-next',
-  standalone: false
+  
 })
 export abstract class BaseNextComponent extends BaseComponent {
   pathNextPage: string = "";

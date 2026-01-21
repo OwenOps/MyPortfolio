@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { lstUser, User } from 'src/app/core/models/user';
 import { BaseComponent } from '../../shared/base/base.component';
 import { StorageService } from 'src/app/core/services/storage/storage.service';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { SocialMediaComponent } from '../social-media/social-media.component';
+import { PrimengModule } from 'src/app/shared/primeng.module';
+import { lstUser, User } from 'src/app/core/models/user';
 
 @Component({
   selector: 'app-form-contact',
   templateUrl: './form-contact.component.html',
   styleUrl: './form-contact.component.scss',
-  standalone: false,
+  imports: [SharedModule, SocialMediaComponent, PrimengModule],
 })
-export class FormContactComponent extends BaseComponent {
+export class FormContactComponent extends BaseComponent implements OnInit {
   user: User = lstUser[0];
   contactForm!: FormGroup;
   topics: string[] = [];

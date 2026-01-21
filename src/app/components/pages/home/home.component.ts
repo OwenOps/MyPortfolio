@@ -1,13 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { BaseNextComponent } from '../../shared/base-next/base-next.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ButtonNextComponent } from '../../layouts/button-next/button-next.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  standalone: false
+  imports: [SharedModule, ButtonNextComponent]
 })
-export class HomeComponent extends BaseNextComponent {
+export class HomeComponent extends BaseNextComponent implements OnInit {
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
   @ViewChild('typedElement2', { static: true }) typedElement2!: ElementRef;
 

@@ -4,12 +4,16 @@ import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { BaseComponent } from 'src/app/components/shared/base/base.component';
 import { StorageService } from 'src/app/core/services/storage/storage.service';
 import { ThemeService } from 'src/app/core/services/themes/theme.service';
+import { PrimengModule } from 'src/app/shared/primeng.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { FlagsComponent } from '../../flags/flags.component';
+import { FormContactComponent } from '../../form-contact/form-contact.component';
 
 @Component({
   selector: 'app-dialog-preferences',
   templateUrl: './dialog-preferences.component.html',
   styleUrl: './dialog-preferences.component.scss',
-  standalone: false
+  imports: [SharedModule, PrimengModule, FlagsComponent, FormContactComponent]
 })
 export class DialogPreferencesComponent extends BaseComponent {
   themes!: any;

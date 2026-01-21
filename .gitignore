@@ -39,6 +39,6 @@ Thumbs.db
 
 /docs
 
-environments/
+src/environments/environment.ts
 
 src/app/core/models/user.ts

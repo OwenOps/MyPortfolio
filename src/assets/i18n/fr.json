@@ -23,19 +23,19 @@
     "Timeline": {
       "2020-2021": {
         "Title": "Passé",
-        "Description": "J’ai suivi un lycée général avec une spécialité technologique (STI2D). Durant ces années, nous avons réalisé divers projets liés à l’internet des objets, en utilisant notamment des cartes Arduino."
-      },
-      "2022-2023": {
-        "Title": "Présent",
-        "Description": "Je prépare actuellement un Bachelor universitaire de technologie à Paris Cité. Nous y menons de nombreux projets dans des domaines variés, comme le développement d’applications ou les systèmes."
+        "Description": "J’ai suivi un lycée général avec une spécialisation technologique (STI2D). Durant cette période, j’ai réalisé plusieurs projets IoT basés sur des cartes Arduino."
       },
       "2023-2025": {
-        "Title": "Présent",
-        "Description": "Je suis actuellement apprenti Développeur Full Stack chez Subsea7. Je participe à plusieurs projets de création d'applications web."
+        "Title": "Passé",
+        "Description": "J’ai étudié à l’Université Paris Cité où j’ai validé ma première année de BUT. J’ai travaillé sur différents projets académiques liés au développement logiciel et aux systèmes."
       },
-      "2026": {
+      "2026-2028": {
+        "Title": "Présent",
+        "Description": "Je suis actuellement en école d’ingénieur tout en étant en alternance chez Subsea7 en tant que Développeur Full Stack. Je contribue à divers projets visant à créer et améliorer des applications web internes."
+      },
+      "2029": {
         "Title": "Futur",
-        "Description": "Après l’obtention de mon BUT, je souhaiterais intégrer une école d’ingénieurs en informatique. Mon projet professionnel reste à affiner, mais je m’oriente vers une carrière de Développeur Full Stack ou DevOps."
+        "Description": "Je souhaite renforcer mon expertise dans le cloud, les pratiques DevOps et les architectures scalables. Mon objectif est d’évoluer vers un rôle d’ingénieur DevOps ou d’ingénieur cloud."
       }
     }
   },

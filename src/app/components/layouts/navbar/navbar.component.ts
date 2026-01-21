@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { lstSections, Sections } from 'src/app/core/models/sections';
-import { lstUser, User } from 'src/app/core/models/user';
 import { BaseComponent } from '../../shared/base/base.component';
 import { DialogPreferencesComponent } from '../_dialogs/dialog-preferences/dialog-preferences.component';
+import { User, lstUser } from 'src/app/core/models/user';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  standalone: false
+  imports: [SharedModule]
 })
 export class NavbarComponent extends BaseComponent {
   isMenuOpen: boolean = false;

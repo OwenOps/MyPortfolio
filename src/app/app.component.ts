@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LANGUAGES } from './constants/language.constants';
 import { APP_CONSTANTS } from './constants/app.constants';
@@ -8,15 +8,19 @@ import { StorageService } from './core/services/storage/storage.service';
 import { BaseComponent } from './components/shared/base/base.component';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { SharedModule } from './shared/shared.module';
+import { PrimengModule } from './shared/primeng.module';
+import { SideBarComponent } from './components/layouts/side-bar/side-bar.component';
+import { NavbarComponent } from './components/layouts/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [SharedModule, PrimengModule, SideBarComponent, NavbarComponent]
 })
-export class AppComponent extends BaseComponent {
+export class AppComponent extends BaseComponent implements OnInit {
   isMdMode: boolean = false;
 
   constructor

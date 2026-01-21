@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { lstSections, Sections } from 'src/app/core/models/sections';
-import { lstUser, User } from 'src/app/core/models/user';
 import { BaseComponent } from '../../shared/base/base.component';
+import { User, lstUser } from 'src/app/core/models/user';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { FlagsComponent } from '../flags/flags.component';
+import { SideBarFooterComponent } from '../side-bar-footer/side-bar-footer.component';
 
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss'],
-  standalone: false
+  imports: [SharedModule, FlagsComponent, SideBarFooterComponent]
 })
 export class SideBarComponent extends BaseComponent {
   lstSection: Sections[] = lstSections;

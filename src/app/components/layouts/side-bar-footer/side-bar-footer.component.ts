@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { lstUser, User } from 'src/app/core/models/user';
 import { DialogPreferencesComponent } from '../_dialogs/dialog-preferences/dialog-preferences.component';
 import { BaseComponent } from '../../shared/base/base.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { User, lstUser } from 'src/app/core/models/user';
+import { SocialMediaComponent } from '../social-media/social-media.component';
 
 export interface Country {
   name: string,
@@ -12,7 +14,7 @@ export interface Country {
   selector: 'app-side-bar-footer',
   templateUrl: './side-bar-footer.component.html',
   styleUrls: ['./side-bar-footer.component.scss'],
-  standalone: false
+  imports:[SharedModule, SocialMediaComponent]
 })
 export class SideBarFooterComponent extends BaseComponent {
   countries: Country[] | undefined;

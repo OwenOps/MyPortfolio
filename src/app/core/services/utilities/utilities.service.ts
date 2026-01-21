@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 import { APP_CONSTANTS } from 'src/app/constants/app.constants';
 import { LANGUAGES } from 'src/app/constants/language.constants';
 import emailjs from '@emailjs/browser';
-import { environment } from 'src/environments/environment';
 import { MessageService } from '../message/message.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class UtilitiesService {
 
   changeSiteLanguage(language: string) {
     this.translateService.setDefaultLang(language ?? LANGUAGES.FR);
-    window.localStorage.setItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE, language);
+    localStorage.setItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE, language);
   }
 
   public openDialog(component: any, header?: string, data: any = {}): DynamicDialogRef {

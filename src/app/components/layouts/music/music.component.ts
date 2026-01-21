@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { spotifyTracks, Track } from 'src/app/core/models/track';
 import { MessageService } from 'src/app/core/services/message/message.service';
 import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
+import { SafeUrlPipe } from '../../shared/pipe/safe-url.pipe';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
     selector: 'app-music',
     templateUrl: './music.component.html',
     styleUrls: ['./music.component.scss'],
-    standalone: false
+    imports: [SafeUrlPipe, SharedModule]
 })
 export class MusicComponent {
     tracks: Track[] = spotifyTracks;

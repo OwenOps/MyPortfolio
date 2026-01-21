@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { AccordionWork, lstworks } from 'src/app/core/models/accordion-work';
+import { lstworks } from 'src/app/core/models/accordion-work';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
     selector: 'app-accordion',
     templateUrl: './accordion.component.html',
     styleUrls: ['./accordion.component.scss'],
-    standalone: false
+    imports: [SharedModule]
 })
 export class AccordionComponent {
     visibleItems = 4;
