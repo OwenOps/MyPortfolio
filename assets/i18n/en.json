@@ -18,24 +18,24 @@
   "ABOUT": {
     "Title1": "ABOUT ME",
     "Title2": "WHO AM I?",
-    "Description": "My name is Owen, I'm 21 years old, and I'm studying computer science at Paris Descartes. My interest in computers goes back to my childhood, when I discovered video games. Since then, my passion for this field has continued to grow. I love exploring new technologies and learning new skills.",
+    "Description": "My name is Owen, I'm 22 years old, and I'm studying computer science at ESIEA, an engineering school. My interest in computers goes back to my childhood, when I discovered video games. Since then, my passion for this field has continued to grow. I love exploring new technologies and learning new skills.",
     "CareerPathTitle": "My Career Path",
     "Timeline": {
       "2020-2021": {
         "Title": "Past",
-        "Description": "I attended a general high school with a technological specialization (STI2D). During these years, we created various IoT projects using Arduino boards."
-      },
-      "2022-2023": {
-        "Title": "Present",
-        "Description": "I am currently preparing a Bachelor's degree in technology at Paris Cité. We work on various projects in fields such as systems and application development."
+        "Description": "I attended a general high school with a technological specialization (STI2D). During this period, I worked on several IoT projects using Arduino boards."
       },
       "2023-2025": {
-        "Title": "Present",
-        "Description": "I am currently an apprentice Full Stack Developer at Subsea7. I am involved in multiple projects creating web applications."
+        "Title": "Past",
+        "Description": "I studied at Paris Cité University, where I completed the first year of my Bachelor's degree in technology. I worked on multiple academic projects in software and system development."
       },
-      "2026": {
+      "2026-2028": {
+        "Title": "Present",
+        "Description": "I am currently enrolled in an engineering school while working as a Full Stack Developer apprentice at Subsea7. I contribute to various internal web application projects and continue to develop my technical skills."
+      },
+      "2029": {
         "Title": "Future",
-        "Description": "After completing my Bachelor's in technology, I plan to attend a computer engineering school. My career path is still undecided, but I am considering becoming either a Full Stack Developer or a DevOps engineer."
+        "Description": "I aim to solidify my expertise in cloud technologies, DevOps practices, and scalable architectures. My goal is to take on more responsibilities in software engineering, possibly moving toward a DevOps or Cloud Engineer role."
       }
     }
   },
@@ -108,7 +108,6 @@
     "Contact": "Contact",
     "Address": "Address",
     "Phone": "Phone",
-    "Email": "E-Mail",
     "Qualities": "Qualities",
     "Languages": "Languages",
     "French": "French: Native language",
@@ -119,8 +118,11 @@
     "Hobby2": "Japanese culture",
     "Hobby3": "Video games (strategy)",
     "AboutMe": "About Me",
-    "AboutText": "Third-year computer science student passionate about technology. I aspire to continuously grow in this field, especially through an apprenticeship to gain expertise.",
+    "AboutText": "First-year engineering student passionate about technology. I aspire to continuously grow in this field, especially through an apprenticeship to gain expertise.",
     "Education": "Education",
+    "EngineeringSchoolTitle": "Engineering Degree in Computer Science",
+    "EngineeringSchoolSchool": "ESIEA, Paris (75)",
+    "EngineeringSchoolDetail1": "First year of the engineering cycle, generalist computer science training",
     "ButTitle": "Bachelor in Computer Science",
     "ButSchool": "Université Paris Rives de Seine, Paris (75)",
     "ButDetail1": "Application development: design, implementation, validation",
