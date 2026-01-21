@@ -31,7 +31,7 @@ export class UtilitiesService {
     localStorage.setItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE, language);
   }
 
-  public openDialog(component: any, header?: string, data: any = {}): DynamicDialogRef {
+  public openDialog(component: any, header?: string, data: any = {}): DynamicDialogRef<unknown> | null {
     const ref = this.dialogService.open(component, {
       header: header,
       modal: true,
