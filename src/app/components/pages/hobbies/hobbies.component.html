@@ -13,9 +13,11 @@
       <div>
         <app-phone></app-phone>
       </div>
-      <div *ngIf="!isPro">
-        <app-games></app-games>
-      </div>
+      @if (!isPro) {
+        <div>
+          <app-games></app-games>
+        </div>
+      }
     </div>
   </div>
 </div>

@@ -28,37 +28,44 @@
   </div>
   <div id="faq">
     <ul>
-      <li *ngFor="let track of tracks">
-        <input type="checkbox" [id]="'track-' + track.id" (click)="loadIframe(track)">
-        <a [href]="track.spotifyUrl" target="_blank">
-          <i class="pi pi-external-link" style="color: var(--spotify-color)"></i>
-        </a>
-        <label [for]="'track-' + track.id">
-          <div class="loader">
-            <div class="song">
-              <p class="name">{{ track.name }}</p>
-              <p class="artist">{{ track.artist }}</p>
+      @for (track of tracks; track track) {
+        <li>
+          <input type="checkbox" [id]="'track-' + track.id" (click)="loadIframe(track)">
+          <a [href]="track.spotifyUrl" target="_blank">
+            <i class="pi pi-external-link" style="color: var(--spotify-color)"></i>
+          </a>
+          <label [for]="'track-' + track.id">
+            <div class="loader">
+              <div class="song">
+                <p class="name">{{ track.name }}</p>
+                <p class="artist">{{ track.artist }}</p>
+              </div>
+              <div class="albumcover">
+                <img [src]="track.albumCover" alt="album-cover" width="100" height="100">
+              </div>
+              @if (track.isLoaded) {
+                <div class="loading">
+                  <div class="load"></div>
+                  <div class="load"></div>
+                  <div class="load"></div>
+                  <div class="load"></div>
+                </div>
+              }
+              @if (!track.isLoaded) {
+                <div class="play"></div>
+              }
             </div>
-            <div class="albumcover">
-              <img [src]="track.albumCover" alt="album-cover" width="100" height="100">
-            </div>
-            <div class="loading" *ngIf="track.isLoaded">
-              <div class="load"></div>
-              <div class="load"></div>
-              <div class="load"></div>
-              <div class="load"></div>
-            </div>
-            <div class="play" *ngIf="!track.isLoaded"></div>
+          </label>
+          <div class="embed-container">
+            @if (track.isLoaded) {
+              <iframe style="border-radius:12px" [src]="track.embedUrl | safeUrl" width="100%"
+                height="150" [title]="track.name"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+              </iframe>
+            }
           </div>
-        </label>
-
-        <div class="embed-container">
-          <iframe *ngIf="track.isLoaded" style="border-radius:12px" [src]="track.embedUrl | safeUrl" width="100%"
-            height="150" [title]="track.name"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-          </iframe>
-        </div>
-      </li>
+        </li>
+      }
     </ul>
   </div>
 </div>

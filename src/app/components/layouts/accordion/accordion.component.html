@@ -2,23 +2,29 @@
   <h1 translate="WORK.SomeProjectsTitle"></h1>
   <ul>
     <!-- Affiche uniquement les projets visibles, selon showAll -->
-    <li *ngFor="let work of lstworks.slice(0, visibleItems); let i = index">
-      <input type="checkbox" checked>
-      <div class="title-container">
-        <h2 [translate]="work.titleKey"></h2>
-        <a [href]="work.link" target="_blank">
-          <i class="pi pi-external-link"></i>
-        </a>
-      </div>
-      <p [translate]="work.descriptionKey"></p>
-    </li>
+    @for (work of lstworks.slice(0, visibleItems); track work; let i = $index) {
+      <li>
+        <input type="checkbox" checked>
+        <div class="title-container">
+          <h2 [translate]="work.titleKey"></h2>
+          <a [href]="work.link" target="_blank">
+            <i class="pi pi-external-link"></i>
+          </a>
+        </div>
+        <p [translate]="work.descriptionKey"></p>
+      </li>
+    }
   </ul>
 
-  <button *ngIf="!showAll" (click)="toggleShowMore()" class="showAll">
-    <span>View more</span>
-  </button>
+  @if (!showAll) {
+    <button (click)="toggleShowMore()" class="showAll">
+      <span>View more</span>
+    </button>
+  }
 
-  <button *ngIf="showAll" (click)="toggleShowMore()" class="showAll">
-    <span>View less</span>
-  </button>
+  @if (showAll) {
+    <button (click)="toggleShowMore()" class="showAll">
+      <span>View less</span>
+    </button>
+  }
 </div>

@@ -14,11 +14,13 @@
       </div>
     </div>
     <ul class="sidebar__nav">
-      <div *ngFor="let item of lstSection">
-        <li class="sidebar__nav-item">
-          <a class="sidebar__nav-link" (click)="goToThePage(item.root)">{{ item.translationKey | translate }}</a>
-        </li>
-      </div>
+      @for (item of lstSection; track item) {
+        <div>
+          <li class="sidebar__nav-item">
+            <a class="sidebar__nav-link" (click)="goToThePage(item.root)">{{ item.translationKey | translate }}</a>
+          </li>
+        </div>
+      }
     </ul>
     <div class="sidebar__footer">
       <app-side-bar-footer></app-side-bar-footer>

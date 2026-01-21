@@ -13,20 +13,22 @@
 
       <div class="settings-container">
         <i class="pi pi-cog navbar__left-settings" [ngClass]="{ 'pi-spin': settingHover }"
-          (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" (click)="openDialog()"></i>
+        (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" (click)="openDialog()"></i>
       </div>
     </div>
 
-    <div class="navbar__links--mobile" *ngIf="isMenuOpen">
-      <ul>
-        <ng-container *ngFor="let link of lstSection">
-          <li>
-            <a (click)="goToThePage(link.root)">{{
+    @if (isMenuOpen) {
+      <div class="navbar__links--mobile">
+        <ul>
+          @for (link of lstSection; track link) {
+            <li>
+              <a (click)="goToThePage(link.root)">{{
               link.header }}</a>
-          </li>
-        </ng-container>
-      </ul>
-    </div>
+            </li>
+          }
+        </ul>
+      </div>
+    }
 
     <div class="navbar__middle">
       <p> {{ currentUser.fullName }} </p>

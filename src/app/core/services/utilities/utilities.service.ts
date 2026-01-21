@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Observable } from 'rxjs';
 import { APP_CONSTANTS } from 'src/app/constants/app.constants';
@@ -8,6 +6,8 @@ import { LANGUAGES } from 'src/app/constants/language.constants';
 import emailjs from '@emailjs/browser';
 import { MessageService } from '../message/message.service';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
