@@ -119,8 +119,11 @@
     "Hobby2": "Culture japonaise",
     "Hobby3": "Jeux vidéo (stratégie)",
     "AboutMe": "À propos de moi",
-    "AboutText": "Étudiant en 3e année de BUT informatique, passionné par la technologie, je souhaite évoluer en continu dans ce domaine, notamment en alternance, pour gagner en expertise.",
+    "AboutText": "Étudiant en 1ere année de cycle ingénieur informatique, passionné par la technologie, je souhaite évoluer en continu dans ce domaine, notamment en alternance, pour gagner en expertise.",
     "Education": "Éducation",
+    "EngineeringSchoolTitle": "Diplôme d'Ingénieur en Informatique",
+    "EngineeringSchoolSchool": "ESIEA, Paris (75)",
+    "EngineeringSchoolDetail1": "Première année du cycle ingénieur, formation généraliste en informatique",
     "ButTitle": "BUT Informatique",
     "ButSchool": "Université Paris Rives de Seine, Paris (75)",
     "ButDetail1": "Parcours Réalisation d’applications : conception, développement, validation",
@@ -156,7 +159,6 @@
     "StudentApprenticeship": "Étudiant Apprentissage",
     "Copied": "a été copié dans le presse-papier.",
     "Phonenumber": "Numéro de téléphone",
-    "Location": "Emplacement",
-    "Email": "E-mail"
+    "Location": "Emplacement"
   }
 }
