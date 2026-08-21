@@ -62,12 +62,18 @@ export class AppComponent extends BaseComponent implements OnInit {
     else this.translate.setDefaultLang(LANGUAGES.EN);
 
     this.themeService.initTheme();
+    document.body.style.removeProperty('zoom');
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       const url = (event as NavigationEnd).urlAfterRedirects;
-      this.userState.setIsCvPage(url.includes('/cv'));
-    });;
+      const isCv = url.includes('/cv');
+      this.userState.setIsCvPage(isCv);
+
+      if (!isCv) {
+        document.body.style.removeProperty('zoom');
+      }
+    });
   }
 }

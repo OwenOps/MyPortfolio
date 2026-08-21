@@ -1,78 +1,93 @@
 <div class="dialog-content">
-  <div class="dialog-content__section">
-    <div class="dialog-content__section__title">
-      <h3>{{ 'PREFERENCES.Themes' | translate }}</h3>
-      <i class="pi pi-palette"></i>
-    </div>
+  <div class="dialog-tabs" role="tablist">
+    <button type="button" class="dialog-tabs__tab" role="tab"
+      [class.active]="activeTab === 'settings'"
+      [attr.aria-selected]="activeTab === 'settings'"
+      (click)="activeTab = 'settings'">
+      <i class="pi pi-cog"></i>
+      <span>{{ 'PREFERENCES.Settings_Tab' | translate }}</span>
+    </button>
+    <button type="button" class="dialog-tabs__tab" role="tab"
+      [class.active]="activeTab === 'contact'"
+      [attr.aria-selected]="activeTab === 'contact'"
+      (click)="activeTab = 'contact'">
+      <i class="pi pi-send"></i>
+      <span>{{ 'PREFERENCES.Contact' | translate }}</span>
+    </button>
+  </div>
 
-    <div class="radio-input">
-      @for (theme of themes; track theme; let i = $index) {
-        <label
-          [ngClass]="selectedTheme === theme.value ? theme.value : ''">
-          <input type="radio" name="value-radio" [value]="theme.value" [(ngModel)]="selectedTheme"
-            (change)="onThemeChange(i)" />
-            <span>{{ 'PREFERENCES.' + theme.label | translate }}</span>
-          </label>
+  @if (activeTab === 'settings') {
+    <div class="dialog-content__section">
+      <div class="dialog-content__section__title">
+        <h3>{{ 'PREFERENCES.Themes' | translate }}</h3>
+        <i class="pi pi-palette"></i>
+      </div>
+      <p class="dialog-hint">{{ 'PREFERENCES.Themes_Hint' | translate }}</p>
+
+      <div class="theme-swatches">
+        @for (theme of themes; track theme.value) {
+          <button type="button" class="theme-swatch"
+            [class.active]="selectedTheme === theme.value"
+            [style.--swatch]="theme.swatch"
+            [style.--accent]="theme.accent"
+            [pTooltip]="'PREFERENCES.' + theme.label | translate"
+            tooltipPosition="top"
+            [attr.aria-label]="'PREFERENCES.' + theme.label | translate"
+            (click)="onThemeChange(theme)">
+            <span class="theme-swatch__dot"></span>
+          </button>
         }
-        <span class="selection"
-          [ngStyle]="{transform: 'translateX(calc(100% * ' + selectedIndex + ' / ' + themes.length + '))'}"
-        [ngClass]="selectedTheme"></span>
       </div>
     </div>
-
-    @if (isPhoneMode || isPhoneSize) {
-      <div class="dialog-content__section">
-        <div class="dialog-content__section__title">
-          <h3>{{ 'PREFERENCES.LANGUAGES' | translate }}</h3>
-          <i class="pi pi-flag"></i>
-        </div>
-        <app-flags></app-flags>
-      </div>
-    }
 
     <div class="dialog-content__section">
+      <div class="dialog-content__section__title">
+        <h3>{{ 'PREFERENCES.LANGUAGES' | translate }}</h3>
+        <i class="pi pi-flag"></i>
+      </div>
+      <app-flags></app-flags>
+    </div>
 
+    <div class="dialog-content__section">
       <div class="dialog-content__section__title">
         <h3>{{ 'PREFERENCES.Navigation' | translate }}</h3>
         <i class="pi pi-directions"></i>
       </div>
 
-      <div class="dialog-content__elements">
+      <div class="setting-row">
         <p-checkbox [binary]="true" inputId="single-page" [(ngModel)]="isSinglePage"
           (onChange)="setSinglePage($event)" />
-          <label for="single-page" class="label">{{ 'PREFERENCES.Single_Page' | translate }}</label>
-        </div>
-
-        @if (!isPhoneSize) {
-          <div class="dialog-content__elements">
-            <p-checkbox [binary]="true" [(ngModel)]="isPhoneMode" inputId="mobile-phone"
-              (onChange)="setPhoneMode($event)" />
-              <label for="mobile-phone" class="label">{{ 'PREFERENCES.Phone_Mode' | translate }}</label>
-            </div>
-          }
-
-          <div class="dialog-content__elements">
-            <p-checkbox [binary]="true" [(ngModel)]="isCvPage" inputId="cv-page" (onChange)="setCVPage($event)" />
-            <label for="cv-page" class="label">{{ 'PREFERENCES.CV_Page' | translate }}</label>
-          </div>
-
-          <div class="dialog-content__elements">
-            <p-checkbox [binary]="true" [(ngModel)]="isPro" [disabled]="!isUserAdmin" inputId="pro-mode"
-            (onChange)="setProMode($event)"></p-checkbox>
-
-            <div class="label">
-              <label for="pro-mode">{{ 'PREFERENCES.Pro_Mode' | translate }}</label>
-              <i class="pi pi-info-circle" pTooltip="Show more personnal infos" tooltipPosition="right"
-              [showDelay]="500"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="dialog-content__section">
-          <div class="dialog-content__section__title">
-            <h3>{{ 'PREFERENCES.Contact' | translate }}</h3>
-            <i class="pi pi-user"></i>
-          </div>
-          <app-form-contact></app-form-contact>
+        <div class="setting-copy">
+          <label for="single-page">{{ 'PREFERENCES.Single_Page' | translate }}</label>
+          <p>{{ 'PREFERENCES.Single_Page_Hint' | translate }}</p>
         </div>
       </div>
+
+      @if (!isPhoneSize) {
+        <div class="setting-row">
+          <p-checkbox [binary]="true" [(ngModel)]="isPhoneMode" inputId="mobile-phone"
+            (onChange)="setPhoneMode($event)" />
+          <div class="setting-copy">
+            <label for="mobile-phone">{{ 'PREFERENCES.Phone_Mode' | translate }}</label>
+            <p>{{ 'PREFERENCES.Phone_Mode_Hint' | translate }}</p>
+          </div>
+        </div>
+      }
+
+      @if (isUserAdmin) {
+        <div class="setting-row">
+          <p-checkbox [binary]="true" [(ngModel)]="isPro" inputId="pro-mode"
+            (onChange)="setProMode($event)"></p-checkbox>
+          <div class="setting-copy">
+            <label for="pro-mode">{{ 'PREFERENCES.Pro_Mode' | translate }}</label>
+            <p>{{ 'PREFERENCES.Pro_Mode_Hint' | translate }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="dialog-content__section dialog-content__section--contact">
+      <app-form-contact></app-form-contact>
+    </div>
+  }
+</div>

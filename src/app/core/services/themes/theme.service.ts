@@ -1,20 +1,27 @@
 import { Injectable } from '@angular/core';
 import { APP_CONSTANTS } from 'src/app/constants/app.constants';
 
+export interface ThemeOption {
+  value: string;
+  label: string;
+  swatch: string;
+  accent: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
   private selectedTheme: string = "";
 
-  private readonly themes = [
-    { value: 'brown', label: 'Theme_Brown' },
-    { value: 'light', label: 'Theme_Light' },
-    { value: 'green', label: 'Theme_Green' },
-    { value: 'blue', label: 'Theme_Blue' },
-    { value: 'gray', label: 'Theme_Gray' },
-    { value: 'red', label: 'Theme_Red' },
-    { value: 'purple', label: 'Theme_Purple' },
+  private readonly themes: ThemeOption[] = [
+    { value: 'brown', label: 'Theme_Brown', swatch: '#6E3B1F', accent: '#FF4301' },
+    { value: 'light', label: 'Theme_Light', swatch: '#f5f5f5', accent: '#aaaaaa' },
+    { value: 'green', label: 'Theme_Green', swatch: '#004d40', accent: '#00FF00' },
+    { value: 'blue', label: 'Theme_Blue', swatch: '#1b263b', accent: '#00BFFF' },
+    { value: 'gray', label: 'Theme_Gray', swatch: '#393E46', accent: '#00ADB5' },
+    { value: 'red', label: 'Theme_Red', swatch: '#3D0000', accent: '#FF5733' },
+    { value: 'purple', label: 'Theme_Purple', swatch: '#52057B', accent: '#9B30FF' },
   ];
 
   constructor() { }
@@ -29,12 +36,12 @@ export class ThemeService {
     const body = document.body;
 
     body.classList.remove(
-      'theme-brown', 
-      'theme-light', 
-      'theme-green', 
-      'theme-blue', 
-      'theme-gray', 
-      'theme-red', 
+      'theme-brown',
+      'theme-light',
+      'theme-green',
+      'theme-blue',
+      'theme-gray',
+      'theme-red',
       'theme-purple'
     );
     body.classList.add(`theme-${theme}`);

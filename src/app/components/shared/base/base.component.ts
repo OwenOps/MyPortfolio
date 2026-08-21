@@ -34,4 +34,8 @@ export abstract class BaseComponent {
   protected startLoading() { this.isLoading = true; }
 
   protected stopLoading() { this.isLoading = false; }
+
+  protected openCv(): void {
+    this.utilitiesService.goToAPage('cv/true');
+  }
 }

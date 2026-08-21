@@ -12,6 +12,13 @@
       </label>
 
       <div class="settings-container">
+        <i class="pi pi-id-card navbar__left-settings"
+          [pTooltip]="'SIDEBAR.View_CV' | translate"
+          tooltipPosition="bottom"
+          (click)="goToCv()"></i>
+      </div>
+
+      <div class="settings-container">
         <i class="pi pi-cog navbar__left-settings" [ngClass]="{ 'pi-spin': settingHover }"
         (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" (click)="openDialog()"></i>
       </div>
@@ -23,9 +30,12 @@
           @for (link of lstSection; track link) {
             <li>
               <a (click)="goToThePage(link.root)">{{
-              link.header }}</a>
+              link.translationKey | translate }}</a>
             </li>
           }
+          <li>
+            <a class="navbar__cv-link" (click)="goToCv()">{{ 'SIDEBAR.View_CV' | translate }}</a>
+          </li>
         </ul>
       </div>
     }

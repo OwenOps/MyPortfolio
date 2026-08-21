@@ -1,30 +1,51 @@
 <div id="faq">
   <h1 translate="WORK.SomeProjectsTitle"></h1>
+
+  <div class="project-filters">
+    @for (filter of filters; track filter.value) {
+      <button type="button" class="filter-chip"
+        [class.active]="activeFilter === filter.value"
+        (click)="setFilter(filter.value)">
+        {{ filter.labelKey | translate }}
+      </button>
+    }
+  </div>
+
   <ul>
-    <!-- Affiche uniquement les projets visibles, selon showAll -->
-    @for (work of lstworks.slice(0, visibleItems); track work; let i = $index) {
-      <li>
-        <input type="checkbox" checked>
-        <div class="title-container">
-          <h2 [translate]="work.titleKey"></h2>
-          <a [href]="work.link" target="_blank">
-            <i class="pi pi-external-link"></i>
-          </a>
+    @for (work of visibleWorks; track work.titleKey; let i = $index) {
+      <li [class.open]="openIndex === i">
+        <button type="button" class="project-header" (click)="toggle(i)">
+          <div class="title-container">
+            <h2 [translate]="work.titleKey"></h2>
+            <span class="project-meta">
+              <span class="project-year">{{ work.year }}</span>
+              <span class="project-kind">{{ kindLabel(work.kind) | translate }}</span>
+            </span>
+          </div>
+        </button>
+
+        <div class="project-body">
+          <p [translate]="work.descriptionKey"></p>
+          <div class="project-footer">
+            <div class="project-stack">
+              @for (tech of work.stack; track tech) {
+                <span class="stack-tag">{{ tech }}</span>
+              }
+            </div>
+            <a [href]="work.link" target="_blank" rel="noopener noreferrer"
+              [attr.aria-label]="work.titleKey | translate"
+              (click)="$event.stopPropagation()">
+              <i class="pi pi-github"></i>
+            </a>
+          </div>
         </div>
-        <p [translate]="work.descriptionKey"></p>
       </li>
     }
   </ul>
 
-  @if (!showAll) {
-    <button (click)="toggleShowMore()" class="showAll">
-      <span>View more</span>
-    </button>
-  }
-
-  @if (showAll) {
-    <button (click)="toggleShowMore()" class="showAll">
-      <span>View less</span>
+  @if (canToggleMore) {
+    <button type="button" (click)="toggleShowMore()" class="showAll">
+      <span>{{ (showAll ? 'WORK.ViewLess' : 'WORK.ViewMore') | translate }}</span>
     </button>
   }
 </div>

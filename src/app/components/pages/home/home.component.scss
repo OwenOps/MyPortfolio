@@ -41,3 +41,25 @@
   color: var(--tertiary-color-white);
   text-align: center;
 }
+
+.home-cv {
+  z-index: 55;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--secondary-color-accent);
+  color: var(--secondary-color-accent);
+  border-radius: 9999px;
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--secondary-color-accent);
+    color: var(--primary-color-dark);
+  }
+}

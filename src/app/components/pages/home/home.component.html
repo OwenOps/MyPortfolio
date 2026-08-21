@@ -4,6 +4,11 @@
       <p class="typed-text" #typedElement></p>
       <p class="typed-text" #typedElement2></p>
     </div>
-    <app-button-next [showButton]="showButton" [pathNextPage]="pathNextPage"></app-button-next>
+      @if (showButton) {
+        <button type="button" class="home-cv" (click)="openCv()">
+          {{ 'SIDEBAR.View_CV' | translate }}
+        </button>
+      }
+      <app-button-next [showButton]="showButton" [pathNextPage]="pathNextPage"></app-button-next>
   </div>
 </div>

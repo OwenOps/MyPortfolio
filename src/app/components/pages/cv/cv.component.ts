@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IconComponent } from "../../layouts/icon/icon.component";
 import { TagModule } from 'primeng/tag';
 import { SpeedDialModule } from 'primeng/speeddial';
@@ -17,7 +17,7 @@ import { lstUser, User } from 'src/app/core/models/user';
   templateUrl: './cv.component.html',
   styleUrl: './cv.component.scss'
 })
-export class CvComponent extends BaseComponent implements OnInit, AfterViewInit {
+export class CvComponent extends BaseComponent implements OnInit, OnDestroy {
   items!: MenuItem[];
 
   user: User = lstUser[0];
@@ -28,6 +28,7 @@ export class CvComponent extends BaseComponent implements OnInit, AfterViewInit 
   }
 
   ngOnInit() {
+    this.resetPageZoom();
     this.items = [
       {
         icon: 'pi pi-cog',
@@ -35,19 +36,21 @@ export class CvComponent extends BaseComponent implements OnInit, AfterViewInit 
           this.utilities.openDialog(DialogPreferencesComponent, "Preferences")
         },
       },
-      // {
-      //   label: 'Download CV',
-      //   icon: 'pi pi-download',
-      //   command: () => {
-
-      //   },
-      // },
+      {
+        icon: 'pi pi-home',
+        command: () => {
+          this.resetPageZoom();
+          this.utilities.goToAPage('/');
+        },
+      },
     ];
   }
 
-  ngAfterViewInit() {
-    if (this.isPhoneSize)
-      document.body.style.zoom = '60%';
-    else document.body.style.zoom = '77%';
+  ngOnDestroy(): void {
+    this.resetPageZoom();
+  }
+
+  private resetPageZoom(): void {
+    document.body.style.removeProperty('zoom');
   }
 }

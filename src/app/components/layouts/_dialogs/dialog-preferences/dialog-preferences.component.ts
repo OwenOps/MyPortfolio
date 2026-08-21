@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { BaseComponent } from 'src/app/components/shared/base/base.component';
 import { StorageService } from 'src/app/core/services/storage/storage.service';
-import { ThemeService } from 'src/app/core/services/themes/theme.service';
+import { ThemeOption, ThemeService } from 'src/app/core/services/themes/theme.service';
 import { PrimengModule } from 'src/app/shared/primeng.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FlagsComponent } from '../../flags/flags.component';
@@ -16,10 +16,9 @@ import { FormContactComponent } from '../../form-contact/form-contact.component'
   imports: [SharedModule, PrimengModule, FlagsComponent, FormContactComponent]
 })
 export class DialogPreferencesComponent extends BaseComponent {
-  themes!: any;
-
-  selectedTheme!: string;
-  selectedIndex: number = 0;
+  themes: ThemeOption[] = [];
+  selectedTheme = '';
+  activeTab: 'settings' | 'contact' = 'settings';
 
   constructor
     (
@@ -35,10 +34,9 @@ export class DialogPreferencesComponent extends BaseComponent {
     this.selectedTheme = this.themeService.getSelectedTheme();
   }
 
-  onThemeChange(index: number): void {
-    const selected = this.themes[index].value;
-    this.selectedTheme = selected;
-    this.themeService.setTheme(selected);
+  onThemeChange(theme: ThemeOption): void {
+    this.selectedTheme = theme.value;
+    this.themeService.setTheme(theme.value);
   }
 
   setProMode(event: CheckboxChangeEvent) {
@@ -64,20 +62,5 @@ export class DialogPreferencesComponent extends BaseComponent {
   setPhoneMode(event: CheckboxChangeEvent) {
     this.userState.setIsPhoneMode(event.checked);
     this.storageService.saveIsPhoneMode(event.checked);
-  }
-
-  setCVPage(event: CheckboxChangeEvent) {
-    if (event.checked) {
-      this.utilitiesService.goToAPage(`cv/true`)
-      return
-    }
-
-    this.utilitiesService.goToAPage('/');
-
-    setTimeout(() => {
-      document.body.style.zoom = '100%';
-    }, 150)
-
-    this.userState.setIsPhoneMode(event.checked);
   }
 }

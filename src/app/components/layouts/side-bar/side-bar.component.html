@@ -10,7 +10,13 @@
         <p class="sidebar__subtitle">
           {{ 'SIDEBAR.Full_Stack_Developper' | translate }}
         </p>
-        <app-flags></app-flags>
+        <div class="sidebar__meta">
+          <app-flags></app-flags>
+          <button type="button" class="sidebar__cv" (click)="openCv()">
+            <i class="pi pi-id-card"></i>
+            <span>{{ 'SIDEBAR.View_CV' | translate }}</span>
+          </button>
+        </div>
       </div>
     </div>
     <ul class="sidebar__nav">
