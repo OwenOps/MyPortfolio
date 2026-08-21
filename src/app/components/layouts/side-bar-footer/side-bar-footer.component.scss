@@ -21,6 +21,12 @@
   &__title {
     font-size: 18px;
     text-align: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--secondary-color-accent);
+    }
   }
 
   &__rights {

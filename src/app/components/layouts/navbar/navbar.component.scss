@@ -99,6 +99,10 @@
       color: white;
       padding: 0.2rem;
       text-decoration: none;
+
+      &.active {
+        color: var(--secondary-color-accent);
+      }
     }
 
     .navbar__cv-link {

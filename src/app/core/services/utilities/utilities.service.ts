@@ -31,9 +31,9 @@ export class UtilitiesService {
     localStorage.setItem(APP_CONSTANTS.LANGUAGE_LOCAL_STORAGE, language);
   }
 
-  public openDialog(component: any, header?: string, data: any = {}): DynamicDialogRef<unknown> | null {
+  public openDialog(component: any, headerKey: string = 'SIDEBAR.Settings', data: any = {}): DynamicDialogRef<unknown> | null {
     const ref = this.dialogService.open(component, {
-      header: header,
+      header: this.translateService.instant(headerKey),
       modal: true,
       focusOnShow: false,
       style: { width: '50vw' },

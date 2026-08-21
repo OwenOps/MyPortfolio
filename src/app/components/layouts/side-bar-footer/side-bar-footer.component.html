@@ -1,7 +1,7 @@
 <div class="sidebar-footer">
   <i class="pi pi-cog sidebar-footer__settings" [ngClass]="{ 'pi-spin': settingHover }"
     (mouseenter)="settingHover = true" (mouseleave)="settingHover = false" (click)="openDialog()"></i>
-  <h3 class="sidebar-footer__title">Contact</h3>
+  <h3 class="sidebar-footer__title" (click)="openContact()">{{ 'SIDEBAR.Contact' | translate }}</h3>
 
   <app-social-media></app-social-media>
   
@@ -9,7 +9,7 @@
     <p class="sidebar-footer__text2">{{ 'SIDEBAR.Copyright' | translate:{ firstName: currentUser.firstName, name:
       currentUser.name } }}</p>
     <p>
-      {{ 'SIDEBAR.Last_Update' | translate:{ date: '26 / 06 / 2025' } }}
+      {{ 'SIDEBAR.Last_Update' | translate:{ date: lastUpdate } }}
     </p>
   </div>
 </div>

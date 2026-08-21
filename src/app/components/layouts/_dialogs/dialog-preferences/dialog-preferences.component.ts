@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 import { CheckboxChangeEvent } from 'primeng/checkbox';
 import { BaseComponent } from 'src/app/components/shared/base/base.component';
 import { StorageService } from 'src/app/core/services/storage/storage.service';
@@ -16,6 +16,7 @@ import { FormContactComponent } from '../../form-contact/form-contact.component'
   imports: [SharedModule, PrimengModule, FlagsComponent, FormContactComponent]
 })
 export class DialogPreferencesComponent extends BaseComponent {
+  private readonly dialogConfig = inject(DynamicDialogConfig, { optional: true });
   themes: ThemeOption[] = [];
   selectedTheme = '';
   activeTab: 'settings' | 'contact' = 'settings';
@@ -23,8 +24,7 @@ export class DialogPreferencesComponent extends BaseComponent {
   constructor
     (
       private readonly themeService: ThemeService,
-      private readonly storageService: StorageService,
-      private readonly router: Router
+      private readonly storageService: StorageService
     ) {
     super();
   }
@@ -32,6 +32,9 @@ export class DialogPreferencesComponent extends BaseComponent {
   ngOnInit(): void {
     this.themes = this.themeService.getThemes();
     this.selectedTheme = this.themeService.getSelectedTheme();
+    if (this.dialogConfig?.data?.tab === 'contact') {
+      this.activeTab = 'contact';
+    }
   }
 
   onThemeChange(theme: ThemeOption): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BaseComponent } from '../../shared/base/base.component';
 import { StorageService } from 'src/app/core/services/storage/storage.service';
@@ -14,6 +14,7 @@ import { lstUser, User } from 'src/app/core/models/user';
   imports: [SharedModule, SocialMediaComponent, PrimengModule],
 })
 export class FormContactComponent extends BaseComponent implements OnInit {
+  @Input() showTitle = true;
   user: User = lstUser[0];
   contactForm!: FormGroup;
   topics: string[] = [];

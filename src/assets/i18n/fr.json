@@ -9,12 +9,13 @@
     "Settings": "PARAMÈTRES",
     "View_CV": "Voir le CV",
     "Contact": "Contact",
-    "Copyright": "© 2025 {{firstName}} {{name}} - Tous droits réservés",
+    "Copyright": "© 2026 {{firstName}} {{name}} - Tous droits réservés",
     "Last_Update": "Dernière mise à jour : {{date}}"
   },
   "HOME": {
     "Hello": "Bonjour,",
-    "Welcome": "Bienvenue sur mon portfolio !"
+    "Welcome": "Bienvenue sur mon portfolio !",
+    "Tagline": "Apprenti Full Stack — Angular & .NET — ESIEA / Subsea7"
   },
   "ABOUT": {
     "Title1": "À PROPOS DE MOI",
@@ -56,21 +57,22 @@
   "WORK": {
     "Subtitle": "Mes Travaux",
     "SectionTitle": "Projets",
-    "Description": "Quelques projets perso et scolaires — ceux qui m'ont vraiment fait progresser. Je mélange outils utiles, applis et algos, toujours avec GitHub en filet.",
+    "Description": "Quelques projets perso et scolaires — outils, applis, mods Minecraft et algos, toujours avec GitHub en filet.",
     "SomeProjectsTitle": "Quelques projets",
     "ViewMore": "Voir plus",
     "ViewLess": "Voir moins",
+    "NoProjects": "Rien de ce côté-là pour l’instant — un autre filtre ?",
     "FilterAll": "Tous",
     "FilterWeb": "Web",
     "FilterMobile": "Mobile",
     "FilterTools": "Outils",
+    "FilterGames": "Jeux",
     "FilterSchool": "École",
     "KindWeb": "Web",
     "KindMobile": "Mobile",
     "KindTool": "Outil",
+    "KindGame": "Jeu",
     "KindSchool": "École",
-    "ProjectRedesignTitle": "Refonte d'un site",
-    "ProjectRedesignDesc": "SAE à l'IUT : reprendre le site d'une commune et le rendre plus lisible, plus moderne, sans perdre l'identité du village. Un bon exercice d'UI et de contraintes réelles.",
     "ProjectGraphsTitle": "Graphes",
     "ProjectGraphsDesc": "Implémentation de Dijkstra sur plusieurs types de graphes, avec un vrai focus perf : trouver le plus court chemin même quand le graphe devient énorme. Un projet un peu nerd, assumé.",
     "ProjectMastermindTitle": "Mastermind",
@@ -78,9 +80,13 @@
     "ProjectMobileAppTitle": "PharmaSignal",
     "ProjectMobileAppDesc": "App Flutter (iOS + Android) pour le suivi de signalements pharma. Auth, sync Firebase, parcours pensé pour aller vite sur le terrain — un projet plus « produit » que devoir.",
     "NamiFlow": "NamiFlow",
-    "NamiFlowDesc": "Transfert de fichiers avec une couche de sécurité en plus : chaque fichier passe par l'API VirusTotal avant d'être envoyé. Un outil perso pour mixer C# et une vraie API tierce.",
-    "FolderCompare": "Comparaison de dossiers",
-    "FolderCompareDesc": "Petit utilitaire C# : deux chemins, un scan, les diffs dans un Excel, et un mail à la fin. Né d'un vrai besoin — comparer des arborescences sans le faire à la main."
+    "NamiFlowDesc": "Transfert de fichiers avec une couche de sécurité en plus : chaque fichier passe par l'API VirusTotal avant d'être envoyé. Un outil perso en Java, branché sur une vraie API tierce.",
+    "WorldZip": "Minecraft World Zip",
+    "WorldZipDesc": "Mod Minecraft 26.2 (Fabric / NeoForge) pour zipper les mondes et gagner de la place. Depuis l'écran de sélection : Zip, Unzip, Zip All, filtre dossiers / archives, barre de progression. Un vrai besoin perso, pas un TP.",
+    "WorldPreset": "Minecraft World Preset",
+    "WorldPresetDesc": "Mod Minecraft 26.2 qui ajoute des presets de monde (Skyblock, OneBlock) sans toucher au vanilla. Écran Create World, options de difficulté / structures, JARs Fabric et NeoForge.",
+    "ParkingClicker": "Parking Clicker",
+    "ParkingClickerDesc": "Jeu de gestion de parking en C + Raylib : flux de voitures, pathfinding A*, modes Easy / Hard, argent clicker + tickets. Un projet école qui a dérapé en vrai tycoon — listes chaînées, malloc, et un peu trop de fun."
   },
   "HOBBIES": {
     "Subtitle": "Mes Loisirs",
@@ -160,7 +166,7 @@
     "AltTask3": "Création d’un gestionnaire de fichier avancé",
     "Projects": "Projets Réalisés",
     "ProjectsMain": "Projets principaux",
-    "Project1": "Refonte d’un site web",
+    "Project1": "Mods Minecraft (World Zip, World Preset)",
     "Project2": "Projet mobile pour simplifier la gestion des signaux pharmaceutiques.",
     "Project3": "Projet visant à développer des compétences en optimisation d'applications.",
     "Tools": "Outils & Technologies",

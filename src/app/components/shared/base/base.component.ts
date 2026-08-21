@@ -1,4 +1,5 @@
 import { Directive, effect, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageService } from 'src/app/core/services/message/message.service';
 import { UserStateService } from 'src/app/core/services/user-state/user-state.service';
 import { UtilitiesService } from 'src/app/core/services/utilities/utilities.service';
@@ -11,6 +12,7 @@ export abstract class BaseComponent {
   protected readonly userState = inject(UserStateService);
   protected readonly messageService = inject(MessageService);
   protected readonly utilitiesService = inject(UtilitiesService);
+  protected readonly router = inject(Router);
 
   isLoading: boolean = false;
   isUserAdmin: boolean = false;
@@ -37,5 +39,9 @@ export abstract class BaseComponent {
 
   protected openCv(): void {
     this.utilitiesService.goToAPage('cv/true');
+  }
+
+  protected isActiveSection(root: string): boolean {
+    return this.router.url.split('?')[0].includes(`/${root}`);
   }
 }

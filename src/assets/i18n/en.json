@@ -9,12 +9,13 @@
     "Settings": "SETTINGS",
     "View_CV": "View CV",
     "Contact": "Contact",
-    "Copyright": "© 2025 {{firstName}} {{name}} - All rights reserved",
+    "Copyright": "© 2026 {{firstName}} {{name}} - All rights reserved",
     "Last_Update": "Last Update: {{date}}"
   },
   "HOME": {
     "Hello": "Hello,",
-    "Welcome": "Welcome To My Portfolio !"
+    "Welcome": "Welcome To My Portfolio !",
+    "Tagline": "Full Stack apprentice — Angular & .NET — ESIEA / Subsea7"
   },
   "ABOUT": {
     "Title1": "ABOUT ME",
@@ -56,21 +57,22 @@
   "WORK": {
     "Subtitle": "My Work",
     "SectionTitle": "Projects",
-    "Description": "A mix of personal tools and school work — the projects that actually moved me forward. Useful utilities, apps, and algorithms, all on GitHub.",
+    "Description": "A mix of personal tools, school work, Minecraft mods and algorithms — all on GitHub.",
     "SomeProjectsTitle": "Selected projects",
     "ViewMore": "View more",
     "ViewLess": "View less",
+    "NoProjects": "Nothing here yet — try another filter?",
     "FilterAll": "All",
     "FilterWeb": "Web",
     "FilterMobile": "Mobile",
     "FilterTools": "Tools",
+    "FilterGames": "Games",
     "FilterSchool": "School",
     "KindWeb": "Web",
     "KindMobile": "Mobile",
     "KindTool": "Tool",
+    "KindGame": "Game",
     "KindSchool": "School",
-    "ProjectRedesignTitle": "Town website redesign",
-    "ProjectRedesignDesc": "University brief: pick a French town site and make it clearer and more modern without losing its identity. A good exercise in UI under real constraints.",
     "ProjectGraphsTitle": "Graphs",
     "ProjectGraphsDesc": "Dijkstra on several graph types, with a real focus on performance — shortest path even when the graph gets huge. Slightly nerdy, fully intended.",
     "ProjectMastermindTitle": "Mastermind",
@@ -78,9 +80,13 @@
     "ProjectMobileAppTitle": "PharmaSignal",
     "ProjectMobileAppDesc": "Flutter app (iOS + Android) for pharmaceutical reporting. Auth, Firebase sync, and a flow built to be fast in the field — more product than homework.",
     "NamiFlow": "NamiFlow",
-    "NamiFlowDesc": "File transfer with an extra security layer: every file is scanned through the VirusTotal API before it is sent. A personal tool to mix C# with a real third-party API.",
-    "FolderCompare": "Folder compare",
-    "FolderCompareDesc": "Small C# utility: two paths, a scan, diffs in Excel, and an email at the end. Born from a real need — comparing trees without doing it by hand."
+    "NamiFlowDesc": "File transfer with an extra security layer: every file is scanned through the VirusTotal API before it is sent. A personal Java tool wired to a real third-party API.",
+    "WorldZip": "Minecraft World Zip",
+    "WorldZipDesc": "Minecraft 26.2 mod (Fabric / NeoForge) to zip worlds and save disk space. From the Select World screen: Zip, Unzip, Zip All, folder/archive filter, progress bar. Built for a real personal need.",
+    "WorldPreset": "Minecraft World Preset",
+    "WorldPresetDesc": "Minecraft 26.2 mod that adds world presets (Skyblock, OneBlock) without touching vanilla. Create World screen, difficulty / structure options, Fabric and NeoForge JARs.",
+    "ParkingClicker": "Parking Clicker",
+    "ParkingClickerDesc": "Parking management game in C + Raylib: car flow, A* pathfinding, Easy / Hard modes, clicker money plus tickets. A school project that drifted into a proper tycoon — linked lists, malloc, and a bit too much fun."
   },
   "HOBBIES": {
     "Subtitle": "My Hobbies",
@@ -159,7 +165,7 @@
     "AltTask3": "Built an advanced file manager",
     "Projects": "Projects Completed",
     "ProjectsMain": "Main Projects",
-    "Project1": "Website redesign",
+    "Project1": "Minecraft mods (World Zip, World Preset)",
     "Project2": "Mobile project to simplify pharmaceutical signal management",
     "Project3": "Project focused on optimizing application performance",
     "Tools": "Tools & Technologies",

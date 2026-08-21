@@ -44,7 +44,7 @@ export class NavbarComponent extends BaseComponent {
   }
 
   openDialog() {
-    this.utilitiesService.openDialog(DialogPreferencesComponent, "Preferences");
+    this.utilitiesService.openDialog(DialogPreferencesComponent, 'SIDEBAR.Settings');
   }
 
   goToCv(): void {

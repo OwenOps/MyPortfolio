@@ -29,7 +29,7 @@
         <ul>
           @for (link of lstSection; track link) {
             <li>
-              <a (click)="goToThePage(link.root)">{{
+              <a [class.active]="isActiveSection(link.root)" (click)="goToThePage(link.root)">{{
               link.translationKey | translate }}</a>
             </li>
           }
@@ -45,7 +45,7 @@
     </div>
 
     <a routerLink="/" class="navbar__link-logo">
-      <img src="assets/img/test.jpg" alt="subsea7-brand" width="40" height="40" class="navbar__logo">
+                    <img src="assets/img/test.jpg" alt="me" width="40" height="40" class="navbar__logo">
     </a>
   </nav>
 </header>

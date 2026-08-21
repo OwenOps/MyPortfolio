@@ -51,6 +51,12 @@ ul li i:after {
   margin-top: 0;
 }
 
+.empty-projects {
+  text-align: center !important;
+  opacity: 0.75;
+  padding: 1rem 0 2rem !important;
+}
+
 #faq h2 {
   color: var(--secondary-color-light);
   line-height: 34px;

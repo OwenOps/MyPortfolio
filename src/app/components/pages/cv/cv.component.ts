@@ -33,7 +33,7 @@ export class CvComponent extends BaseComponent implements OnInit, OnDestroy {
       {
         icon: 'pi pi-cog',
         command: () => {
-          this.utilities.openDialog(DialogPreferencesComponent, "Preferences")
+          this.utilities.openDialog(DialogPreferencesComponent, 'SIDEBAR.Settings')
         },
       },
       {

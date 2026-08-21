@@ -6,7 +6,7 @@ import { ThemeService } from './core/services/themes/theme.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { StorageService } from './core/services/storage/storage.service';
 import { BaseComponent } from './components/shared/base/base.component';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { SharedModule } from './shared/shared.module';
 import { PrimengModule } from './shared/primeng.module';
@@ -29,7 +29,6 @@ export class AppComponent extends BaseComponent implements OnInit {
       private readonly themeService: ThemeService,
       private readonly breakpointObserver: BreakpointObserver,
       private readonly storageService: StorageService,
-      private readonly router: Router,
     ) {
 
     super();

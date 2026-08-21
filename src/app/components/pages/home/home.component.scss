@@ -42,9 +42,21 @@
   text-align: center;
 }
 
+.home-tagline {
+  z-index: 55;
+  margin: 1.1rem 1.5rem 0;
+  max-width: 34rem;
+  text-align: center;
+  color: var(--tertiary-color-white);
+  opacity: 0.78;
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
 .home-cv {
   z-index: 55;
-  margin-top: 1.5rem;
+  margin-top: 1.15rem;
   margin-bottom: 0.5rem;
   background: transparent;
   border: 1px solid var(--secondary-color-accent);

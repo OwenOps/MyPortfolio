@@ -1,4 +1,4 @@
-export type WorkKind = 'web' | 'mobile' | 'tool' | 'school';
+export type WorkKind = 'web' | 'mobile' | 'tool' | 'school' | 'game';
 
 export interface AccordionWork {
     titleKey: string;
@@ -14,16 +14,16 @@ export const lstworks: AccordionWork[] =
     [
         {
             titleKey: 'WORK.NamiFlow',
-            link: 'https://github.com/OwenOps/NamiFlow.git',
+            link: 'https://github.com/OwenOps/NamiFlow',
             descriptionKey: 'WORK.NamiFlowDesc',
             year: '2025',
-            kind: 'web',
-            stack: ['C#', 'VirusTotal'],
+            kind: 'tool',
+            stack: ['Java', 'VirusTotal'],
             featured: true,
         },
         {
             titleKey: 'WORK.ProjectMobileAppTitle',
-            link: 'https://github.com/OwenOps/PharmaSignal.git',
+            link: 'https://github.com/OwenOps/PharmaSignal',
             descriptionKey: 'WORK.ProjectMobileAppDesc',
             year: '2024',
             kind: 'mobile',
@@ -31,17 +31,33 @@ export const lstworks: AccordionWork[] =
             featured: true,
         },
         {
-            titleKey: 'WORK.FolderCompare',
-            link: 'https://github.com/OwenOps/SeekFilesCompare.git',
-            descriptionKey: 'WORK.FolderCompareDesc',
-            year: '2024',
-            kind: 'tool',
-            stack: ['C#', 'Excel'],
+            titleKey: 'WORK.WorldZip',
+            link: 'https://github.com/OwenOps/Minecraft-World-Zip',
+            descriptionKey: 'WORK.WorldZipDesc',
+            year: '2026',
+            kind: 'game',
+            stack: ['Java', 'Fabric', 'NeoForge'],
             featured: true,
         },
         {
+            titleKey: 'WORK.WorldPreset',
+            link: 'https://github.com/OwenOps/Minecraft-World-Preset',
+            descriptionKey: 'WORK.WorldPresetDesc',
+            year: '2026',
+            kind: 'game',
+            stack: ['Java', 'Fabric', 'NeoForge'],
+        },
+        {
+            titleKey: 'WORK.ParkingClicker',
+            link: 'https://github.com/OwenOps/ParkingClicker',
+            descriptionKey: 'WORK.ParkingClickerDesc',
+            year: '2025',
+            kind: 'game',
+            stack: ['C', 'Raylib'],
+        },
+        {
             titleKey: 'WORK.ProjectMastermindTitle',
-            link: 'https://github.com/OwenOps/Mastermind.git',
+            link: 'https://github.com/OwenOps/Mastermind',
             descriptionKey: 'WORK.ProjectMastermindDesc',
             year: '2023',
             kind: 'school',
@@ -49,18 +65,10 @@ export const lstworks: AccordionWork[] =
         },
         {
             titleKey: 'WORK.ProjectGraphsTitle',
-            link: 'https://github.com/OwenOps/Graphes.git',
+            link: 'https://github.com/OwenOps/Graphes',
             descriptionKey: 'WORK.ProjectGraphsDesc',
             year: '2023',
             kind: 'school',
-            stack: ['C++', 'Dijkstra'],
-        },
-        {
-            titleKey: 'WORK.ProjectRedesignTitle',
-            link: 'https://github.com/OwenOps/DevWebSae.git',
-            descriptionKey: 'WORK.ProjectRedesignDesc',
-            year: '2023',
-            kind: 'school',
-            stack: ['HTML', 'CSS'],
+            stack: ['Java', 'Dijkstra'],
         },
     ];

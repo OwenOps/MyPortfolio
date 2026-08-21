@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DialogPreferencesComponent } from '../_dialogs/dialog-preferences/dialog-preferences.component';
 import { BaseComponent } from '../../shared/base/base.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { APP_CONSTANTS } from 'src/app/constants/app.constants';
 import { User, lstUser } from 'src/app/core/models/user';
 import { SocialMediaComponent } from '../social-media/social-media.component';
 
@@ -19,6 +20,7 @@ export interface Country {
 export class SideBarFooterComponent extends BaseComponent {
   countries: Country[] | undefined;
   currentUser: User = lstUser[0];
+  lastUpdate = APP_CONSTANTS.LAST_UPDATE;
 
   selectedCountry: Country | undefined;
 
@@ -27,6 +29,10 @@ export class SideBarFooterComponent extends BaseComponent {
   constructor() { super() }
 
   openDialog() {
-    this.utilitiesService.openDialog(DialogPreferencesComponent, "Preferences");
+    this.utilitiesService.openDialog(DialogPreferencesComponent, 'SIDEBAR.Settings');
+  }
+
+  openContact() {
+    this.utilitiesService.openDialog(DialogPreferencesComponent, 'SIDEBAR.Contact', { tab: 'contact' });
   }
 }

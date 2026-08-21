@@ -18,9 +18,9 @@ export class AccordionComponent {
 
     readonly filters: { value: 'all' | WorkKind; labelKey: string }[] = [
         { value: 'all', labelKey: 'WORK.FilterAll' },
-        { value: 'web', labelKey: 'WORK.FilterWeb' },
         { value: 'mobile', labelKey: 'WORK.FilterMobile' },
         { value: 'tool', labelKey: 'WORK.FilterTools' },
+        { value: 'game', labelKey: 'WORK.FilterGames' },
         { value: 'school', labelKey: 'WORK.FilterSchool' },
     ];
 
@@ -60,6 +60,7 @@ export class AccordionComponent {
             mobile: 'WORK.KindMobile',
             tool: 'WORK.KindTool',
             school: 'WORK.KindSchool',
+            game: 'WORK.KindGame',
         };
 
         return labels[kind];

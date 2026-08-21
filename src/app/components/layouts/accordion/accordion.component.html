@@ -43,6 +43,10 @@
     }
   </ul>
 
+  @if (visibleWorks.length === 0) {
+    <p class="empty-projects">{{ 'WORK.NoProjects' | translate }}</p>
+  }
+
   @if (canToggleMore) {
     <button type="button" (click)="toggleShowMore()" class="showAll">
       <span>{{ (showAll ? 'WORK.ViewLess' : 'WORK.ViewMore') | translate }}</span>
